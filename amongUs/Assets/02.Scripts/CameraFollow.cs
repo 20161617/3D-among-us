@@ -70,7 +70,7 @@ namespace Com.MyCompany.MyGame
             if (followOnStart)
             {
                 OnStartFollowing();
-                Debug.Log("Follow");
+
             }
 
 
@@ -112,7 +112,7 @@ namespace Com.MyCompany.MyGame
         {
             cameraTransform = Camera.main.transform;
             isFollowing = true;
-            Debug.Log("OnstartFollowing");
+
             // we don't smooth anything, we go straight to the right camera shot
             Cut();
         }

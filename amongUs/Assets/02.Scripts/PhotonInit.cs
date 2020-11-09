@@ -41,7 +41,7 @@ public class PhotonInit : MonoBehaviourPunCallbacks
     //방에 입장한 후에 플레이어 생성
     public override void OnJoinedRoom()
     {
-        Debug.Log("Joined room");
+
         StartCoroutine(this.CreatePlayer());
         CreateCamera();
         //방에 입장한 이후에 플레이어를 생성한다. 

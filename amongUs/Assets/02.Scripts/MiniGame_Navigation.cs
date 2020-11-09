@@ -8,7 +8,8 @@ public class MiniGame_Navigation : MonoBehaviour ,IPointerDownHandler, IDragHand
     public RectTransform RT;
     public Vector3 mousePos;
     public Vector2 downPosition;
-
+    public GameObject MinigamePanel;
+    public GameObject MissionManager;
 
     public void OnPointerDown(PointerEventData data)
     {
@@ -27,10 +28,13 @@ public class MiniGame_Navigation : MonoBehaviour ,IPointerDownHandler, IDragHand
 
     public void OnPointerUp(PointerEventData data)
     {
-        Debug.Log("up");
+      
         if (RT.anchoredPosition.x > -20 && RT.anchoredPosition.x < 20 && RT.anchoredPosition.y > -20 && RT.anchoredPosition.y < 20)
         {
-         //   RT.anchoredPosition = Vector2.zero;
+            RT.anchoredPosition = Vector2.zero;
+            MissionManager.GetComponent<MissionManager>().missionClear(MinigamePanel);
+           // MissionManager.Instance().missionClear(MinigamePanel); 
+
             Debug.Log("성공");
         }
     }

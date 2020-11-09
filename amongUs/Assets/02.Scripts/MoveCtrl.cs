@@ -6,14 +6,17 @@ using Photon.Realtime;
 
 public class MoveCtrl : MonoBehaviourPunCallbacks, IPunObservable
 {
-
+    PhotonView pv;
     public float speed = 10.0f;
     public float turnSpeed = 10.0f;
     private Transform tr;
 
     void Start()
     {
+        pv = photonView;
         tr = GetComponent<Transform>();
+      //  MissionManager.Instance().setView(pv);
+
     }
     public bool getViewIsMine()
     {
