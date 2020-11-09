@@ -112,7 +112,6 @@ namespace Com.MyCompany.MyGame
         {
             cameraTransform = Camera.main.transform;
             isFollowing = true;
-
             // we don't smooth anything, we go straight to the right camera shot
             Cut();
         }

@@ -1371,7 +1371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a66d915503b99cf46a7ffcf3411c5df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PV: {fileID: 1239166083}
+  PV: {fileID: 0}
   clearText: {fileID: 788024421}
   missionGauge: {fileID: 295230337}
 --- !u!1 &1165144521
@@ -1520,7 +1520,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2101813339}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1404553345}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -1650,6 +1650,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setGague: 5
+--- !u!1 &1404553345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8452815810953674146, guid: 76123676417216f4eb17e29282ce9d34,
+    type: 3}
+  m_PrefabInstance: {fileID: 2101813339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1404553348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404553345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b6eec9cab5c0b4479f79b773e954a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PV: {fileID: 1239166083}
 --- !u!1 &1423965156
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,6 +2145,16 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8452815810953674145, guid: 76123676417216f4eb17e29282ce9d34,
+        type: 3}
+      propertyPath: OwnershipTransfer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8452815810953674145, guid: 76123676417216f4eb17e29282ce9d34,
+        type: 3}
+      propertyPath: ObservedComponentsFoldoutOpen
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8452815810953674146, guid: 76123676417216f4eb17e29282ce9d34,
         type: 3}
       propertyPath: m_Name
@@ -2134,7 +2163,7 @@ PrefabInstance:
     - target: {fileID: 8452815810953674146, guid: 76123676417216f4eb17e29282ce9d34,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8452815810953674159, guid: 76123676417216f4eb17e29282ce9d34,
         type: 3}

@@ -110,45 +110,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11892}
     - Class: 114
-      Script: {instanceID: 11956}
+      Script: {instanceID: 11930}
     - Class: 114
-      Script: {instanceID: 11968}
+      Script: {instanceID: 11958}
     - Class: 114
-      Script: {instanceID: 12134}
+      Script: {instanceID: 11970}
     - Class: 114
-      Script: {instanceID: 12174}
+      Script: {instanceID: 12136}
     - Class: 114
-      Script: {instanceID: 12238}
+      Script: {instanceID: 12176}
     - Class: 114
-      Script: {instanceID: 12426}
+      Script: {instanceID: 12240}
     - Class: 114
-      Script: {instanceID: 12500}
+      Script: {instanceID: 12428}
     - Class: 114
-      Script: {instanceID: 12580}
+      Script: {instanceID: 12502}
     - Class: 114
-      Script: {instanceID: 12588}
+      Script: {instanceID: 12582}
     - Class: 114
-      Script: {instanceID: 12798}
+      Script: {instanceID: 12590}
     - Class: 114
-      Script: {instanceID: 12816}
+      Script: {instanceID: 12800}
     - Class: 114
-      Script: {instanceID: 12824}
+      Script: {instanceID: 12818}
     - Class: 114
-      Script: {instanceID: 12952}
+      Script: {instanceID: 12826}
     - Class: 114
-      Script: {instanceID: 12988}
+      Script: {instanceID: 12884}
     - Class: 114
-      Script: {instanceID: 13300}
+      Script: {instanceID: 12956}
+    - Class: 114
+      Script: {instanceID: 12992}
     - Class: 114
       Script: {instanceID: 13304}
     - Class: 114
-      Script: {instanceID: 13386}
+      Script: {instanceID: 13308}
     - Class: 114
-      Script: {instanceID: 13416}
+      Script: {instanceID: 13390}
     - Class: 114
-      Script: {instanceID: 21074}
-    - Class: 114
-      Script: {instanceID: 24226}
+      Script: {instanceID: 13420}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -680,6 +680,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: f427f8231bb35ab91ea9a4d344b938ff
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Gague
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1169,6 +1175,12 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
+    className: testA
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
     className: testMini
   - hash:
       serializedVersion: 2
@@ -1542,18 +1554,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: f427f8231bb35ab91ea9a4d344b938ff
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Gague
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: testA
   platform: 5
   scenePathNames:
   - Assets/01.Scenes/InGame.unity
