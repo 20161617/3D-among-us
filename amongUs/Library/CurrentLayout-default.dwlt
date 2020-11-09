@@ -74,7 +74,11 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 93
+=======
+  controlID: 130
+>>>>>>> Stashed changes
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +171,11 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 87
+=======
+  controlID: 18
+>>>>>>> Stashed changes
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -192,7 +200,11 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 17
+=======
+  controlID: 105
+>>>>>>> Stashed changes
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -653,7 +665,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 202c0000
       m_LastClickedID: 0
       m_ExpandedIDs: 6ef8ffff
       m_RenameOverlay:
@@ -718,20 +730,34 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< Updated upstream
     - Assets/04.Images
   m_ViewMode: 1
   m_StartGridSize: 67
   m_LastFolders:
   - Assets/04.Images
+=======
+    - Assets/02.Scripts
+  m_ViewMode: 1
+  m_StartGridSize: 67
+  m_LastFolders:
+  - Assets/02.Scripts
+>>>>>>> Stashed changes
   m_LastFoldersGridSize: 67
   m_LastProjectPath: E:\GitHub\3D-among-us\amongUs
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< Updated upstream
     m_SelectedIDs: b2390000
     m_LastClickedID: 14770
     m_ExpandedIDs: 00000000a8390000aa390000ac390000ae390000b0390000b239000000ca9a3b
+=======
+    m_SelectedIDs: f0380000
+    m_LastClickedID: 14576
+    m_ExpandedIDs: 00000000ce380000d0380000d2380000d4380000d638000000ca9a3b
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -786,7 +812,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 123a000094330000b2330000de340000fe3500002034000030340000e040000034410000000000001e440000d2440000dc440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
