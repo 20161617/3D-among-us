@@ -8,9 +8,13 @@ using UnityEngine.SceneManagement;
 
 public class PhotonInit : MonoBehaviourPunCallbacks
 {
+    public static PhotonInit Instance;
+    public PhotonView PV;
     private void Awake()
     {
-
+        Instance = this;
+        PV = photonView;
+        MissionManager.instance.setView(PV);
         PhotonNetwork.AutomaticallySyncScene = true;
         //방의 모든 클라이언트가 마스터 클라이언트와 동일한 레벨을로드해야하는지 여부를 정의합니다.
     }

@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
+using static PhotonInit;
 
 
 
 public class MissionManager :   MonoBehaviourPun 
 {
-    public PhotonView PV;
+    public static MissionManager instance;
+
+     public PhotonView PV;
     
 
     public RectTransform clearText = null;
@@ -28,25 +31,24 @@ public class MissionManager :   MonoBehaviourPun
     
     private void Awake()
     {
-
-
-       
+        instance = this;
     }
 
     public void setView(PhotonView _pv)
     {
-        PV = _pv;
+        // PV = _pv;
+        PV = photonView;
     }
 
 
 
-    public void missionClear(GameObject _obejct) // 미션을꺳을떄 
+    public void missionClear(GameObject _object) // 미션을꺳을떄 
     {
 
 
-        StartCoroutine(MissionClearText(_obejct));
-        StartCoroutine(setMission_End(_obejct));
-        MissionClear(_obejct);
+        StartCoroutine(MissionClearText(_object));
+        StartCoroutine(setMission_End(_object));
+        MissionClear(_object);
     }
 
     private IEnumerator MissionClearText(GameObject _object) //텍스트 올라왔다 사라지는거 
@@ -58,16 +60,31 @@ public class MissionManager :   MonoBehaviourPun
             clearText.anchoredPosition = new Vector3(0, upText, 0);           
             yield return new WaitForSeconds(0.001f);
         }
+     
         yield return null;
     }
     public void UpGauge()
     {
         missionGauge.fillAmount += 0.25f;
     }
+
     [PunRPC]
-    private void AddMissionGauge(GameObject _object) //게이지 오르는거 
+    void testA()
     {
-        missionGauge.fillAmount += _object.GetComponent<Gague>().setGague * 0.01f;
+        int a = 0;
+    }
+    [PunRPC]
+     void AddMissionGauge(GameObject _object) //게이지 오르는거 
+    {
+        //missionGauge.fillAmount += _object.GetComponent<Gague>().setGague * 0.01f;
+        StartCoroutine(testBA());
+    }
+    private IEnumerator testBA()
+    {
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        yield return null;
     }
     private IEnumerator setMission_End(GameObject _object)
     {
@@ -76,12 +93,12 @@ public class MissionManager :   MonoBehaviourPun
         Vector2 setPos = new Vector2(0, -600f);
         clearText.anchoredPosition = setPos;
         yield return null;
+        
     }
 
     public void MissionClear(GameObject _object)
     {
-        AddMissionGauge(_object);
-        PV.RPC("AddMissionGauge", RpcTarget.AllViaServer);
+        PV.RPC("testA", RpcTarget.AllViaServer);
         Debug.Log(_object.GetComponent<Gague>().setGague);
 
        
