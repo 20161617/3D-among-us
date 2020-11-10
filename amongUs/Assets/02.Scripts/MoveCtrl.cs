@@ -13,6 +13,7 @@ public class MoveCtrl : MonoBehaviourPunCallbacks, IPunObservable
 
     void Start()
     {
+       
         pv = photonView;
         tr = GetComponent<Transform>();
       //  MissionManager.Instance().setView(pv);

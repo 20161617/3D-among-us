@@ -827,8 +827,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.18, y: -221}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: 200, y: 200}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &579946722
 MonoBehaviour:
@@ -842,11 +842,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9e77e6ce89998428e60f571f78f0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RT: {fileID: 579946721}
-  mousePos: {x: 0, y: 0, z: 0}
-  downPosition: {x: 0, y: 0}
   MinigamePanel: {fileID: 1367766266}
-  MissionManager: {fileID: 1040536901}
+  firstPos: {x: 0, y: 0}
 --- !u!114 &579946723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1267,7 +1264,6 @@ GameObject:
   - component: {fileID: 1040536904}
   - component: {fileID: 1040536903}
   - component: {fileID: 1040536902}
-  - component: {fileID: 1040536906}
   m_Layer: 5
   m_Name: MissionUi
   m_TagString: Untagged
@@ -1309,7 +1305,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1359,21 +1355,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1040536906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1040536901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a66d915503b99cf46a7ffcf3411c5df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PV: {fileID: 0}
-  clearText: {fileID: 788024421}
-  missionGauge: {fileID: 295230337}
 --- !u!1 &1165144521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,14 +1630,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e73e258298f544391a4a4a6fe2fc2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setGague: 5
+  setGague: 20
 --- !u!1 &1404553345 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8452815810953674146, guid: 76123676417216f4eb17e29282ce9d34,
     type: 3}
   m_PrefabInstance: {fileID: 2101813339}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1404553348
+--- !u!114 &1404553346
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1665,10 +1646,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1404553345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b6eec9cab5c0b4479f79b773e954a84, type: 3}
+  m_Script: {fileID: 11500000, guid: a66d915503b99cf46a7ffcf3411c5df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PV: {fileID: 1239166083}
+  clearText: {fileID: 788024421}
+  missionGauge: {fileID: 295230337}
 --- !u!1 &1423965156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,7 +1692,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c6882892c0b168147a2dd104e8cac04f, type: 3}
-    m_FontSize: 100
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1745,8 +1728,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -661, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: -97, y: -447}
+  m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1423965160
 MonoBehaviour:
@@ -1760,6 +1743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98ce1eb9960b9644a7a8491ff35fb2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gage: {fileID: 295230337}
 --- !u!1 &1499107673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,7 +2003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 140, y: -87}
+  m_AnchoredPosition: {x: 12, y: -29}
   m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2051140407

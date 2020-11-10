@@ -10,7 +10,7 @@ using static PhotonInit;
 
 public class MissionManager :   MonoBehaviourPun 
 {
-    public static MissionManager instance;
+    public static MissionManager Instance;
 
      public PhotonView PV;
     
@@ -19,6 +19,7 @@ public class MissionManager :   MonoBehaviourPun
     public Image missionGauge;
     
 
+    private float getGagueFill = 0f;
     float missionBarFill { get; set; } //미션게이지 최소 0 최대 1 
     const float MIN_BAR = 0.0f;
     const float MAX_BAR = 1.0f;
@@ -31,24 +32,14 @@ public class MissionManager :   MonoBehaviourPun
     
     private void Awake()
     {
-        instance = this;
-    }
 
-    public void setView(PhotonView _pv)
-    {
-        // PV = _pv;
         PV = photonView;
+        Instance = this;
     }
-
-
-
-    public void missionClear(GameObject _object) // 미션을꺳을떄 
+    public void MissionClear(GameObject _object) // 미션을꺳을떄 
     {
-
-
         StartCoroutine(MissionClearText(_object));
-        StartCoroutine(setMission_End(_object));
-        MissionClear(_object);
+       // PV.RPC("testFill", RpcTarget.AllViaServer);
     }
 
     private IEnumerator MissionClearText(GameObject _object) //텍스트 올라왔다 사라지는거 
@@ -60,49 +51,38 @@ public class MissionManager :   MonoBehaviourPun
             clearText.anchoredPosition = new Vector3(0, upText, 0);           
             yield return new WaitForSeconds(0.001f);
         }
-     
+        StartCoroutine(setMission_End(_object));
+        PV_GaugeFill(_object);
         yield return null;
     }
-    public void UpGauge()
+
+    public void PV_GaugeFill(GameObject _object)
+    {
+       // getGagueFill = _object.GetComponent<Gague>().setGague * 0.01f;
+        PV.RPC("MissionClearGauge", RpcTarget.AllViaServer);
+    }
+
+    [PunRPC]
+    IEnumerator MissionClearGauge()
     {
         missionGauge.fillAmount += 0.25f;
-    }
-
-    [PunRPC]
-    void testA()
-    {
-        int a = 0;
-    }
-    [PunRPC]
-     void AddMissionGauge(GameObject _object) //게이지 오르는거 
-    {
-        //missionGauge.fillAmount += _object.GetComponent<Gague>().setGague * 0.01f;
-        StartCoroutine(testBA());
-    }
-    private IEnumerator testBA()
-    {
-        int a = 0;
-        int b = 0;
-        int c = 0;
+       // getGagueFill = 0f;
+      
         yield return null;
     }
+
+
     private IEnumerator setMission_End(GameObject _object)
     {
-        _object.SetActive(false);
-        yield return new WaitForSeconds(1f);
+        
         Vector2 setPos = new Vector2(0, -600f);
         clearText.anchoredPosition = setPos;
-        yield return null;
-        
+        Debug.Log("텍스트 위치 초기화 ");
+        _object.SetActive(false);
+        yield return null;     
     }
 
-    public void MissionClear(GameObject _object)
-    {
-        PV.RPC("testA", RpcTarget.AllViaServer);
-        Debug.Log(_object.GetComponent<Gague>().setGague);
 
-       
-    }
    public void MissionInit() //게임시작시 미션 갯수 설정  별도로 원할시 미션 get set 으로 불러와서 지정 
     {
         commonMission = 1;

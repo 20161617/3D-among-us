@@ -42,6 +42,10 @@ MonoBehaviour:
   - AddMissionGauge
   - testA
   - ChatRPC
+  - UpGauge
+  - gaugeTest
+  - MissionClearGauge
+  - testFill
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
