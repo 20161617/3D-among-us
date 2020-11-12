@@ -40,6 +40,10 @@ MonoBehaviour:
   - RespawnSpaceship
   - CreatePlayer
   - AddMissionGauge
+<<<<<<< Updated upstream
+=======
+  - testA
+>>>>>>> Stashed changes
   - ChatRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1
