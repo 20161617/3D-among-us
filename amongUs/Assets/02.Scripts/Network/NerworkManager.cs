@@ -11,10 +11,10 @@ public class NerworkManager : MonoBehaviourPunCallbacks
     [Header("LobbyPanel")]
     public GameObject LobbyPanel;
     public InputField NickNameInput;
+    public Button[] cellBtn;
 
     [Header("RoomPanel")]
     public GameObject RoomPanel;
-    //public Text ListText;
     public Text RoomInfoText;
 
     [Header("ChatPanel")]
@@ -26,11 +26,54 @@ public class NerworkManager : MonoBehaviourPunCallbacks
     public Text StatusText;
     public PhotonView PV;
 
+    List<RoomInfo> myList = new List<RoomInfo>();
+
+    #region 방리스트 갱신
+    public void MyListClick(int num)
+    {
+        if (myList.Count > num)
+        {
+            PhotonNetwork.LocalPlayer.NickName = NickNameInput.text;
+            PhotonNetwork.JoinRoom(myList[num].Name);
+            MyListRenewal();
+        }
+    }
+
+    void MyListRenewal()
+    {
+        for(int i =0; i< cellBtn.Length; i++)
+        {
+            cellBtn[i].transform.GetChild(0).GetComponent<Text>().text = (i < myList.Count) ? myList[i].Name : "";
+        }
+    }
+
+    public override void OnRoomListUpdate(List<RoomInfo> roomList)
+    {
+        int roomCount = roomList.Count;
+        for (int i = 0; i < roomCount; i++)
+        {
+            //방 정보가 없다면..? true를 반환
+            if (!roomList[i].RemovedFromList)
+            {
+                //이미 있으면 넣지 않는다..
+                if (!myList.Contains(roomList[i])) myList.Add(roomList[i]);
+
+                //어느 위치에 있는지 검색 후 인덱스를 반환한다..
+                else myList[myList.IndexOf(roomList[i])] = roomList[i];
+            }
+
+            //검색 후 해당 인스터스가 없으면 -1을 반환, 고로 없을 경우.. 아마 오류를 방지하기 위한 코드..?
+            else if (myList.IndexOf(roomList[i]) != -1) myList.RemoveAt(myList.IndexOf(roomList[i]));
+        }
+        MyListRenewal();
+    }
+
+    #endregion
+
     #region 서버연결
     private void Awake()
     {
         Screen.SetResolution(960, 540, false);
-        //NickNameInput.text = "";
         Connect();
     }
 
@@ -134,11 +177,7 @@ public class NerworkManager : MonoBehaviourPunCallbacks
 
     void RoomRenewal()
     {
-       // ListText.text = "";
-        //for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
-        //{
-        //   // ListText.text += PhotonNetwork.PlayerList[i].NickName + ((i + 1 == PhotonNetwork.PlayerList.Length) ? "" : ", ");
-        //}
+      
         RoomInfoText.text = PhotonNetwork.CurrentRoom.Name + " / " + PhotonNetwork.CurrentRoom.PlayerCount + "/" + PhotonNetwork.CurrentRoom.MaxPlayers;
     }
     #endregion

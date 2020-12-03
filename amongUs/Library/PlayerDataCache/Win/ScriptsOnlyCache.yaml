@@ -2,13 +2,8 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Com.MyCompany.MyGame.CameraFollow
-    - Gague
-    - MiniGame_Navigation
-    - MissionManager
     - MoveCtrl
-    - PhotonInit
-    - UiManager
-    - testA
+    - NerworkManager
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
     - Photon.Pun.Demo.Asteroids.Bullet
@@ -36,15 +31,23 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.InputField
+    - UnityEngine.UI.Mask
     - UnityEngine.UI.Outline
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/01.Scenes/InGame.unity:
+    Assets/01.Scenes/LobbyScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -84,65 +87,71 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11148}
     - Class: 114
+      Script: {instanceID: 11150}
+    - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
       Script: {instanceID: 11154}
     - Class: 114
-      Script: {instanceID: 11166}
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 11182}
     - Class: 114
-      Script: {instanceID: 11292}
+      Script: {instanceID: 11328}
     - Class: 114
-      Script: {instanceID: 11324}
+      Script: {instanceID: 11348}
     - Class: 114
-      Script: {instanceID: 11344}
+      Script: {instanceID: 11386}
     - Class: 114
-      Script: {instanceID: 11426}
+      Script: {instanceID: 11430}
     - Class: 114
-      Script: {instanceID: 11642}
+      Script: {instanceID: 11490}
     - Class: 114
-      Script: {instanceID: 11894}
+      Script: {instanceID: 11540}
     - Class: 114
-      Script: {instanceID: 11932}
+      Script: {instanceID: 11646}
     - Class: 114
-      Script: {instanceID: 11960}
+      Script: {instanceID: 11682}
     - Class: 114
-      Script: {instanceID: 11972}
+      Script: {instanceID: 11790}
     - Class: 114
-      Script: {instanceID: 12138}
+      Script: {instanceID: 11898}
     - Class: 114
-      Script: {instanceID: 12178}
+      Script: {instanceID: 11976}
     - Class: 114
-      Script: {instanceID: 12242}
+      Script: {instanceID: 12124}
     - Class: 114
-      Script: {instanceID: 12430}
+      Script: {instanceID: 12182}
     - Class: 114
-      Script: {instanceID: 12504}
+      Script: {instanceID: 12246}
     - Class: 114
-      Script: {instanceID: 12584}
+      Script: {instanceID: 12434}
     - Class: 114
-      Script: {instanceID: 12592}
+      Script: {instanceID: 12496}
     - Class: 114
-      Script: {instanceID: 12802}
+      Script: {instanceID: 12508}
     - Class: 114
-      Script: {instanceID: 12820}
+      Script: {instanceID: 12588}
     - Class: 114
-      Script: {instanceID: 12828}
+      Script: {instanceID: 12596}
     - Class: 114
-      Script: {instanceID: 12886}
+      Script: {instanceID: 12608}
     - Class: 114
-      Script: {instanceID: 12958}
+      Script: {instanceID: 12806}
     - Class: 114
-      Script: {instanceID: 12994}
+      Script: {instanceID: 12824}
     - Class: 114
-      Script: {instanceID: 13308}
+      Script: {instanceID: 12832}
     - Class: 114
-      Script: {instanceID: 13312}
+      Script: {instanceID: 12960}
     - Class: 114
-      Script: {instanceID: 13394}
+      Script: {instanceID: 13310}
     - Class: 114
-      Script: {instanceID: 13424}
+      Script: {instanceID: 13314}
+    - Class: 114
+      Script: {instanceID: 13396}
+    - Class: 114
+      Script: {instanceID: 13426}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -566,7 +575,7 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: 092a43dcf2e68340605a6ae8c1b3712b
+      Hash: 8fcb6844d4bccd492b0f421fd3f62018
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NerworkManager
@@ -1562,5 +1571,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 5
   scenePathNames:
-  - Assets/01.Scenes/InGame.unity
-  playerPath: "C:/Users/USER-PC/Desktop/\uAC8C\uC784\uD14C\uC2A4\uD2B8/amougUs/\uC11C\uBC84\uD14C\uC2A4\uD2B8/amongUs.exe"
+  - Assets/01.Scenes/LobbyScene.unity
+  playerPath: C:/Users/qlenf/Desktop/test_US/amongUs.exe
