@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -13,7 +13,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     void Start()
     {
         PV = photonView;
-        NM.Players.Add(this);
+        NetInstance.Players.Add(this);
     }
 
     // Update is called once per frame
@@ -23,6 +23,6 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     }
     void OnDestroy()
     {
-        NM.Players.Remove(this);
+        NetInstance.Players.Remove(this);
     }
 }
