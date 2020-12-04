@@ -52,16 +52,23 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public void OnClickRoom(string roomName)
     {
+
         PhotonNetwork.JoinRoom(roomName);
     }
 
     void MyListRenewal()
     {
+        //방정보 갱신
         for (int i = 0; i < CellBtn.Length; i++)
         {
             bool isActive = (i < myList.Count) ? true : false;
             CellBtn[i].gameObject.SetActive(isActive);
+            // 방 이름
             CellBtn[i].transform.GetChild(0).GetComponent<Text>().text = isActive ? myList[i].Name : "";
+            // 임포스터 수
+            CellBtn[i].transform.GetChild(2).GetComponent<Text>().text = isActive ? "1" : "";
+            // 총 크루원 수
+            CellBtn[i].transform.GetChild(4).GetComponent<Text>().text = isActive ? string.Format("{0}/{1}", myList[i].PlayerCount, myList[i].MaxPlayers) : "";
         }
     }
 
@@ -96,7 +103,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Connect();
 
         //싱글톤
-        if(NetInstance == null)
+        if (NetInstance == null)
         {
             //이 클래스의 인스턴스가 탄생했을 때 전역변수 NetInstance에 게임매니저 인스턴스가 담겨있지 않다면, 자신을 넣어준다
             NetInstance = this;
@@ -113,8 +120,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             //그래서 이미 전역변수인 NetInstance에 인스턴스가 존재한다면 자신(새로운 씬의 오브젝트)을 삭제해준다.
             Destroy(this.gameObject);
         }
-        
-       // PV = photonView;
+
+        // PV = photonView;
     }
 
     private void Update()
@@ -220,6 +227,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
+        LobbyPanel.SetActive(false);
         RoomPanel.SetActive(true);
         RoomRenewal();
         ChatInput.text = "";
@@ -239,7 +247,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
-    { 
+    {
         CreateRoom();
     }
 
