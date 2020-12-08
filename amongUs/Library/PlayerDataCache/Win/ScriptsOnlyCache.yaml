@@ -1,12 +1,14 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ChatManager
     - CircleRotate
     - Com.MyCompany.MyGame.CameraFollow
     - MoveCtrl
     - NetworkManager
     - PingerRotate
     - PopBody
+    - UIManager
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
     - Photon.Pun.Demo.Asteroids.Bullet
@@ -122,47 +124,49 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11900}
     - Class: 114
-      Script: {instanceID: 11978}
+      Script: {instanceID: 11976}
     - Class: 114
-      Script: {instanceID: 12126}
+      Script: {instanceID: 11980}
     - Class: 114
-      Script: {instanceID: 12184}
+      Script: {instanceID: 12128}
     - Class: 114
-      Script: {instanceID: 12248}
+      Script: {instanceID: 12186}
     - Class: 114
-      Script: {instanceID: 12436}
+      Script: {instanceID: 12250}
     - Class: 114
-      Script: {instanceID: 12470}
+      Script: {instanceID: 12438}
     - Class: 114
-      Script: {instanceID: 12500}
+      Script: {instanceID: 12472}
     - Class: 114
-      Script: {instanceID: 12512}
+      Script: {instanceID: 12502}
     - Class: 114
-      Script: {instanceID: 12592}
+      Script: {instanceID: 12514}
     - Class: 114
-      Script: {instanceID: 12600}
+      Script: {instanceID: 12594}
     - Class: 114
-      Script: {instanceID: 12612}
+      Script: {instanceID: 12602}
     - Class: 114
-      Script: {instanceID: 12794}
+      Script: {instanceID: 12614}
     - Class: 114
-      Script: {instanceID: 12812}
+      Script: {instanceID: 12796}
     - Class: 114
-      Script: {instanceID: 12830}
+      Script: {instanceID: 12814}
     - Class: 114
-      Script: {instanceID: 12838}
+      Script: {instanceID: 12832}
     - Class: 114
-      Script: {instanceID: 12968}
+      Script: {instanceID: 12840}
     - Class: 114
-      Script: {instanceID: 13316}
+      Script: {instanceID: 12970}
     - Class: 114
-      Script: {instanceID: 13320}
+      Script: {instanceID: 13318}
     - Class: 114
-      Script: {instanceID: 13392}
+      Script: {instanceID: 13322}
     - Class: 114
-      Script: {instanceID: 13404}
+      Script: {instanceID: 13394}
     - Class: 114
-      Script: {instanceID: 13434}
+      Script: {instanceID: 13406}
+    - Class: 114
+      Script: {instanceID: 13436}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -746,6 +750,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 7a897b5c03b1a0d631cecd90a9510671
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChatManager
   - hash:
       serializedVersion: 2
       Hash: f8f5c34557f4103b6547d8f956cec6ea
@@ -1520,6 +1530,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: CurrentRoomExpectedUsersProperty
+  - hash:
+      serializedVersion: 2
+      Hash: d2b30e26442177a47d9902d980a12424
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIManager
   - hash:
       serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0

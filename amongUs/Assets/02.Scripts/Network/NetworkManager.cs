@@ -32,12 +32,23 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public PhotonView PV;
 
     //새로 추가..
-    public static NetworkManager NetInstance;
+    public static NetworkManager NM;
 
     public List<PlayerScript> Players = new List<PlayerScript>();
+
     public PlayerScript MyPlayer;
 
     List<RoomInfo> myList = new List<RoomInfo>();
+
+    void ShowPanel(GameObject CurPanel)
+    {
+        LobbyPanel.SetActive(false);
+        RoomPanel.SetActive(false);
+        ChatPanel.SetActive(false);
+
+        if(CurPanel != null)
+        CurPanel.SetActive(true);
+    }
 
     #region 방리스트 갱신
     public void MyListClick(int num)
@@ -103,10 +114,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Connect();
 
         //싱글톤
-        if (NetInstance == null)
+        if (NM == null)
         {
             //이 클래스의 인스턴스가 탄생했을 때 전역변수 NetInstance에 게임매니저 인스턴스가 담겨있지 않다면, 자신을 넣어준다
-            NetInstance = this;
+            NM = this;
 
             //씬 전환이 되더라도 파괴되지 않게 한다.
             //gameObect만으로도 이 스크립트가 컴포넌트로서 붙어 있는 Hierarchy상의 게임오브젝트라는 뜻이지만,
@@ -120,15 +131,24 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             //그래서 이미 전역변수인 NetInstance에 인스턴스가 존재한다면 자신(새로운 씬의 오브젝트)을 삭제해준다.
             Destroy(this.gameObject);
         }
-
-        // PV = photonView;
     }
 
     private void Update()
     {
         StatusText.text = PhotonNetwork.NetworkClientState.ToString();
 
-        if (ChatPanel.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            bool chatAvtive = !ChatManager.CM.ChatPanel.activeSelf;
+            ChatManager.CM.ChatPanel.SetActive(chatAvtive);
+
+            if (chatAvtive)
+            {
+                ChatManager.CM.ChatEnable();
+            }
+        }
+
+            if (ChatPanel.activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
@@ -149,9 +169,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
-        LobbyPanel.SetActive(true);
-        RoomPanel.SetActive(false);
-        ChatPanel.SetActive(false);
+        ShowPanel(LobbyPanel);
         PhotonNetwork.LocalPlayer.NickName = NickNameInput.text;
     }
 
@@ -162,9 +180,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnDisconnected(DisconnectCause cause)
     {
-        LobbyPanel.SetActive(false);
-        RoomPanel.SetActive(false);
-        ChatPanel.SetActive(false);
+        ShowPanel(null);
     }
 
     /*
@@ -211,8 +227,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         PhotonNetwork.LocalPlayer.NickName = NickNameInput.text;
         PhotonNetwork.CreateRoom(NickNameInput.text == "" ? "Room" + Random.Range(0, 100) : NickNameInput.text, new RoomOptions { MaxPlayers = 4 });
 
-        LobbyPanel.SetActive(false);
-        RoomPanel.SetActive(true);
+        ShowPanel(RoomPanel);
     }
 
     public void JoinRandomRoom()
@@ -222,13 +237,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public void LeaveRoom()
     {
+        ChatManager.CM.ChatClear();
         PhotonNetwork.LeaveRoom();
     }
 
     public override void OnJoinedRoom()
     {
-        LobbyPanel.SetActive(false);
-        RoomPanel.SetActive(true);
+        ShowPanel(RoomPanel);
+
         RoomRenewal();
         ChatInput.text = "";
 
@@ -293,6 +309,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         PV.RPC("ChatRPC", RpcTarget.All, PhotonNetwork.NickName + " : " + ChatInput.text);
         ChatInput.text = "";
+
+        ChatInput.ActivateInputField();
+        //ChatInput.Select();
     }
 
     [PunRPC] // RPC는 플레이어가 속해있는 방 모든 인원에게 전달한다
@@ -316,6 +335,4 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
     }
     #endregion
-
-
 }

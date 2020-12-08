@@ -13,7 +13,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     void Start()
     {
         PV = photonView;
-        NetInstance.Players.Add(this);
+        NM.Players.Add(this);
     }
 
     // Update is called once per frame
@@ -23,6 +23,6 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     }
     void OnDestroy()
     {
-        NetInstance.Players.Remove(this);
+        NM.Players.Remove(this);
     }
 }
