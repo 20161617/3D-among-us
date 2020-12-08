@@ -52,16 +52,23 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public void OnClickRoom(string roomName)
     {
+
         PhotonNetwork.JoinRoom(roomName);
     }
 
     void MyListRenewal()
     {
+        //방정보 갱신
         for (int i = 0; i < CellBtn.Length; i++)
         {
             bool isActive = (i < myList.Count) ? true : false;
             CellBtn[i].gameObject.SetActive(isActive);
+            // 방 이름
             CellBtn[i].transform.GetChild(0).GetComponent<Text>().text = isActive ? myList[i].Name : "";
+            // 임포스터 수
+            CellBtn[i].transform.GetChild(2).GetComponent<Text>().text = isActive ? "1" : "";
+            // 총 크루원 수
+            CellBtn[i].transform.GetChild(4).GetComponent<Text>().text = isActive ? string.Format("{0}/{1}", myList[i].PlayerCount, myList[i].MaxPlayers) : "";
         }
     }
 
@@ -92,15 +99,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     #region 서버연결
     private void Awake()
     {
-        //스크린 설정 및 서버 연결
         Screen.SetResolution(960, 540, false);
         Connect();
 
-        //로비 판넬 활성화
-        ShowPanel(LobbyPanel);
-
         //싱글톤
-        if(NetInstance == null)
+        if (NetInstance == null)
         {
             //이 클래스의 인스턴스가 탄생했을 때 전역변수 NetInstance에 게임매니저 인스턴스가 담겨있지 않다면, 자신을 넣어준다
             NetInstance = this;
@@ -117,6 +120,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             //그래서 이미 전역변수인 NetInstance에 인스턴스가 존재한다면 자신(새로운 씬의 오브젝트)을 삭제해준다.
             Destroy(this.gameObject);
         }
+
+        // PV = photonView;
     }
 
     private void Update()
@@ -144,7 +149,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
-        ShowPanel(LobbyPanel);
+        LobbyPanel.SetActive(true);
+        RoomPanel.SetActive(false);
+        ChatPanel.SetActive(false);
         PhotonNetwork.LocalPlayer.NickName = NickNameInput.text;
     }
 
@@ -155,8 +162,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnDisconnected(DisconnectCause cause)
     {
-        //판넬 비활성화
-        ShowPanel(null);
+        LobbyPanel.SetActive(false);
+        RoomPanel.SetActive(false);
+        ChatPanel.SetActive(false);
     }
 
     /*
@@ -201,9 +209,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public void CreateRoom()
     {
         PhotonNetwork.LocalPlayer.NickName = NickNameInput.text;
-        PhotonNetwork.CreateRoom(NickNameInput.text == "" ? "Room" + Random.Range(0, 100) : NickNameInput.text, new RoomOptions { MaxPlayers = 4 }, null);
+        PhotonNetwork.CreateRoom(NickNameInput.text == "" ? "Room" + Random.Range(0, 100) : NickNameInput.text, new RoomOptions { MaxPlayers = 4 });
 
-        ShowPanel(RoomPanel);
+        LobbyPanel.SetActive(false);
+        RoomPanel.SetActive(true);
     }
 
     public void JoinRandomRoom()
@@ -211,14 +220,18 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinRandomRoom();
     }
 
+    public void LeaveRoom()
+    {
+        PhotonNetwork.LeaveRoom();
+    }
+
     public override void OnJoinedRoom()
     {
-        //대기룸 업데이트
-        ShowPanel(RoomPanel);
+        LobbyPanel.SetActive(false);
+        RoomPanel.SetActive(true);
         RoomRenewal();
-
-        //채팅 필드 초기화
         ChatInput.text = "";
+
         for (int i = 0; i < ChatText.Length; i++)
         {
             ChatText[i].text = "";
@@ -228,18 +241,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         MyPlayer = PhotonNetwork.Instantiate("Cube", Vector3.zero, Quaternion.identity).GetComponent<PlayerScript>();
     }
 
-    public void LeaveRoom()
-    {
-        PhotonNetwork.LeaveRoom();
-    }
-
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
         CreateRoom();
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
-    { 
+    {
         CreateRoom();
     }
 
@@ -258,16 +266,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     void RoomRenewal()
     {
         RoomInfoText.text = PhotonNetwork.CurrentRoom.Name + " / " + PhotonNetwork.CurrentRoom.PlayerCount + "/" + PhotonNetwork.CurrentRoom.MaxPlayers;
-    }
-
-    void ShowPanel(GameObject CurPanel)
-    {
-        LobbyPanel.SetActive(false);
-        RoomPanel.SetActive(false);
-        ChatPanel.SetActive(false);
-
-        if(CurPanel != null)
-        CurPanel.SetActive(true);
     }
 
 

@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - NetworkManager
     - PingerRotate
     - PopBody
+    - UIManager
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
     - Photon.Pun.Demo.Asteroids.Bullet
@@ -94,71 +95,73 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11154}
     - Class: 114
-      Script: {instanceID: 11210}
+      Script: {instanceID: 11166}
     - Class: 114
-      Script: {instanceID: 11216}
+      Script: {instanceID: 11172}
     - Class: 114
-      Script: {instanceID: 11224}
+      Script: {instanceID: 11180}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11328}
     - Class: 114
-      Script: {instanceID: 11392}
+      Script: {instanceID: 11348}
+    - Class: 114
+      Script: {instanceID: 11386}
     - Class: 114
       Script: {instanceID: 11430}
     - Class: 114
-      Script: {instanceID: 11474}
+      Script: {instanceID: 11490}
     - Class: 114
-      Script: {instanceID: 11534}
+      Script: {instanceID: 11542}
     - Class: 114
-      Script: {instanceID: 11586}
+      Script: {instanceID: 11648}
     - Class: 114
-      Script: {instanceID: 11692}
+      Script: {instanceID: 11790}
     - Class: 114
-      Script: {instanceID: 11836}
+      Script: {instanceID: 11798}
     - Class: 114
-      Script: {instanceID: 11844}
+      Script: {instanceID: 11900}
     - Class: 114
-      Script: {instanceID: 11946}
+      Script: {instanceID: 11978}
     - Class: 114
-      Script: {instanceID: 12024}
+      Script: {instanceID: 12126}
     - Class: 114
-      Script: {instanceID: 12172}
+      Script: {instanceID: 12184}
     - Class: 114
-      Script: {instanceID: 12230}
+      Script: {instanceID: 12248}
     - Class: 114
-      Script: {instanceID: 12294}
+      Script: {instanceID: 12436}
     - Class: 114
-      Script: {instanceID: 12482}
+      Script: {instanceID: 12470}
     - Class: 114
-      Script: {instanceID: 12516}
+      Script: {instanceID: 12500}
     - Class: 114
-      Script: {instanceID: 12546}
+      Script: {instanceID: 12512}
     - Class: 114
-      Script: {instanceID: 12558}
+      Script: {instanceID: 12592}
     - Class: 114
-      Script: {instanceID: 12638}
+      Script: {instanceID: 12600}
     - Class: 114
-      Script: {instanceID: 12646}
+      Script: {instanceID: 12612}
     - Class: 114
-      Script: {instanceID: 12658}
+      Script: {instanceID: 12794}
     - Class: 114
-      Script: {instanceID: 12840}
+      Script: {instanceID: 12812}
     - Class: 114
-      Script: {instanceID: 12858}
+      Script: {instanceID: 12830}
     - Class: 114
-      Script: {instanceID: 12876}
+      Script: {instanceID: 12838}
     - Class: 114
-      Script: {instanceID: 12884}
+      Script: {instanceID: 12968}
     - Class: 114
-      Script: {instanceID: 13014}
+      Script: {instanceID: 13316}
     - Class: 114
-      Script: {instanceID: 13362}
+      Script: {instanceID: 13320}
     - Class: 114
-      Script: {instanceID: 13366}
+      Script: {instanceID: 13392}
     - Class: 114
-      Script: {instanceID: 13450}
+      Script: {instanceID: 13404}
     - Class: 114
-      Script: {instanceID: 13480}
+      Script: {instanceID: 13434}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1518,6 +1521,12 @@ ScriptsOnlyBuild:
     className: CurrentRoomExpectedUsersProperty
   - hash:
       serializedVersion: 2
+      Hash: d2b30e26442177a47d9902d980a12424
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIManager
+  - hash:
+      serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1603,4 +1612,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/01.Scenes/LobbyScene.unity
-  playerPath: C:/Users/qlenf/Desktop/test_US/amongUs.exe
+  playerPath: "D:/\uC870\uD604\uC131GF/3D-among-us/amongUs/amongUs.exe"
