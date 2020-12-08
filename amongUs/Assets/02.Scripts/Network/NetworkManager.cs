@@ -92,8 +92,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     #region 서버연결
     private void Awake()
     {
+        //스크린 설정 및 서버 연결
         Screen.SetResolution(960, 540, false);
         Connect();
+
+        //로비 판넬 활성화
+        ShowPanel(LobbyPanel);
 
         //싱글톤
         if(NetInstance == null)
@@ -113,8 +117,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             //그래서 이미 전역변수인 NetInstance에 인스턴스가 존재한다면 자신(새로운 씬의 오브젝트)을 삭제해준다.
             Destroy(this.gameObject);
         }
-        
-       // PV = photonView;
     }
 
     private void Update()
@@ -142,9 +144,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
-        LobbyPanel.SetActive(true);
-        RoomPanel.SetActive(false);
-        ChatPanel.SetActive(false);
+        ShowPanel(LobbyPanel);
         PhotonNetwork.LocalPlayer.NickName = NickNameInput.text;
     }
 
@@ -155,9 +155,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnDisconnected(DisconnectCause cause)
     {
-        LobbyPanel.SetActive(false);
-        RoomPanel.SetActive(false);
-        ChatPanel.SetActive(false);
+        //판넬 비활성화
+        ShowPanel(null);
     }
 
     /*
@@ -202,10 +201,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public void CreateRoom()
     {
         PhotonNetwork.LocalPlayer.NickName = NickNameInput.text;
-        PhotonNetwork.CreateRoom(NickNameInput.text == "" ? "Room" + Random.Range(0, 100) : NickNameInput.text, new RoomOptions { MaxPlayers = 4 });
+        PhotonNetwork.CreateRoom(NickNameInput.text == "" ? "Room" + Random.Range(0, 100) : NickNameInput.text, new RoomOptions { MaxPlayers = 4 }, null);
 
-        LobbyPanel.SetActive(false);
-        RoomPanel.SetActive(true);
+        ShowPanel(RoomPanel);
     }
 
     public void JoinRandomRoom()
@@ -213,17 +211,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinRandomRoom();
     }
 
-    public void LeaveRoom()
-    {
-        PhotonNetwork.LeaveRoom();
-    }
-
     public override void OnJoinedRoom()
     {
-        RoomPanel.SetActive(true);
+        //대기룸 업데이트
+        ShowPanel(RoomPanel);
         RoomRenewal();
-        ChatInput.text = "";
 
+        //채팅 필드 초기화
+        ChatInput.text = "";
         for (int i = 0; i < ChatText.Length; i++)
         {
             ChatText[i].text = "";
@@ -231,6 +226,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         //새로 추가된 부분
         MyPlayer = PhotonNetwork.Instantiate("Cube", Vector3.zero, Quaternion.identity).GetComponent<PlayerScript>();
+    }
+
+    public void LeaveRoom()
+    {
+        PhotonNetwork.LeaveRoom();
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
@@ -258,6 +258,16 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     void RoomRenewal()
     {
         RoomInfoText.text = PhotonNetwork.CurrentRoom.Name + " / " + PhotonNetwork.CurrentRoom.PlayerCount + "/" + PhotonNetwork.CurrentRoom.MaxPlayers;
+    }
+
+    void ShowPanel(GameObject CurPanel)
+    {
+        LobbyPanel.SetActive(false);
+        RoomPanel.SetActive(false);
+        ChatPanel.SetActive(false);
+
+        if(CurPanel != null)
+        CurPanel.SetActive(true);
     }
 
 
