@@ -1,7 +1,10 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+<<<<<<< HEAD
     - ChatManager
+=======
+>>>>>>> parent of eccb511... TeamAssign
     - CircleRotate
     - Com.MyCompany.MyGame.CameraFollow
     - MoveCtrl
@@ -98,10 +101,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11154}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 11166}
+=======
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 11172}
+      Script: {instanceID: 11176}
     - Class: 114
+      Script: {instanceID: 11184}
+>>>>>>> parent of eccb511... TeamAssign
+    - Class: 114
+      Script: {instanceID: 11332}
+    - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 11180}
     - Class: 114
       Script: {instanceID: 11328}
@@ -115,21 +127,39 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11490}
     - Class: 114
       Script: {instanceID: 11542}
+=======
+      Script: {instanceID: 11352}
     - Class: 114
-      Script: {instanceID: 11648}
+      Script: {instanceID: 11390}
     - Class: 114
-      Script: {instanceID: 11790}
+      Script: {instanceID: 11434}
     - Class: 114
+      Script: {instanceID: 11494}
+    - Class: 114
+      Script: {instanceID: 11546}
+    - Class: 114
+      Script: {instanceID: 11652}
+>>>>>>> parent of eccb511... TeamAssign
+    - Class: 114
+      Script: {instanceID: 11794}
+    - Class: 114
+      Script: {instanceID: 11802}
+    - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 11798}
     - Class: 114
       Script: {instanceID: 11900}
     - Class: 114
       Script: {instanceID: 11976}
+=======
+      Script: {instanceID: 11904}
+>>>>>>> parent of eccb511... TeamAssign
     - Class: 114
-      Script: {instanceID: 11980}
+      Script: {instanceID: 11982}
     - Class: 114
       Script: {instanceID: 12128}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 12186}
     - Class: 114
       Script: {instanceID: 12250}
@@ -163,10 +193,49 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13322}
     - Class: 114
       Script: {instanceID: 13394}
+=======
+      Script: {instanceID: 12188}
     - Class: 114
-      Script: {instanceID: 13406}
+      Script: {instanceID: 12252}
     - Class: 114
+      Script: {instanceID: 12440}
+    - Class: 114
+      Script: {instanceID: 12474}
+    - Class: 114
+      Script: {instanceID: 12504}
+    - Class: 114
+      Script: {instanceID: 12516}
+    - Class: 114
+      Script: {instanceID: 12596}
+    - Class: 114
+      Script: {instanceID: 12604}
+    - Class: 114
+      Script: {instanceID: 12616}
+    - Class: 114
+      Script: {instanceID: 12798}
+    - Class: 114
+      Script: {instanceID: 12816}
+    - Class: 114
+      Script: {instanceID: 12834}
+    - Class: 114
+      Script: {instanceID: 12842}
+    - Class: 114
+      Script: {instanceID: 12972}
+    - Class: 114
+      Script: {instanceID: 13320}
+    - Class: 114
+      Script: {instanceID: 13324}
+>>>>>>> parent of eccb511... TeamAssign
+    - Class: 114
+      Script: {instanceID: 13396}
+    - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 13436}
+=======
+      Script: {instanceID: 13408}
+    - Class: 114
+      Script: {instanceID: 13438}
+>>>>>>> parent of eccb511... TeamAssign
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1623,4 +1692,8 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/01.Scenes/LobbyScene.unity
+<<<<<<< HEAD
   playerPath: C:/Users/qlenf/Desktop/test_US/amongUs.exe
+=======
+  playerPath: "D:/\uC870\uD604\uC131GF/3D-among-us/amongUs/amongUs.exe"
+>>>>>>> parent of eccb511... TeamAssign
