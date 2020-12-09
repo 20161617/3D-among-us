@@ -42,10 +42,8 @@ MonoBehaviour:
   - GameStartRPC
   - MissionClearGauge
   - testA
-<<<<<<< HEAD
+  - SetImpoCrew
   - ChatClearRPC
-=======
->>>>>>> parent of eccb511... TeamAssign
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

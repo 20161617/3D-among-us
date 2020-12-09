@@ -19,9 +19,9 @@ public class PopBody : MonoBehaviour
     {
         if (Pinger.transform.eulerAngles.z == 0 && intTime == 0)
             transform.localScale = new Vector3(1.1f, 1.1f, 1);
-        else if (Pinger.transform.eulerAngles.z == 0 && intTime == 20)
+        else if (Pinger.transform.eulerAngles.z == 0 && intTime == 10)
             transform.localScale = new Vector3(1, 1, 1);
-        if (Pinger.transform.eulerAngles.z == 0 && intTime != 21)
+        if (Pinger.transform.eulerAngles.z == 0 && intTime != 11)
             intTime++;
 
     }

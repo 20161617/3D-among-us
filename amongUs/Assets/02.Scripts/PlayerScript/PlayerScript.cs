@@ -1,6 +1,7 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
 using static UIManager;
@@ -8,16 +9,15 @@ using static NetworkManager;
 
 public class PlayerScript : MonoBehaviourPunCallbacks
 {
+    public bool isImposter;
     PhotonView PV;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         PV = photonView;
-<<<<<<< HEAD
-        NM.Players.Add(this);
-=======
         NetInstance.Players.Add(this);
->>>>>>> parent of eccb511... TeamAssign
+        gameObject.SetActive(false);
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -27,10 +27,11 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     }
     void OnDestroy()
     {
-<<<<<<< HEAD
-        NM.Players.Remove(this);
-=======
         NetInstance.Players.Remove(this);
->>>>>>> parent of eccb511... TeamAssign
+    }
+    [PunRPC]
+    void SetImpoCrew(bool _isImposter)
+    {
+        isImposter = _isImposter;
     }
 }
