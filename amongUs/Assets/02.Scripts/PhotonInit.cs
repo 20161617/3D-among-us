@@ -8,8 +8,11 @@ using UnityEngine.SceneManagement;
 
 public class PhotonInit : MonoBehaviourPunCallbacks
 {
+    public static PhotonInit Instance;
+
     private void Awake()
     {
+        Instance = this;
 
         PhotonNetwork.AutomaticallySyncScene = true;
         //방의 모든 클라이언트가 마스터 클라이언트와 동일한 레벨을로드해야하는지 여부를 정의합니다.
@@ -41,7 +44,7 @@ public class PhotonInit : MonoBehaviourPunCallbacks
     //방에 입장한 후에 플레이어 생성
     public override void OnJoinedRoom()
     {
-        Debug.Log("Joined room");
+
         StartCoroutine(this.CreatePlayer());
         CreateCamera();
         //방에 입장한 이후에 플레이어를 생성한다. 
