@@ -32,10 +32,16 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public PhotonView PV;
 
     //새로 추가..
+<<<<<<< HEAD
     public static NetworkManager NM;
 
     public List<PlayerScript> Players = new List<PlayerScript>();
 
+=======
+    public static NetworkManager NetInstance;
+
+    public List<PlayerScript> Players = new List<PlayerScript>();
+>>>>>>> parent of eccb511... TeamAssign
     public PlayerScript MyPlayer;
 
     List<RoomInfo> myList = new List<RoomInfo>();
@@ -137,6 +143,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         StatusText.text = PhotonNetwork.NetworkClientState.ToString();
 
+<<<<<<< HEAD
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             bool chatAvtive = !ChatManager.CM.ChatPanel.activeSelf;
@@ -150,6 +157,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
             if (ChatPanel.activeSelf)
         {
+=======
+        if (ChatPanel.activeSelf)
+        {
+>>>>>>> parent of eccb511... TeamAssign
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 Send();

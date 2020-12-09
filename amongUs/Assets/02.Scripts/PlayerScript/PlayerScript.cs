@@ -13,7 +13,11 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     void Start()
     {
         PV = photonView;
+<<<<<<< HEAD
         NM.Players.Add(this);
+=======
+        NetInstance.Players.Add(this);
+>>>>>>> parent of eccb511... TeamAssign
     }
 
     // Update is called once per frame
@@ -23,6 +27,10 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     }
     void OnDestroy()
     {
+<<<<<<< HEAD
         NM.Players.Remove(this);
+=======
+        NetInstance.Players.Remove(this);
+>>>>>>> parent of eccb511... TeamAssign
     }
 }
