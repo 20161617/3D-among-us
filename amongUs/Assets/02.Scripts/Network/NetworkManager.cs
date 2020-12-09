@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -24,8 +25,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public InputField ChatInput;
     public Text[] ChatText;
 
-    [Header("IntroPanel")]
-    public GameObject IntroPanel;
+    [Header("GameSceneManager")]
+    public GameSceneManager GSM;
 
     [Header("ETC")]
     public Text StatusText;
@@ -33,9 +34,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     //새로 추가..
     public static NetworkManager NetInstance;
-
-    public List<PlayerScript> Players = new List<PlayerScript>();
     public PlayerScript MyPlayer;
+    public List<PlayerScript> Players = new List<PlayerScript>();
+
 
     List<RoomInfo> myList = new List<RoomInfo>();
 
@@ -128,11 +129,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         StatusText.text = PhotonNetwork.NetworkClientState.ToString();
 
-        if (ChatPanel.activeSelf)
+        if (ChatPanel != null)
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (ChatPanel.activeSelf)
             {
-                Send();
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    Send();
+                }
             }
         }
     }
@@ -237,8 +241,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             ChatText[i].text = "";
         }
 
-        //새로 추가된 부분
-        MyPlayer = PhotonNetwork.Instantiate("Cube", Vector3.zero, Quaternion.identity).GetComponent<PlayerScript>();
+        MyPlayer = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity).GetComponent<PlayerScript>();
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
@@ -268,16 +271,37 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         RoomInfoText.text = PhotonNetwork.CurrentRoom.Name + " / " + PhotonNetwork.CurrentRoom.PlayerCount + "/" + PhotonNetwork.CurrentRoom.MaxPlayers;
     }
 
+    #endregion
 
+    #region 게임시작
     //새로 추가된 부분
     public void GameStart()
     {
-        PV.RPC("GameStart", RpcTarget.AllViaServer);
+        SetImpoCrew();
+        PV.RPC("GameStartRPC", RpcTarget.AllViaServer);
     }
+
+
+    void SetImpoCrew()
+    {
+        List<PlayerScript> ImpoList = new List<PlayerScript>(Players);
+        for (int i = 0; i < 1; i++)
+        {
+            int rand = Random.Range(0, ImpoList.Count);
+            Debug.Log(rand + "번 플레이어 임포");
+            Debug.Log(ImpoList.Count + "명");
+            Players[rand].GetComponent<PhotonView>().RPC("SetImpoCrew", RpcTarget.AllViaServer, true);
+            ImpoList.RemoveAt(rand);
+        }
+    }
+
 
     [PunRPC]
     void GameStartRPC()
     {
+        GSM.GameStart = true;
+        GSM.call();
+        SceneManager.LoadScene("GameScene");
         print("게임시작");
     }
 
