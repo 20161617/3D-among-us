@@ -16,7 +16,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     {
         PV = photonView;
         NetInstance.Players.Add(this);
-        gameObject.SetActive(false);
+       // gameObject.SetActive(false);
         DontDestroyOnLoad(gameObject);
     }
 
