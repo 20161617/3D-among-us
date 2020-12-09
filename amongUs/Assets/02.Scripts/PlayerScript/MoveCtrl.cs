@@ -7,16 +7,16 @@ using Photon.Realtime;
 public class MoveCtrl : MonoBehaviourPunCallbacks, IPunObservable
 {
     PhotonView pv;
-    public float speed = 10.0f;
-    public float turnSpeed = 10.0f;
+    public float speed = 5.0f;
+    public float turnSpeed = 1.1f;
     private Transform tr;
 
     void Start()
     {
-       
+
         pv = photonView;
         tr = GetComponent<Transform>();
-      //  MissionManager.Instance().setView(pv);
+        //  MissionManager.Instance().setView(pv);
 
     }
     public bool getViewIsMine()
@@ -31,7 +31,7 @@ public class MoveCtrl : MonoBehaviourPunCallbacks, IPunObservable
             float moveHorizontal = Input.GetAxis("Horizontal");
             float moveVertical = Input.GetAxis("Vertical");
 
-            Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+            Vector3 movement = new Vector3(0.0f, 0.0f, moveVertical);
             tr.Translate(movement * Time.deltaTime * speed);
 
 
@@ -41,7 +41,7 @@ public class MoveCtrl : MonoBehaviourPunCallbacks, IPunObservable
             if (isMove)
             {
 
-                transform.Rotate(0f, moveHorizontal * turnSpeed * Time.deltaTime, 0f);
+                transform.Rotate(0f, moveHorizontal, 0f);
 
             }
 
@@ -88,4 +88,3 @@ public class MoveCtrl : MonoBehaviourPunCallbacks, IPunObservable
         }
     }
 }
-
