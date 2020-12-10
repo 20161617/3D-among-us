@@ -5,12 +5,20 @@ using UnityEngine.UI;
 
 public class GameSceneManager : MonoBehaviour
 {
-    public bool GameStart;
-    public GameObject gameSceneManager;
+    public static GameSceneManager GameInstance;
+    public GameObject MainCamera;
+    public GameObject Map;
 
-
-    public void call()
+    void Awake()
     {
-        DontDestroyOnLoad(gameSceneManager);
+        GameInstance = this;
     }
+
+
+    public void CameraOn()
+    {
+        MainCamera.SetActive(true);
+        Map.SetActive(true);
+    }
+
 }

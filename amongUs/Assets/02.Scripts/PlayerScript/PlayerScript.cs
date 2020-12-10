@@ -29,9 +29,22 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     {
         NetInstance.Players.Remove(this);
     }
+
+    [PunRPC]
+    void ShowCharacter()
+    {
+        gameObject.SetActive(true);
+    }
+
     [PunRPC]
     void SetImpoCrew(bool _isImposter)
     {
         isImposter = _isImposter;
+    }
+
+    [PunRPC]
+    void SetMyPosition(Vector3 postion)
+    {
+        gameObject.transform.position = postion;
     }
 }

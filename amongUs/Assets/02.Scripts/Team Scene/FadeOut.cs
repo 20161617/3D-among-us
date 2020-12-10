@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
+using Photon.Realtime;
+using static NetworkManager;
+using static GameSceneManager;
 
 public class FadeOut : MonoBehaviour
 {           //판넬오브젝트
@@ -24,6 +28,9 @@ public class FadeOut : MonoBehaviour
             if (checkbool)                                            //만약 checkbool 이 참이면
             {
                 Debug.Log(sceneNum + "번 씬삭제!");
+
+                NetInstance.MyPlayer.GetComponent<PhotonView>().RPC("ShowCharacter", RpcTarget.AllViaServer);
+                GameInstance.CameraOn();
                 Scene scene = SceneManager.GetSceneByBuildIndex(sceneNum);
                 SceneManager.UnloadSceneAsync(scene);                     //판넬 파괴, 삭제
             }

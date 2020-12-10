@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: 1f1391d9c33acb741be8fc66339ffb67
   - enabled: 1
     path: Assets/01.Scenes/GameScene.unity
-    guid: 8fd2de009aba9a74896ef2331e23b420
+    guid: c255d180768520648b628bd376f26f7b
   - enabled: 1
     path: Assets/01.Scenes/Impo Team.unity
     guid: 6562e8fc0e48c5f418325c6aa6b6f55c

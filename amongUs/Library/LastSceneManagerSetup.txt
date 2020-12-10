@@ -7,11 +7,3 @@ sceneSetups:
   isLoaded: 0
   isActive: 0
   isSubScene: 0
-- path: Assets/01.Scenes/Impo Team.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/01.Scenes/Crew Team.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0

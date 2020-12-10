@@ -299,8 +299,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     [PunRPC]
     void GameStartRPC()
     {
-        GSM.GameStart = true;
-        GSM.call();
         SceneManager.LoadScene("GameScene");
         print("게임시작");
     }
