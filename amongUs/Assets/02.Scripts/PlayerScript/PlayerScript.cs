@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,7 +15,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     void Awake()
     {
         PV = photonView;
-        NetInstance.Players.Add(this);
+        DatabaseManager.databaseManager.Players.Add(this);
        // gameObject.SetActive(false);
         DontDestroyOnLoad(gameObject);
     }
@@ -27,7 +27,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     }
     void OnDestroy()
     {
-        NetInstance.Players.Remove(this);
+        DatabaseManager.databaseManager.Players.Remove(this);
     }
     [PunRPC]
     void SetImpoCrew(bool _isImposter)

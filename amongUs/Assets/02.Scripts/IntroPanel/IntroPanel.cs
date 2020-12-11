@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
@@ -19,7 +19,7 @@ public class IntroPanel : MonoBehaviour
     void AssignTeam()
     {
         //내가 임포스터라면
-        if (NetInstance.MyPlayer.isImposter)
+        if (DatabaseManager.databaseManager.MyPlayer.isImposter)
         {
             //임포스터 팀 씬 로드
             SceneManager.LoadScene("Impo Team", LoadSceneMode.Additive);
