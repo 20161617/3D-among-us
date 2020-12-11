@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class MiniGame_Navigation : MonoBehaviour ,IPointerDownHandler, IDragHandler,IPointerUpHandler
 {
-    RectTransform RT;
+    public RectTransform RT;
     public GameObject MinigamePanel;
     public Vector2 firstPos;
 
@@ -25,14 +25,17 @@ public class MiniGame_Navigation : MonoBehaviour ,IPointerDownHandler, IDragHand
     }
     public void OnPointerDown(PointerEventData data)
     {
+        Debug.Log("마우스다운 ");
     }
     public void OnDrag(PointerEventData data)
     {
-        RT.transform.position = data.position;   
+        RT.transform.position = data.position;
+        Debug.Log("드래그 ");
     }
 
     public void OnPointerUp(PointerEventData data)
-    {    
+    {
+        Debug.Log("마우스업  ");
         if (RT.anchoredPosition.x > -20 && RT.anchoredPosition.x < 20 && RT.anchoredPosition.y > -20 && RT.anchoredPosition.y < 20)
         {
             RT.anchoredPosition = Vector2.zero;

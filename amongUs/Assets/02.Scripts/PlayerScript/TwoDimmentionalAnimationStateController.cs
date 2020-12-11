@@ -55,11 +55,11 @@ public class TwoDimmentionalAnimationStateController : MonoBehaviour
         {
             velocityZ -= Time.deltaTime * acceleration;
         }
-        if (leftPressed && velocityX > -0.5f)
+        if (leftPressed && velocityX > -0.5f && forwardPressed)
         {
             velocityX -= Time.deltaTime * acceleration;
         }
-        if (rightPressed && velocityX < 0.5f)
+        if (rightPressed && velocityX < 0.5f && forwardPressed)
         {
             velocityX += Time.deltaTime * acceleration;
         }
