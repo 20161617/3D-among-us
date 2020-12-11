@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class GameSceneManager : MonoBehaviour
 {
     public static GameSceneManager GameInstance;
     public GameObject MainCamera;
     public GameObject Map;
+
 
     void Awake()
     {

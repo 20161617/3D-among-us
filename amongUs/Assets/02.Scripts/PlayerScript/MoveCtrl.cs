@@ -10,6 +10,12 @@ public class MoveCtrl : MonoBehaviourPunCallbacks, IPunObservable
     public float speed = 5.0f;
     public float turnSpeed = 1.1f;
     private Transform tr;
+    Rigidbody rigid;
+
+    void Awake()
+    {
+        rigid = GetComponent<Rigidbody>();
+    }
 
     void Start()
     {
@@ -23,7 +29,7 @@ public class MoveCtrl : MonoBehaviourPunCallbacks, IPunObservable
     {
         return photonView.IsMine;
     }
-    void Update()
+    void Move()
     {
         //controlled locally일 경우 이동(자기 자신의 캐릭터일 때)
         if (photonView.IsMine)
@@ -65,6 +71,18 @@ public class MoveCtrl : MonoBehaviourPunCallbacks, IPunObservable
             }
         }
 
+    }
+
+    //오브젝트와 충돌했을때, 자동으로 회전되는 것을 막음
+    void FixedUpdate()
+    {
+        FreezeRotation();
+        Move();
+    }
+
+    void FreezeRotation()
+    {
+        rigid.angularVelocity = Vector3.zero;
     }
 
     //클론이 통신을 받는 변수 설정

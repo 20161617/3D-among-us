@@ -9,8 +9,8 @@ public class SpawnCenter : MonoBehaviour
 {
 
 
-    public GameObject SpawnPoint;
     Vector3 Center;
+
     int playerNum = NetInstance.Players.Count;
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,6 @@ public class SpawnCenter : MonoBehaviour
         Debug.Log(Center.z + 3 * Mathf.Sin(radian));
         //반지름 3을 기준으로 플레이어 수만큼 스폰포인트 소환
     }
-
 
     // Update is called once per frame
     void Update()

@@ -9,12 +9,12 @@ using static NetworkManager;
 public class UIManager : MonoBehaviourPun
 {
 
-    public static UIManager UM;
+    public static UIManager uiInstance;
     public Button StartBtn;
 
     void Awake()
     {
-        UM = this;
+        uiInstance = this;
     }
 
     // Start is called before the first frame update
@@ -26,7 +26,8 @@ public class UIManager : MonoBehaviourPun
     void Update()
     {
         if (!PhotonNetwork.IsMasterClient) return;
-        ShowStartBtn();
+        if (StartBtn != null)
+            ShowStartBtn();
     }
     void ShowStartBtn()
     {
