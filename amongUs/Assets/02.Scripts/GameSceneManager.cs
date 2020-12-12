@@ -10,6 +10,7 @@ public class GameSceneManager : MonoBehaviour
     public static GameSceneManager GameInstance;
     public GameObject MainCamera;
     public GameObject Map;
+    public GameObject UIPanel;
 
 
     void Awake()
@@ -22,6 +23,7 @@ public class GameSceneManager : MonoBehaviour
     {
         MainCamera.SetActive(true);
         Map.SetActive(true);
+        UIPanel.SetActive(true);
     }
 
 }

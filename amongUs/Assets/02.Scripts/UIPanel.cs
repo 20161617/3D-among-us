@@ -13,6 +13,8 @@ public class UIPanel : MonoBehaviour
     public Button SabotageButton;
     public Button VentButton;
 
+    private Dictionary<Button, string> ButtonList = new Dictionary<Button, string>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,9 @@ public class UIPanel : MonoBehaviour
         {
             UseButton.gameObject.SetActive(true);
             ReportButton.gameObject.SetActive(true);
+
+            ButtonList.Add(UseButton, "Use");
+            ButtonList.Add(ReportButton, "Report");
         }
         else
         {
@@ -32,6 +37,11 @@ public class UIPanel : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+
+    }
+
+    void ShowButton(string BtnName)
     {
 
     }
