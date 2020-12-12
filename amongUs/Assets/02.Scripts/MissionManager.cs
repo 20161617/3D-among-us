@@ -34,7 +34,7 @@ public class MissionManager :   MonoBehaviourPun
 
         PV = photonView;
         Instance = this;
-        PV.RPC("MissionClearGauge", RpcTarget.AllViaServer);
+     
     }
     public void MissionClear(GameObject _object) // 미션을꺳을떄 
     {
