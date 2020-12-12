@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class TwoDimmentionalAnimationStateController : MonoBehaviour
+public class TwoDimmentionalAnimationStateController : MonoBehaviourPunCallbacks
 {
     Animator animator;
     float velocityZ = 0.0f;
     float velocityX = 0.0f;
     public float acceleration = 2.0f;
     public float deceleration = 2.0f;
+    PhotonView PV;
 
     int VelocityZHash;
     int VelocityXHash;
@@ -16,6 +19,7 @@ public class TwoDimmentionalAnimationStateController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PV = photonView;
         animator = GetComponent<Animator>();
 
         VelocityZHash = Animator.StringToHash("Velocity Z");
@@ -80,6 +84,8 @@ public class TwoDimmentionalAnimationStateController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!PV.IsMine)
+            return;
         bool forwardPressed = Input.GetKey(KeyCode.W);
         bool leftPressed = Input.GetKey(KeyCode.A);
         bool rightPressed = Input.GetKey(KeyCode.D);

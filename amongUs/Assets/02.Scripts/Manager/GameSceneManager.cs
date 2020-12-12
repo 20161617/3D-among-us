@@ -2,15 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class GameSceneManager : MonoBehaviour
 {
-    public bool GameStart;
-    public GameObject gameSceneManager;
+    public static GameSceneManager GameInstance;
+    public GameObject MainCamera;
+    public GameObject Map;
+    public GameObject UIPanel;
+
+    GameObject networkManager;
 
 
-    public void call()
+    void Awake()
     {
-        DontDestroyOnLoad(gameSceneManager);
+        GameInstance = this;
+
+        networkManager = GameObject.Find("NetworkManager");
     }
+    void Start()
+    {
+        Destroy(networkManager);
+    }
+
+
+    public void CameraOn()
+    {
+        MainCamera.SetActive(true);
+        Map.SetActive(true);
+        UIPanel.SetActive(true);
+    }
+
 }

@@ -19,7 +19,6 @@ public class MissionManager :   MonoBehaviourPun
     public Image missionGauge;
     
 
-    private float getGagueFill = 0f;
     float missionBarFill { get; set; } //미션게이지 최소 0 최대 1 
     const float MIN_BAR = 0.0f;
     const float MAX_BAR = 1.0f;
@@ -35,6 +34,7 @@ public class MissionManager :   MonoBehaviourPun
 
         PV = photonView;
         Instance = this;
+     
     }
     public void MissionClear(GameObject _object) // 미션을꺳을떄 
     {

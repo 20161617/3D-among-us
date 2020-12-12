@@ -1,11 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
 using static UIManager;
-using static NetworkManager;
+using static DatabaseManager;
 
 public class PlayerScript : MonoBehaviourPunCallbacks
 {
@@ -19,7 +19,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     void Awake()
     {
         PV = photonView;
-        DatabaseManager.databaseManager.Players.Add(this);
+        databaseManager.Players.Add(this);
 
         color = gameObject.transform.Find("Beta_Surface").GetComponent<SkinnedMeshRenderer>();
 
@@ -34,7 +34,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 
     void OnDestroy()
     {
-        DatabaseManager.databaseManager.Players.Remove(this);
+        databaseManager.Players.Remove(this);
     }
 
     [PunRPC]
@@ -46,7 +46,24 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     [PunRPC]
     public void SetColor(int _colorIndex)
     {
-        color.material = DatabaseManager.databaseManager.Colors[_colorIndex];
+        color.material = databaseManager.Colors[_colorIndex];
         colorIndex = _colorIndex;
+    }
+    [PunRPC]
+    void GameStartRPC()
+    {
+        gameObject.SetActive(false);
+    }
+
+    [PunRPC]
+    void ShowCharacter()
+    {
+        gameObject.SetActive(true);
+    }
+
+    [PunRPC]
+    void SetMyPosition(Vector3 postion)
+    {
+        gameObject.transform.position = postion;
     }
 }
