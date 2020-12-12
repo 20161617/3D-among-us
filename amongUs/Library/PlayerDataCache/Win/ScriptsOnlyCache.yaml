@@ -2,12 +2,18 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - ChatManager
 =======
     - AnimationStateController
 >>>>>>> origin/진짜메인인거임
+=======
+    - ChatManager
+>>>>>>> origin/진짜메인인거임
     - CircleRotate
+    - ColorManager
     - Com.MyCompany.MyGame.CameraFollow
+    - DatabaseManager
     - FadeIn
     - FadeOut
     - GameSceneManager
@@ -21,6 +27,7 @@ ScriptsOnlyBuild:
     - RightBlackMove
     - TwoDimmentionalAnimationStateController
     - UIManager
+    - WatingRoomManager
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
     - Photon.Pun.Demo.Asteroids.Bullet
@@ -58,7 +65,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Mask
     - UnityEngine.UI.Outline
     - UnityEngine.UI.ScrollRect
-    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
@@ -92,10 +98,11 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11160}
+      Script: {instanceID: 11162}
     - Class: 114
-      Script: {instanceID: 11186}
+      Script: {instanceID: 11188}
     - Class: 114
+<<<<<<< HEAD
 <<<<<<< HEAD
       Script: {instanceID: 11166}
     - Class: 114
@@ -104,14 +111,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11180}
 =======
       Script: {instanceID: 12000}
+=======
+      Script: {instanceID: 11282}
+>>>>>>> origin/진짜메인인거임
     - Class: 114
-      Script: {instanceID: 12362}
+      Script: {instanceID: 11842}
     - Class: 114
-      Script: {instanceID: 12982}
+      Script: {instanceID: 12032}
     - Class: 114
-      Script: {instanceID: 18734}
+      Script: {instanceID: 12404}
     - Class: 114
-      Script: {instanceID: 21426}
+      Script: {instanceID: 13042}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -147,16 +157,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
 >>>>>>> origin/진짜메인인거임
     - Class: 114
-      Script: {instanceID: 11160}
+      Script: {instanceID: 11162}
     - Class: 114
-      Script: {instanceID: 11186}
+      Script: {instanceID: 11188}
     - Class: 114
-      Script: {instanceID: 11798}
+      Script: {instanceID: 11816}
     - Class: 114
-      Script: {instanceID: 12186}
+      Script: {instanceID: 12224}
     - Class: 114
-      Script: {instanceID: 12478}
+      Script: {instanceID: 12522}
     - Class: 114
+<<<<<<< HEAD
 <<<<<<< HEAD
       Script: {instanceID: 11542}
     - Class: 114
@@ -167,8 +178,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11798}
 =======
       Script: {instanceID: 12808}
+=======
+      Script: {instanceID: 12862}
+>>>>>>> origin/진짜메인인거임
     - Class: 114
-      Script: {instanceID: 12982}
+      Script: {instanceID: 13042}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -211,19 +225,19 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11160}
+      Script: {instanceID: 11162}
     - Class: 114
-      Script: {instanceID: 11186}
+      Script: {instanceID: 11188}
     - Class: 114
-      Script: {instanceID: 12000}
+      Script: {instanceID: 11282}
     - Class: 114
-      Script: {instanceID: 12362}
+      Script: {instanceID: 11842}
     - Class: 114
-      Script: {instanceID: 12982}
+      Script: {instanceID: 12032}
     - Class: 114
-      Script: {instanceID: 18734}
+      Script: {instanceID: 12404}
     - Class: 114
-      Script: {instanceID: 21426}
+      Script: {instanceID: 13042}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -275,8 +289,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
+<<<<<<< HEAD
     - Class: 108
       Script: {instanceID: 0}
+>>>>>>> origin/진짜메인인거임
+=======
 >>>>>>> origin/진짜메인인거임
     - Class: 114
       Script: {instanceID: 11148}
@@ -299,36 +316,31 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11156}
 >>>>>>> origin/진짜메인인거임
     - Class: 114
-      Script: {instanceID: 11158}
-    - Class: 114
       Script: {instanceID: 11160}
     - Class: 114
-      Script: {instanceID: 11172}
+      Script: {instanceID: 11162}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 11174}
     - Class: 114
-      Script: {instanceID: 11186}
+      Script: {instanceID: 11180}
     - Class: 114
-      Script: {instanceID: 11334}
+      Script: {instanceID: 11188}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11346}
     - Class: 114
-      Script: {instanceID: 11392}
+      Script: {instanceID: 11366}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 11528}
     - Class: 114
-      Script: {instanceID: 11648}
+      Script: {instanceID: 11664}
     - Class: 114
-      Script: {instanceID: 11790}
+      Script: {instanceID: 11916}
     - Class: 114
-      Script: {instanceID: 11902}
+      Script: {instanceID: 11930}
     - Class: 114
-      Script: {instanceID: 11980}
+      Script: {instanceID: 12012}
     - Class: 114
-      Script: {instanceID: 12130}
-    - Class: 114
-      Script: {instanceID: 12190}
-    - Class: 114
+<<<<<<< HEAD
 <<<<<<< HEAD
       Script: {instanceID: 13394}
     - Class: 114
@@ -337,35 +349,39 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13436}
 =======
       Script: {instanceID: 12254}
+=======
+      Script: {instanceID: 12228}
+>>>>>>> origin/진짜메인인거임
     - Class: 114
-      Script: {instanceID: 12444}
+      Script: {instanceID: 12294}
     - Class: 114
-      Script: {instanceID: 12508}
+      Script: {instanceID: 12486}
     - Class: 114
-      Script: {instanceID: 12520}
+      Script: {instanceID: 12564}
     - Class: 114
-      Script: {instanceID: 12600}
+      Script: {instanceID: 12646}
     - Class: 114
-      Script: {instanceID: 12604}
+      Script: {instanceID: 12656}
     - Class: 114
-      Script: {instanceID: 12610}
+      Script: {instanceID: 12836}
     - Class: 114
-      Script: {instanceID: 12622}
+      Script: {instanceID: 12848}
     - Class: 114
-      Script: {instanceID: 12782}
+      Script: {instanceID: 12880}
     - Class: 114
-      Script: {instanceID: 12794}
+      Script: {instanceID: 12898}
     - Class: 114
-      Script: {instanceID: 12826}
+      Script: {instanceID: 12906}
     - Class: 114
-      Script: {instanceID: 12844}
+      Script: {instanceID: 13042}
     - Class: 114
-      Script: {instanceID: 12852}
+      Script: {instanceID: 13400}
     - Class: 114
-      Script: {instanceID: 12982}
+      Script: {instanceID: 13404}
     - Class: 114
-      Script: {instanceID: 13330}
+      Script: {instanceID: 13488}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 13334}
     - Class: 114
       Script: {instanceID: 13406}
@@ -373,6 +389,9 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13418}
     - Class: 114
       Script: {instanceID: 13448}
+>>>>>>> origin/진짜메인인거임
+=======
+      Script: {instanceID: 13518}
 >>>>>>> origin/진짜메인인거임
     - Class: 115
       Script: {instanceID: 0}
@@ -404,6 +423,97 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 225
       Script: {instanceID: 0}
+    Assets/01.Scenes/WaitingRoom.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11148}
+    - Class: 114
+      Script: {instanceID: 11150}
+    - Class: 114
+      Script: {instanceID: 11154}
+    - Class: 114
+      Script: {instanceID: 11158}
+    - Class: 114
+      Script: {instanceID: 11160}
+    - Class: 114
+      Script: {instanceID: 11162}
+    - Class: 114
+      Script: {instanceID: 11188}
+    - Class: 114
+      Script: {instanceID: 11808}
+    - Class: 114
+      Script: {instanceID: 11930}
+    - Class: 114
+      Script: {instanceID: 12008}
+    - Class: 114
+      Script: {instanceID: 12166}
+    - Class: 114
+      Script: {instanceID: 12552}
+    - Class: 114
+      Script: {instanceID: 12650}
+    - Class: 114
+      Script: {instanceID: 12744}
+    - Class: 114
+      Script: {instanceID: 13042}
+    - Class: 114
+      Script: {instanceID: 13400}
+    - Class: 114
+      Script: {instanceID: 13404}
+    - Class: 114
+      Script: {instanceID: 13476}
+    - Class: 114
+      Script: {instanceID: 13488}
+    - Class: 114
+      Script: {instanceID: 13564}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
   scriptHashData:
   - hash:
       serializedVersion: 2
@@ -425,6 +535,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 7ab0e790220bdca831fdd886b339039d
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
       Hash: 7072231382eb3c4871b3dd75ad0227e1
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -437,10 +553,10 @@ ScriptsOnlyBuild:
     className: ContentSizeFitter
   - hash:
       serializedVersion: 2
-      Hash: 7ab0e790220bdca831fdd886b339039d
+      Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
-    className: GridLayoutGroup
+    className: InputField
   - hash:
       serializedVersion: 2
       Hash: 89f9a1b4c64db9559e39f4a2e3bfaadd
@@ -455,7 +571,7 @@ ScriptsOnlyBuild:
     className: MoveCtrl
   - hash:
       serializedVersion: 2
-      Hash: e7d1162581a5788d010057f60171a839
+      Hash: e4132a486fcdef2960afd1ed2cb1eb5c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NetworkManager
@@ -531,6 +647,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: GraphicToggleIsOnTransition
+  - hash:
+      serializedVersion: 2
+      Hash: a01b5d1d4d7fc235c31e67de1edaf403
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FadeOut
   - hash:
       serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
@@ -701,7 +823,7 @@ ScriptsOnlyBuild:
     className: ConnectAndJoinRandomLb
   - hash:
       serializedVersion: 2
-      Hash: c29e3710b45981f01e7b98fb4d28167d
+      Hash: 6a78bb64c7a0049899c802e34d9f43f6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerScript
@@ -857,6 +979,12 @@ ScriptsOnlyBuild:
     className: PhotonRigidbody2DView
   - hash:
       serializedVersion: 2
+      Hash: ca910f344cf61e78b3f04492ad1faa3e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FadeIn
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -897,6 +1025,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: PunCockpitEmbed
+  - hash:
+      serializedVersion: 2
+      Hash: e546b8d19751fae959fe998aec2e2bd2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DatabaseManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -963,6 +1097,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 7a897b5c03b1a0d631cecd90a9510671
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChatManager
   - hash:
       serializedVersion: 2
       Hash: f8f5c34557f4103b6547d8f956cec6ea
@@ -1307,12 +1447,6 @@ ScriptsOnlyBuild:
     className: SplineWalker
   - hash:
       serializedVersion: 2
-      Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: InputField
-  - hash:
-      serializedVersion: 2
       Hash: c9a8b80298a116835b51ba1cf9284367
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1361,6 +1495,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 1ba860ef8caf25301a5ee2a00e435814
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WatingRoomManager
+  - hash:
+      serializedVersion: 2
       Hash: 11bdd61587db747672b66c52442395d8
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1406,7 +1546,7 @@ ScriptsOnlyBuild:
       Hash: b8ab61733b1902241b6798876c91e27f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: AnimationStateController
+    className: TwoDimmentionalAnimationStateController
   - hash:
       serializedVersion: 2
       Hash: b8ab61733b1902241b6798876c91e27f
@@ -1859,25 +1999,20 @@ ScriptsOnlyBuild:
     className: LobbyTopPanel
   - hash:
       serializedVersion: 2
+      Hash: 67c6d7dbb48008138ec47b24b56679e9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ColorManager
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: ca910f344cf61e78b3f04492ad1faa3e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FadeIn
-  - hash:
-      serializedVersion: 2
-      Hash: a01b5d1d4d7fc235c31e67de1edaf403
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FadeOut
   platform: 5
   scenePathNames:
   - Assets/01.Scenes/LobbyScene.unity
+<<<<<<< HEAD
 <<<<<<< HEAD
   playerPath: C:/Users/qlenf/Desktop/test_US/amongUs.exe
 =======
@@ -1885,4 +2020,11 @@ ScriptsOnlyBuild:
   - Assets/01.Scenes/Impo Team.unity
   - Assets/01.Scenes/Crew Team.unity
   playerPath: "D:/\uC870\uD604\uC131GF/3D-among-us/amongUs/amongUs.exe"
+>>>>>>> origin/진짜메인인거임
+=======
+  - Assets/01.Scenes/WaitingRoom.unity
+  - Assets/01.Scenes/GameScene.unity
+  - Assets/01.Scenes/Impo Team.unity
+  - Assets/01.Scenes/Crew Team.unity
+  playerPath: C:/Users/qlenf/Desktop/test_US/amongUs.exe
 >>>>>>> origin/진짜메인인거임

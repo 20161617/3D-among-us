@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/01.Scenes/InGame.unity
+=======
+- path: Assets/01.Scenes/LobbyScene.unity
+>>>>>>> origin/진짜메인인거임
   isLoaded: 1
   isActive: 1
   isSubScene: 0
