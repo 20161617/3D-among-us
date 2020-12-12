@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static NetworkManager;
+using static DatabaseManager;
 
 public class UIPanel : MonoBehaviour
 {
@@ -18,7 +18,7 @@ public class UIPanel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (NetInstance.MyPlayer.isImposter)
+        if (databaseManager.MyPlayer.isImposter)
         {
             UseButton.gameObject.SetActive(true);
             ReportButton.gameObject.SetActive(true);

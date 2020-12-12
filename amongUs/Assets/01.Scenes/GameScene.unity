@@ -1132,41 +1132,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1760786346}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &155475987
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 404
-  m_Height: 572
-  m_AntiAliasing: 8
-  m_MipCount: -1
-  m_DepthFormat: 2
-  m_ColorFormat: 8
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &163682810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2950,6 +2915,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 302616353}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &304650196
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/GlowComposite
+  m_Shader: {fileID: 4800000, guid: e4b39d1c04bdfb24ebc10e5897e6b067, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!4 &306816064 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 465744, guid: f3a954679d4d04b49953424fc6bf526c,
@@ -11141,31 +11131,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1515166417}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &933332162
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hidden/GlowComposite
-  m_Shader: {fileID: 4800000, guid: e4b39d1c04bdfb24ebc10e5897e6b067, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
 --- !u!1001 &933450372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15502,7 +15467,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 155475987}
+  m_TargetTexture: {fileID: 1324046966}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -16169,6 +16134,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 748502261}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &1324046966
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 376
+  m_Height: 557
+  m_AntiAliasing: 8
+  m_MipCount: -1
+  m_DepthFormat: 2
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1329237287
 GameObject:
   m_ObjectHideFlags: 0
@@ -17761,7 +17761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Intensity: 2
-  _compositeMat: {fileID: 933332162}
+  _compositeMat: {fileID: 304650196}
 --- !u!124 &1437759161
 Behaviour:
   m_ObjectHideFlags: 0
@@ -21001,7 +21001,7 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents: []
-  viewIdField: 1
+  viewIdField: 4
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!1001 &1698874280

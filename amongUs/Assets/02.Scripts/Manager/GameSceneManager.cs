@@ -12,10 +12,18 @@ public class GameSceneManager : MonoBehaviour
     public GameObject Map;
     public GameObject UIPanel;
 
+    GameObject networkManager;
+
 
     void Awake()
     {
         GameInstance = this;
+
+        networkManager = GameObject.Find("NetworkManager");
+    }
+    void Start()
+    {
+        Destroy(networkManager);
     }
 
 
