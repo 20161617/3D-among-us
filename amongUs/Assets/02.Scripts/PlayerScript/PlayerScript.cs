@@ -10,13 +10,19 @@ using static NetworkManager;
 public class PlayerScript : MonoBehaviourPunCallbacks
 {
     public bool isImposter;
+    public SkinnedMeshRenderer color;
+    public int colorIndex = -1;
+
     PhotonView PV;
+
     // Start is called before the first frame update
     void Awake()
     {
         PV = photonView;
         DatabaseManager.databaseManager.Players.Add(this);
-       // gameObject.SetActive(false);
+
+        color = gameObject.transform.Find("Beta_Surface").GetComponent<SkinnedMeshRenderer>();
+
         DontDestroyOnLoad(gameObject);
     }
 
@@ -25,13 +31,22 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     {
         if (!PV.IsMine) return;
     }
+
     void OnDestroy()
     {
         DatabaseManager.databaseManager.Players.Remove(this);
     }
+
     [PunRPC]
     void SetImpoCrew(bool _isImposter)
     {
         isImposter = _isImposter;
+    }
+
+    [PunRPC]
+    public void SetColor(int _colorIndex)
+    {
+        color.material = DatabaseManager.databaseManager.Colors[_colorIndex];
+        colorIndex = _colorIndex;
     }
 }

@@ -12,6 +12,8 @@ public class DatabaseManager : MonoBehaviourPun
 
     public List<PlayerScript> Players = new List<PlayerScript>();
 
+    public List<Material> Colors = new List<Material>();
+
     public string roomInfoText;
 
     private void Awake()
@@ -32,4 +34,26 @@ public class DatabaseManager : MonoBehaviourPun
     {
         roomInfoText = PhotonNetwork.CurrentRoom.Name + " / " + PhotonNetwork.CurrentRoom.PlayerCount + "/" + PhotonNetwork.CurrentRoom.MaxPlayers;
     }
+
+
+    public void setRandColor()
+    {
+        List<int> PlayerColors = new List<int>();
+        for(int i=0; i <Players.Count; i++)
+        {
+            PlayerColors.Add(Players[i].colorIndex);
+        }
+
+        while (true)
+        {
+            int rand = Random.Range(0, 12);
+            if (!PlayerColors.Contains(rand))
+            {
+                MyPlayer.GetComponent<PhotonView>().RPC("SetColor", RpcTarget.AllBuffered, rand);
+                break;
+            }
+        }
+       
+    }
+
 }

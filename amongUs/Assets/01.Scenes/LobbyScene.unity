@@ -325,6 +325,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyPlayer: {fileID: 0}
   Players: []
+  Colors:
+  - {fileID: 2100000, guid: d9805232af913f245a62975b2d665829, type: 2}
+  - {fileID: 2100000, guid: 4385c1a5b477e7c4d85fa18d6a9c7c56, type: 2}
+  - {fileID: 2100000, guid: e952c906589642048be8e5177d3c24b6, type: 2}
+  - {fileID: 2100000, guid: 90597037df6da354ba0b2313e03be601, type: 2}
+  - {fileID: 2100000, guid: 67cde85c1aa4efc4dba557fe3f140aff, type: 2}
+  - {fileID: 2100000, guid: d8f1cfd2721948d4bbae90f383a6f67c, type: 2}
+  - {fileID: 2100000, guid: 53e6a587c9a9fab439d873a9392ed9f5, type: 2}
+  - {fileID: 2100000, guid: 902ee6865c6596d4492010cd0406363b, type: 2}
+  - {fileID: 2100000, guid: daa0d070025ffec4092787c696f6e275, type: 2}
+  - {fileID: 2100000, guid: 203cb359cf2d38e4f94864d10af2227a, type: 2}
+  - {fileID: 2100000, guid: 55345d500d0393c4489232d64fc63a71, type: 2}
+  - {fileID: 2100000, guid: 0cd7c615acbff824b913f5badb5e13a1, type: 2}
   roomInfoText: 
 --- !u!4 &1005530748
 Transform:
