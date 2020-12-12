@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,13 +10,19 @@ using static NetworkManager;
 public class PlayerScript : MonoBehaviourPunCallbacks
 {
     public bool isImposter;
+    public SkinnedMeshRenderer color;
+    public int colorIndex = -1;
+
     PhotonView PV;
+
     // Start is called before the first frame update
     void Awake()
     {
         PV = photonView;
-        NetInstance.Players.Add(this);
-        gameObject.SetActive(false);
+        DatabaseManager.databaseManager.Players.Add(this);
+
+        color = gameObject.transform.Find("Beta_Surface").GetComponent<SkinnedMeshRenderer>();
+
         DontDestroyOnLoad(gameObject);
     }
 
@@ -25,15 +31,10 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     {
         if (!PV.IsMine) return;
     }
+
     void OnDestroy()
     {
-        NetInstance.Players.Remove(this);
-    }
-
-    [PunRPC]
-    void ShowCharacter()
-    {
-        gameObject.SetActive(true);
+        DatabaseManager.databaseManager.Players.Remove(this);
     }
 
     [PunRPC]
@@ -43,8 +44,9 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    void SetMyPosition(Vector3 postion)
+    public void SetColor(int _colorIndex)
     {
-        gameObject.transform.position = postion;
+        color.material = DatabaseManager.databaseManager.Colors[_colorIndex];
+        colorIndex = _colorIndex;
     }
 }
