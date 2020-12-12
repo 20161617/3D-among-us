@@ -8,11 +8,13 @@ ScriptsOnlyBuild:
     - MiniGame_Distributor
     - MiniGame_Navigation
     - MiniGame_SwipeCard
+    - MiniGame_UploadData
     - MissionManager
     - MoveCtrl
     - PhotonInit
     - TwoDimmentionalAnimationStateController
     - UIManager
+    - UploadGague
     - testA
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
@@ -87,81 +89,85 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11148}
+      Script: {instanceID: 11150}
     - Class: 114
-      Script: {instanceID: 11152}
+      Script: {instanceID: 11154}
     - Class: 114
       Script: {instanceID: 11156}
     - Class: 114
       Script: {instanceID: 11162}
     - Class: 114
-      Script: {instanceID: 11198}
+      Script: {instanceID: 11174}
     - Class: 114
-      Script: {instanceID: 11212}
+      Script: {instanceID: 11188}
     - Class: 114
-      Script: {instanceID: 11332}
+      Script: {instanceID: 11308}
     - Class: 114
-      Script: {instanceID: 11370}
+      Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 11390}
+      Script: {instanceID: 11348}
     - Class: 114
-      Script: {instanceID: 11552}
+      Script: {instanceID: 11368}
     - Class: 114
-      Script: {instanceID: 11688}
+      Script: {instanceID: 11392}
     - Class: 114
-      Script: {instanceID: 11954}
+      Script: {instanceID: 11532}
     - Class: 114
-      Script: {instanceID: 11992}
+      Script: {instanceID: 11668}
     - Class: 114
-      Script: {instanceID: 12020}
+      Script: {instanceID: 11934}
     - Class: 114
-      Script: {instanceID: 12036}
+      Script: {instanceID: 11972}
     - Class: 114
-      Script: {instanceID: 12104}
+      Script: {instanceID: 12000}
     - Class: 114
-      Script: {instanceID: 12212}
+      Script: {instanceID: 12016}
     - Class: 114
-      Script: {instanceID: 12256}
+      Script: {instanceID: 12084}
     - Class: 114
-      Script: {instanceID: 12322}
+      Script: {instanceID: 12192}
     - Class: 114
-      Script: {instanceID: 12514}
+      Script: {instanceID: 12236}
     - Class: 114
-      Script: {instanceID: 12592}
+      Script: {instanceID: 12302}
     - Class: 114
-      Script: {instanceID: 12674}
+      Script: {instanceID: 12494}
     - Class: 114
-      Script: {instanceID: 12684}
+      Script: {instanceID: 12572}
     - Class: 114
-      Script: {instanceID: 12864}
+      Script: {instanceID: 12654}
     - Class: 114
-      Script: {instanceID: 12876}
+      Script: {instanceID: 12664}
+    - Class: 114
+      Script: {instanceID: 12844}
+    - Class: 114
+      Script: {instanceID: 12856}
+    - Class: 114
+      Script: {instanceID: 12862}
+    - Class: 114
+      Script: {instanceID: 12890}
     - Class: 114
       Script: {instanceID: 12908}
     - Class: 114
-      Script: {instanceID: 12926}
+      Script: {instanceID: 12916}
     - Class: 114
-      Script: {instanceID: 12934}
+      Script: {instanceID: 12932}
     - Class: 114
-      Script: {instanceID: 12950}
+      Script: {instanceID: 12982}
     - Class: 114
-      Script: {instanceID: 13000}
+      Script: {instanceID: 13054}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 13354}
     - Class: 114
-      Script: {instanceID: 13372}
+      Script: {instanceID: 13414}
     - Class: 114
-      Script: {instanceID: 13432}
+      Script: {instanceID: 13418}
     - Class: 114
-      Script: {instanceID: 13436}
+      Script: {instanceID: 13490}
     - Class: 114
-      Script: {instanceID: 13508}
+      Script: {instanceID: 13502}
     - Class: 114
-      Script: {instanceID: 13520}
-    - Class: 114
-      Script: {instanceID: 13550}
-    - Class: 114
-      Script: {instanceID: 45762}
+      Script: {instanceID: 13532}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -182,8 +188,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 199
       Script: {instanceID: 0}
-    - Class: 212
-      Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
     - Class: 222
@@ -197,28 +201,28 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: aeb62f729c52c814dec86c47dcac1471
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
-  - hash:
-      serializedVersion: 2
       Hash: 5f1752ed2092162f016c19510c28a8b9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: caa533b001ae39b864ba8425019e2268
+      Hash: aeb62f729c52c814dec86c47dcac1471
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
-    className: Shadow
+    className: Text
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: caa533b001ae39b864ba8425019e2268
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Shadow
   - hash:
       serializedVersion: 2
       Hash: 7072231382eb3c4871b3dd75ad0227e1
@@ -353,6 +357,12 @@ ScriptsOnlyBuild:
     className: ChatGui
   - hash:
       serializedVersion: 2
+      Hash: 1eecb6af9944a5dfc0e2aeb948ea60b5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UploadGague
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -429,6 +439,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: ButtonInsideScrollList
+  - hash:
+      serializedVersion: 2
+      Hash: 0637fcdfa52e31946913d0718da8d46c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MiniGame_UploadData
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1247,6 +1263,12 @@ ScriptsOnlyBuild:
     className: SendRateField
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ClickButton
+  - hash:
+      serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1707,12 +1729,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ClickButton
   platform: 5
   scenePathNames:
   - Assets/01.Scenes/InGame.unity
