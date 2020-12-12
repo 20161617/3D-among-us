@@ -1,33 +1,19 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-<<<<<<< HEAD
-<<<<<<< HEAD
-    - ChatManager
-=======
-    - AnimationStateController
->>>>>>> origin/진짜메인인거임
-=======
-    - ChatManager
->>>>>>> origin/진짜메인인거임
-    - CircleRotate
-    - ColorManager
+    - ClickButton
     - Com.MyCompany.MyGame.CameraFollow
-    - DatabaseManager
-    - FadeIn
-    - FadeOut
-    - GameSceneManager
-    - IntroPanel
-    - LeftBlackMove
+    - DistributorObject
+    - Gague
+    - MiniGame_Distributor
+    - MiniGame_Navigation
+    - MiniGame_SwipeCard
+    - MissionManager
     - MoveCtrl
-    - NetworkManager
-    - PingerRotate
-    - PlayerScript
-    - PopBody
-    - RightBlackMove
+    - PhotonInit
     - TwoDimmentionalAnimationStateController
     - UIManager
-    - WatingRoomManager
+    - testA
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
     - Photon.Pun.Demo.Asteroids.Bullet
@@ -55,206 +41,15 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
-    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
-    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
-    - UnityEngine.UI.InputField
-    - UnityEngine.UI.Mask
     - UnityEngine.UI.Outline
-    - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
-    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/01.Scenes/Crew Team.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11162}
-    - Class: 114
-      Script: {instanceID: 11188}
-    - Class: 114
-<<<<<<< HEAD
-<<<<<<< HEAD
-      Script: {instanceID: 11166}
-    - Class: 114
-      Script: {instanceID: 11172}
-    - Class: 114
-      Script: {instanceID: 11180}
-=======
-      Script: {instanceID: 12000}
-=======
-      Script: {instanceID: 11282}
->>>>>>> origin/진짜메인인거임
-    - Class: 114
-      Script: {instanceID: 11842}
-    - Class: 114
-      Script: {instanceID: 12032}
-    - Class: 114
-      Script: {instanceID: 12404}
-    - Class: 114
-      Script: {instanceID: 13042}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 137
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    Assets/01.Scenes/GameScene.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
->>>>>>> origin/진짜메인인거임
-    - Class: 114
-      Script: {instanceID: 11162}
-    - Class: 114
-      Script: {instanceID: 11188}
-    - Class: 114
-      Script: {instanceID: 11816}
-    - Class: 114
-      Script: {instanceID: 12224}
-    - Class: 114
-      Script: {instanceID: 12522}
-    - Class: 114
-<<<<<<< HEAD
-<<<<<<< HEAD
-      Script: {instanceID: 11542}
-    - Class: 114
-      Script: {instanceID: 11648}
-    - Class: 114
-      Script: {instanceID: 11790}
-    - Class: 114
-      Script: {instanceID: 11798}
-=======
-      Script: {instanceID: 12808}
-=======
-      Script: {instanceID: 12862}
->>>>>>> origin/진짜메인인거임
-    - Class: 114
-      Script: {instanceID: 13042}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    Assets/01.Scenes/Impo Team.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11162}
-    - Class: 114
-      Script: {instanceID: 11188}
-    - Class: 114
-      Script: {instanceID: 11282}
-    - Class: 114
-      Script: {instanceID: 11842}
-    - Class: 114
-      Script: {instanceID: 12032}
-    - Class: 114
-      Script: {instanceID: 12404}
-    - Class: 114
-      Script: {instanceID: 13042}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 137
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    Assets/01.Scenes/LobbyScene.unity:
+    Assets/01.Scenes/InGame.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -289,110 +84,84 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
-<<<<<<< HEAD
     - Class: 108
       Script: {instanceID: 0}
->>>>>>> origin/진짜메인인거임
-=======
->>>>>>> origin/진짜메인인거임
     - Class: 114
       Script: {instanceID: 11148}
     - Class: 114
-<<<<<<< HEAD
-      Script: {instanceID: 11976}
-    - Class: 114
-      Script: {instanceID: 11980}
-=======
-      Script: {instanceID: 11150}
-    - Class: 114
       Script: {instanceID: 11152}
->>>>>>> origin/진짜메인인거임
     - Class: 114
-      Script: {instanceID: 11154}
-    - Class: 114
-<<<<<<< HEAD
-      Script: {instanceID: 12186}
-=======
       Script: {instanceID: 11156}
->>>>>>> origin/진짜메인인거임
-    - Class: 114
-      Script: {instanceID: 11160}
     - Class: 114
       Script: {instanceID: 11162}
     - Class: 114
-      Script: {instanceID: 11174}
+      Script: {instanceID: 11198}
     - Class: 114
-      Script: {instanceID: 11180}
+      Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11188}
+      Script: {instanceID: 11332}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11370}
     - Class: 114
-      Script: {instanceID: 11366}
+      Script: {instanceID: 11390}
     - Class: 114
-      Script: {instanceID: 11528}
+      Script: {instanceID: 11552}
     - Class: 114
-      Script: {instanceID: 11664}
+      Script: {instanceID: 11688}
     - Class: 114
-      Script: {instanceID: 11916}
+      Script: {instanceID: 11954}
     - Class: 114
-      Script: {instanceID: 11930}
+      Script: {instanceID: 11992}
     - Class: 114
-      Script: {instanceID: 12012}
+      Script: {instanceID: 12020}
     - Class: 114
-<<<<<<< HEAD
-<<<<<<< HEAD
-      Script: {instanceID: 13394}
+      Script: {instanceID: 12036}
     - Class: 114
-      Script: {instanceID: 13406}
+      Script: {instanceID: 12104}
+    - Class: 114
+      Script: {instanceID: 12212}
+    - Class: 114
+      Script: {instanceID: 12256}
+    - Class: 114
+      Script: {instanceID: 12322}
+    - Class: 114
+      Script: {instanceID: 12514}
+    - Class: 114
+      Script: {instanceID: 12592}
+    - Class: 114
+      Script: {instanceID: 12674}
+    - Class: 114
+      Script: {instanceID: 12684}
+    - Class: 114
+      Script: {instanceID: 12864}
+    - Class: 114
+      Script: {instanceID: 12876}
+    - Class: 114
+      Script: {instanceID: 12908}
+    - Class: 114
+      Script: {instanceID: 12926}
+    - Class: 114
+      Script: {instanceID: 12934}
+    - Class: 114
+      Script: {instanceID: 12950}
+    - Class: 114
+      Script: {instanceID: 13000}
+    - Class: 114
+      Script: {instanceID: 13072}
+    - Class: 114
+      Script: {instanceID: 13372}
+    - Class: 114
+      Script: {instanceID: 13432}
     - Class: 114
       Script: {instanceID: 13436}
-=======
-      Script: {instanceID: 12254}
-=======
-      Script: {instanceID: 12228}
->>>>>>> origin/진짜메인인거임
     - Class: 114
-      Script: {instanceID: 12294}
+      Script: {instanceID: 13508}
     - Class: 114
-      Script: {instanceID: 12486}
+      Script: {instanceID: 13520}
     - Class: 114
-      Script: {instanceID: 12564}
+      Script: {instanceID: 13550}
     - Class: 114
-      Script: {instanceID: 12646}
-    - Class: 114
-      Script: {instanceID: 12656}
-    - Class: 114
-      Script: {instanceID: 12836}
-    - Class: 114
-      Script: {instanceID: 12848}
-    - Class: 114
-      Script: {instanceID: 12880}
-    - Class: 114
-      Script: {instanceID: 12898}
-    - Class: 114
-      Script: {instanceID: 12906}
-    - Class: 114
-      Script: {instanceID: 13042}
-    - Class: 114
-      Script: {instanceID: 13400}
-    - Class: 114
-      Script: {instanceID: 13404}
-    - Class: 114
-      Script: {instanceID: 13488}
-    - Class: 114
-<<<<<<< HEAD
-      Script: {instanceID: 13334}
-    - Class: 114
-      Script: {instanceID: 13406}
-    - Class: 114
-      Script: {instanceID: 13418}
-    - Class: 114
-      Script: {instanceID: 13448}
->>>>>>> origin/진짜메인인거임
-=======
-      Script: {instanceID: 13518}
->>>>>>> origin/진짜메인인거임
+      Script: {instanceID: 45762}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -413,6 +182,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 199
       Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
     - Class: 222
@@ -423,110 +194,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 225
       Script: {instanceID: 0}
-    Assets/01.Scenes/WaitingRoom.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 90
-      Script: {instanceID: 0}
-    - Class: 95
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11148}
-    - Class: 114
-      Script: {instanceID: 11150}
-    - Class: 114
-      Script: {instanceID: 11154}
-    - Class: 114
-      Script: {instanceID: 11158}
-    - Class: 114
-      Script: {instanceID: 11160}
-    - Class: 114
-      Script: {instanceID: 11162}
-    - Class: 114
-      Script: {instanceID: 11188}
-    - Class: 114
-      Script: {instanceID: 11808}
-    - Class: 114
-      Script: {instanceID: 11930}
-    - Class: 114
-      Script: {instanceID: 12008}
-    - Class: 114
-      Script: {instanceID: 12166}
-    - Class: 114
-      Script: {instanceID: 12552}
-    - Class: 114
-      Script: {instanceID: 12650}
-    - Class: 114
-      Script: {instanceID: 12744}
-    - Class: 114
-      Script: {instanceID: 13042}
-    - Class: 114
-      Script: {instanceID: 13400}
-    - Class: 114
-      Script: {instanceID: 13404}
-    - Class: 114
-      Script: {instanceID: 13476}
-    - Class: 114
-      Script: {instanceID: 13488}
-    - Class: 114
-      Script: {instanceID: 13564}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 137
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
   scriptHashData:
-  - hash:
-      serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: aeb62f729c52c814dec86c47dcac1471
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 5f1752ed2092162f016c19510c28a8b9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -823,10 +503,10 @@ ScriptsOnlyBuild:
     className: ConnectAndJoinRandomLb
   - hash:
       serializedVersion: 2
-      Hash: 6a78bb64c7a0049899c802e34d9f43f6
+      Hash: d2b30e26442177a47d9902d980a12424
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PlayerScript
+    className: UIManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1129,6 +809,12 @@ ScriptsOnlyBuild:
     className: CurrentRoomPlayerTtlProperty
   - hash:
       serializedVersion: 2
+      Hash: e7c54c03aeff639d28e86736c985e3da
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MiniGame_Distributor
+  - hash:
+      serializedVersion: 2
       Hash: f941c3a384168571b7d90f58ec4986bc
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1153,6 +839,12 @@ ScriptsOnlyBuild:
     className: EventSystemSpawner
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Distributor
+  - hash:
+      serializedVersion: 2
       Hash: 57d2b3ca58a430f7cf319bb757c1f0f5
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -1165,7 +857,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 01ba3b2d70533720a2285d534a4b58b3
+      Hash: 051085fbf4bde38b3bc8c372bc3bd901
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MiniGame_Navigation
@@ -1549,12 +1241,6 @@ ScriptsOnlyBuild:
     className: TwoDimmentionalAnimationStateController
   - hash:
       serializedVersion: 2
-      Hash: b8ab61733b1902241b6798876c91e27f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TwoDimmentionalAnimationStateController
-  - hash:
-      serializedVersion: 2
       Hash: cba6cca6bb3290c4c00d709cf63843db
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1595,6 +1281,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Asteroids
     className: Asteroid
+  - hash:
+      serializedVersion: 2
+      Hash: f07bd870daf7001ac869b7b96ddabf13
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DistributorObject
   - hash:
       serializedVersion: 2
       Hash: 7829e932aec962afd9bcfad28ffff27d
@@ -1787,6 +1479,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.PunBasics
     className: GameManager
+  - hash:
+      serializedVersion: 2
+      Hash: 051085fbf4bde38b3bc8c372bc3bd901
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MiniGame_SwipeCard
   - hash:
       serializedVersion: 2
       Hash: 4c0ebd9e77f5bc0558d19d8313e54bb9
@@ -2009,22 +1707,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ClickButton
   platform: 5
   scenePathNames:
-  - Assets/01.Scenes/LobbyScene.unity
-<<<<<<< HEAD
-<<<<<<< HEAD
-  playerPath: C:/Users/qlenf/Desktop/test_US/amongUs.exe
-=======
-  - Assets/01.Scenes/GameScene.unity
-  - Assets/01.Scenes/Impo Team.unity
-  - Assets/01.Scenes/Crew Team.unity
-  playerPath: "D:/\uC870\uD604\uC131GF/3D-among-us/amongUs/amongUs.exe"
->>>>>>> origin/진짜메인인거임
-=======
-  - Assets/01.Scenes/WaitingRoom.unity
-  - Assets/01.Scenes/GameScene.unity
-  - Assets/01.Scenes/Impo Team.unity
-  - Assets/01.Scenes/Crew Team.unity
-  playerPath: C:/Users/qlenf/Desktop/test_US/amongUs.exe
->>>>>>> origin/진짜메인인거임
+  - Assets/01.Scenes/InGame.unity
+  playerPath: "C:/Users/USER-PC/Desktop/\uAC8C\uC784\uD14C\uC2A4\uD2B8/amougUs/\uC11C\uBC84\uD14C\uC2A4\uD2B8/amongUs.exe"
