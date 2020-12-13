@@ -1,20 +1,17 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
 using static UIManager;
-using static NetworkManager;
+using static DatabaseManager;
 
 public class PlayerScript : MonoBehaviourPunCallbacks
 {
     public bool isImposter;
     public SkinnedMeshRenderer color;
-
-    
     public int colorIndex = -1;
-    public string nickName;
 
     PhotonView PV;
 
@@ -22,12 +19,9 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     void Awake()
     {
         PV = photonView;
+        databaseManager.Players.Add(this);
 
         color = gameObject.transform.Find("Beta_Surface").GetComponent<SkinnedMeshRenderer>();
-
-        nickName = photonView.Owner.NickName;
-
-        DatabaseManager.databaseManager.Players.Add(this);
 
         DontDestroyOnLoad(gameObject);
     }
@@ -40,10 +34,8 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 
     void OnDestroy()
     {
-        DatabaseManager.databaseManager.Players.Remove(this);
+        databaseManager.Players.Remove(this);
     }
-
-
 
     [PunRPC]
     void SetImpoCrew(bool _isImposter)
@@ -54,19 +46,24 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     [PunRPC]
     public void SetColor(int _colorIndex)
     {
-        color.material = DatabaseManager.databaseManager.Colors[_colorIndex];
+        color.material = databaseManager.Colors[_colorIndex];
         colorIndex = _colorIndex;
     }
-
     [PunRPC]
-    public void SetNickName(string name)
+    void GameStartRPC()
     {
-        nickName = name;
+        gameObject.SetActive(false);
     }
 
     [PunRPC]
-    public void RegisterPlayer()
+    void ShowCharacter()
     {
-        DatabaseManager.databaseManager.Players.Add(this);
+        gameObject.SetActive(true);
+    }
+
+    [PunRPC]
+    void SetMyPosition(Vector3 postion)
+    {
+        gameObject.transform.position = postion;
     }
 }

@@ -45,10 +45,8 @@ MonoBehaviour:
   - SetImpoCrew
   - ChatClearRPC
   - SetColor
-  - SetNickName
-  - RegisterPlayer
-  - IVoted
-  - SetIconColor
+  - SetMyPosition
+  - ShowCharacter
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

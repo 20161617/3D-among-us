@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":360.3000183105469,"y":423.1499938964844,"z":0.0},"rotation":{"x":0.007808973081409931,"y":-0.013503939844667912,"z":0.00010540858784224838,"w":0.9998778700828552},"size":58.20201873779297,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-387.8582763671875,"y":-640.076416015625,"z":468.7577819824219},"rotation":{"x":0.34449201822280886,"y":-0.2992023825645447,"z":0.11684592068195343,"w":0.8821301460266113},"size":507.89837646484377,"orthographic":false}
+>>>>>>> New-메인

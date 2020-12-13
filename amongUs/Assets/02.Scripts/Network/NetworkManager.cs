@@ -5,6 +5,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static DatabaseManager;
 
 
 public class NetworkManager : MonoBehaviourPunCallbacks
@@ -14,8 +15,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public InputField NickNameInput;
     public Button[] CellBtn;
 
-    [Header("GameSceneManager")]
-    public GameSceneManager GSM;
 
     [Header("ETC")]
     public Text StatusText;
@@ -29,11 +28,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         Screen.SetResolution(960, 540, false);
         Connect();
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Update()
     {
-        StatusText.text = PhotonNetwork.NetworkClientState.ToString();
+        if (StatusText != null)
+            StatusText.text = PhotonNetwork.NetworkClientState.ToString();
     }
 
     public void Connect()
@@ -67,7 +68,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public void CreateRoom()
     {
         PhotonNetwork.LocalPlayer.NickName = NickNameInput.text;
-       
+
         PhotonNetwork.CreateRoom(NickNameInput.text == "" ? "Room" + Random.Range(0, 100) : NickNameInput.text, new RoomOptions { MaxPlayers = 4 });
 
     }
@@ -81,18 +82,18 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.LeaveRoom();
 
-        DatabaseManager.databaseManager.RoomRenewal();
+        databaseManager.RoomRenewal();
     }
 
     public override void OnJoinedRoom()
     {
         PhotonNetwork.LoadLevel("WaitingRoom");
 
-        DatabaseManager.databaseManager.RoomRenewal();
+        databaseManager.RoomRenewal();
 
-        DatabaseManager.databaseManager.MyPlayer = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity).GetComponent<PlayerScript>();
+        databaseManager.MyPlayer = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity).GetComponent<PlayerScript>();
 
-        DatabaseManager.databaseManager.setRandColor();       
+        databaseManager.setRandColor();
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
@@ -152,5 +153,4 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
 
     #endregion
-
 }
