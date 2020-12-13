@@ -5,7 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - ROOM
+<<<<<<< HEAD
   - Asteroid
+=======
+  - INTERACTION
+>>>>>>> origin/New-메인
   layers:
   - Default
   - TransparentFX

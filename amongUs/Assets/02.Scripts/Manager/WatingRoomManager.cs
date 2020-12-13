@@ -12,8 +12,7 @@ public class WatingRoomManager : MonoBehaviourPun
     public GameObject RoomPanel;
     public Text RoomInfoText;
 
-    [Header("GameSceneManager")]
-    public GameSceneManager GSM;
+
 
     void Update()
     {
@@ -26,7 +25,7 @@ public class WatingRoomManager : MonoBehaviourPun
         PhotonNetwork.LoadLevel("LobbyScene");
     }
 
-  
+
 
     void RoomRenewal()
     {
@@ -63,8 +62,6 @@ public class WatingRoomManager : MonoBehaviourPun
     [PunRPC]
     void GameStartRPC()
     {
-        GSM.GameStart = true;
-        GSM.call();
         SceneManager.LoadScene("GameScene");
         print("게임시작");
     }

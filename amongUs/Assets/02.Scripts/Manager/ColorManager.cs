@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
+using static DatabaseManager;
 
 public class ColorManager : MonoBehaviourPun
 {
@@ -19,11 +20,11 @@ public class ColorManager : MonoBehaviourPun
 
     private void Awake()
     {
-        int index = DatabaseManager.databaseManager.MyPlayer.colorIndex;
+        int index = databaseManager.MyPlayer.colorIndex;
         copyPlayerMaterial = PlayerCopy.transform.Find("Beta_Surface").GetComponent<SkinnedMeshRenderer>();
-        copyPlayerMaterial.material = DatabaseManager.databaseManager.Colors[index];
+        copyPlayerMaterial.material = databaseManager.Colors[index];
     }
-  
+
 
     private void Update()
     {
@@ -66,18 +67,18 @@ public class ColorManager : MonoBehaviourPun
         ColorPanel.SetActive(false);
     }
 
-   public void SelectColor(int index)
+    public void SelectColor(int index)
     {
-        DatabaseManager.databaseManager.MyPlayer.GetComponent<PhotonView>().RPC("SetColor", RpcTarget.AllBuffered, index);
-        copyPlayerMaterial.material = DatabaseManager.databaseManager.Colors[index];
+        databaseManager.MyPlayer.GetComponent<PhotonView>().RPC("SetColor", RpcTarget.AllBuffered, index);
+        copyPlayerMaterial.material = databaseManager.Colors[index];
     }
 
     public void ShowSelectedColors()
     {
         List<int> PlayerColors = new List<int>();
-        for (int i = 0; i < DatabaseManager.databaseManager.Players.Count; i++)
+        for (int i = 0; i < databaseManager.Players.Count; i++)
         {
-            PlayerColors.Add(DatabaseManager.databaseManager.Players[i].colorIndex);
+            PlayerColors.Add(databaseManager.Players[i].colorIndex);
         }
 
         for (int i = 0; i < ColorBtn.Length; i++)
