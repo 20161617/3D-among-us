@@ -11,6 +11,7 @@ public class GameSceneManager : MonoBehaviour
     public GameObject MainCamera;
     public GameObject Map;
     public GameObject UIPanel;
+    public GameObject MissionPanel;
 
     GameObject networkManager;
 
@@ -32,6 +33,7 @@ public class GameSceneManager : MonoBehaviour
         MainCamera.SetActive(true);
         Map.SetActive(true);
         UIPanel.SetActive(true);
+        MissionPanel.SetActive(true);
     }
 
 }

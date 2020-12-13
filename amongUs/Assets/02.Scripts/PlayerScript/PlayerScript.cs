@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,23 +11,20 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 {
     public bool isImposter;
     public SkinnedMeshRenderer color;
-
     public int colorIndex = -1;
-    public string nickName;
 
     PhotonView PV;
+    public TargetCtrl targetCtrl;
 
     // Start is called before the first frame update
     void Awake()
     {
         PV = photonView;
-   
+        databaseManager.Players.Add(this);
 
         color = gameObject.transform.Find("Beta_Surface").GetComponent<SkinnedMeshRenderer>();
 
-        nickName = photonView.Owner.NickName;
-
-        databaseManager.Players.Add(this);
+        targetCtrl = gameObject.GetComponent<TargetCtrl>();
 
         DontDestroyOnLoad(gameObject);
     }
@@ -44,6 +41,13 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
+    void HideCharacter()
+    {
+        Debug.Log("플레이어 비활성화!");
+        gameObject.SetActive(false);
+    }
+
+    [PunRPC]
     void SetImpoCrew(bool _isImposter)
     {
         isImposter = _isImposter;
@@ -56,11 +60,6 @@ public class PlayerScript : MonoBehaviourPunCallbacks
         colorIndex = _colorIndex;
     }
 
-    [PunRPC]
-    void GameStartRPC()
-    {
-        gameObject.SetActive(false);
-    }
 
     [PunRPC]
     void ShowCharacter()
