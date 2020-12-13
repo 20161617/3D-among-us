@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,7 +11,9 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 {
     public bool isImposter;
     public SkinnedMeshRenderer color;
+
     public int colorIndex = -1;
+    public string nickName;
 
     PhotonView PV;
 
@@ -19,9 +21,13 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     void Awake()
     {
         PV = photonView;
-        databaseManager.Players.Add(this);
+   
 
         color = gameObject.transform.Find("Beta_Surface").GetComponent<SkinnedMeshRenderer>();
+
+        nickName = photonView.Owner.NickName;
+
+        databaseManager.Players.Add(this);
 
         DontDestroyOnLoad(gameObject);
     }
@@ -49,6 +55,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
         color.material = databaseManager.Colors[_colorIndex];
         colorIndex = _colorIndex;
     }
+
     [PunRPC]
     void GameStartRPC()
     {
