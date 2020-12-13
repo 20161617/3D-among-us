@@ -31,10 +31,8 @@ public class MissionManager :   MonoBehaviourPun
     
     private void Awake()
     {
-
         PV = photonView;
-        Instance = this;
-     
+        Instance = this;  
     }
     public void MissionClear(GameObject _object) // 미션을꺳을떄 
     {
