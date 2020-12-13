@@ -5,7 +5,10 @@ ScriptsOnlyBuild:
     - Com.MyCompany.MyGame.CameraFollow
     - DistributorObject
     - Gague
+    - Garbage
+    - GarbageGrip
     - MiniGame_Distributor
+    - MiniGame_EmptyGarbage
     - MiniGame_Navigation
     - MiniGame_SwipeCard
     - MiniGame_UploadData
@@ -76,6 +79,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
+    - Class: 75
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 90
@@ -97,77 +102,83 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11162}
     - Class: 114
-      Script: {instanceID: 11174}
+      Script: {instanceID: 11182}
     - Class: 114
-      Script: {instanceID: 11188}
+      Script: {instanceID: 11196}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 11316}
     - Class: 114
-      Script: {instanceID: 11310}
+      Script: {instanceID: 11318}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11356}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11392}
+      Script: {instanceID: 11400}
     - Class: 114
-      Script: {instanceID: 11532}
+      Script: {instanceID: 11540}
     - Class: 114
-      Script: {instanceID: 11668}
+      Script: {instanceID: 11676}
     - Class: 114
-      Script: {instanceID: 11934}
+      Script: {instanceID: 11942}
     - Class: 114
-      Script: {instanceID: 11972}
+      Script: {instanceID: 11980}
     - Class: 114
-      Script: {instanceID: 12000}
+      Script: {instanceID: 12008}
     - Class: 114
-      Script: {instanceID: 12016}
+      Script: {instanceID: 12024}
     - Class: 114
-      Script: {instanceID: 12084}
+      Script: {instanceID: 12092}
     - Class: 114
-      Script: {instanceID: 12192}
+      Script: {instanceID: 12200}
     - Class: 114
-      Script: {instanceID: 12236}
+      Script: {instanceID: 12244}
     - Class: 114
-      Script: {instanceID: 12302}
+      Script: {instanceID: 12304}
     - Class: 114
-      Script: {instanceID: 12494}
+      Script: {instanceID: 12312}
     - Class: 114
-      Script: {instanceID: 12572}
+      Script: {instanceID: 12504}
     - Class: 114
-      Script: {instanceID: 12654}
+      Script: {instanceID: 12582}
     - Class: 114
       Script: {instanceID: 12664}
     - Class: 114
-      Script: {instanceID: 12844}
+      Script: {instanceID: 12674}
     - Class: 114
-      Script: {instanceID: 12856}
+      Script: {instanceID: 12854}
     - Class: 114
-      Script: {instanceID: 12862}
+      Script: {instanceID: 12866}
     - Class: 114
-      Script: {instanceID: 12890}
+      Script: {instanceID: 12872}
     - Class: 114
-      Script: {instanceID: 12908}
+      Script: {instanceID: 12900}
     - Class: 114
-      Script: {instanceID: 12916}
+      Script: {instanceID: 12918}
     - Class: 114
-      Script: {instanceID: 12932}
+      Script: {instanceID: 12926}
     - Class: 114
-      Script: {instanceID: 12982}
+      Script: {instanceID: 12942}
     - Class: 114
-      Script: {instanceID: 13054}
+      Script: {instanceID: 12992}
     - Class: 114
-      Script: {instanceID: 13354}
+      Script: {instanceID: 13064}
     - Class: 114
-      Script: {instanceID: 13414}
+      Script: {instanceID: 13364}
     - Class: 114
-      Script: {instanceID: 13418}
+      Script: {instanceID: 13384}
     - Class: 114
-      Script: {instanceID: 13490}
+      Script: {instanceID: 13426}
+    - Class: 114
+      Script: {instanceID: 13430}
     - Class: 114
       Script: {instanceID: 13502}
     - Class: 114
-      Script: {instanceID: 13532}
+      Script: {instanceID: 13514}
+    - Class: 114
+      Script: {instanceID: 13544}
+    - Class: 114
+      Script: {instanceID: 43154}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -963,6 +974,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: bdc53a387252301bb8c05c5c05085c61
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MiniGame_EmptyGarbage
+  - hash:
+      serializedVersion: 2
       Hash: 259988b2d867e1586634d64379c5ff81
     assemblyName: PhotonUnityNetworking.dll
     namespaceName: Photon.Pun
@@ -1533,6 +1550,12 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
+      Hash: 6d58aaa44a2f9ac1323bd21749a524ae
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GarbageGrip
+  - hash:
+      serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1729,6 +1752,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 823e39bc3276748c401b3dd6149d14d7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Garbage
   platform: 5
   scenePathNames:
   - Assets/01.Scenes/InGame.unity
