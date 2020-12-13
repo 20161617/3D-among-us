@@ -92,7 +92,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         DatabaseManager.databaseManager.MyPlayer = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity).GetComponent<PlayerScript>();
 
-        DatabaseManager.databaseManager.setRandColor();
+        DatabaseManager.databaseManager.setRandColor();       
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
