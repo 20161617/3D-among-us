@@ -1,8 +1,4 @@
 sceneSetups:
-- path: Assets/01.Scenes/InGame.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
 - path: Assets/01.Scenes/LobbyScene.unity
   isLoaded: 1
   isActive: 1
@@ -11,11 +7,7 @@ sceneSetups:
   isLoaded: 0
   isActive: 0
   isSubScene: 0
-- path: Assets/01.Scenes/WaitingRoom.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/01.Scenes/Crew Team.unity
+- path: Assets/01.Scenes/InGame.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0

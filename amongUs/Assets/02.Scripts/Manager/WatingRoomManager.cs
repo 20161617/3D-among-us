@@ -5,6 +5,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using static DatabaseManager;
 
 public class WatingRoomManager : MonoBehaviourPun
 {
@@ -29,8 +30,8 @@ public class WatingRoomManager : MonoBehaviourPun
 
     void RoomRenewal()
     {
-        DatabaseManager.databaseManager.RoomRenewal();
-        RoomInfoText.text = DatabaseManager.databaseManager.roomInfoText;
+        databaseManager.RoomRenewal();
+        RoomInfoText.text = databaseManager.roomInfoText;
     }
 
 
@@ -39,13 +40,14 @@ public class WatingRoomManager : MonoBehaviourPun
     public void GameStart()
     {
         SetImpoCrew();
+        HideCharacter();
         photonView.RPC("GameStartRPC", RpcTarget.AllViaServer);
     }
 
 
     void SetImpoCrew()
     {
-        List<PlayerScript> ImpoList = new List<PlayerScript>(DatabaseManager.databaseManager.Players);
+        List<PlayerScript> ImpoList = new List<PlayerScript>(databaseManager.Players);
 
         for (int i = 0; i < 1; i++)
         {
@@ -53,9 +55,15 @@ public class WatingRoomManager : MonoBehaviourPun
             Debug.Log(rand + "번 플레이어 임포");
             Debug.Log(ImpoList.Count + "명");
 
-            DatabaseManager.databaseManager.Players[rand].GetComponent<PhotonView>().RPC("SetImpoCrew", RpcTarget.AllViaServer, true);
+            databaseManager.Players[rand].GetComponent<PhotonView>().RPC("SetImpoCrew", RpcTarget.AllViaServer, true);
             ImpoList.RemoveAt(rand);
         }
+    }
+
+    void HideCharacter()
+    {
+        for (int i = 0; i < databaseManager.Players.Count; i++)
+            databaseManager.Players[i].GetComponent<PhotonView>().RPC("HideCharacter", RpcTarget.AllViaServer);
     }
 
 
