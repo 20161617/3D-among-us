@@ -28,8 +28,6 @@ public class SpawnCenter : MonoBehaviour
                 new Vector3(Center.x + 3 * Mathf.Cos(radian), Center.y, Center.z + 3 * Mathf.Sin(radian)));
             //Instantiate(SpawnPoint, new Vector3(Center.x + 3 * Mathf.Cos(radian), Center.y, Center.z + 3 * Mathf.Sin(radian)), Quaternion.identity);
         }
-        Debug.Log(Center.x + 3 * Mathf.Cos(radian));
-        Debug.Log(Center.z + 3 * Mathf.Sin(radian));
         //반지름 3을 기준으로 플레이어 수만큼 스폰포인트 소환
     }
 
