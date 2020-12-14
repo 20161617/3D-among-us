@@ -1,7 +1,10 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 Cmd: preprocess
@@ -17,9 +20,12 @@ Cmd: preprocess
 Cmd: preprocess
   insize=2066 outsize=396 ok=1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 
 Quitting shader compiler process
 >>>>>>> New-메인
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
