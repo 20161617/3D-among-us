@@ -27,7 +27,6 @@ public class FadeOut : MonoBehaviour
             StartCoroutine("MainSplash");                        //코루틴    //판넬 투명도 조절
             if (checkbool)                                            //만약 checkbool 이 참이면
             {
-                Debug.Log(sceneNum + "번 씬삭제!");
 
                 databaseManager.MyPlayer.GetComponent<PhotonView>().RPC("ShowCharacter", RpcTarget.AllViaServer);
                 GameInstance.CameraOn();
@@ -44,7 +43,6 @@ public class FadeOut : MonoBehaviour
         {
             color.a += Time.deltaTime * 0.01f;               //이미지 알파 값을 타임 델타 값 * 0.01
             image.color = color;                                //판넬 이미지 컬러에 바뀐 알파값 참조
-            Debug.Log(sceneNum + "번 씬  " + image.color.a + "알파값!");
             if (image.color.a >= 3)                        //만약 판넬 이미지 알파 값이 0보다 작으면
             {
                 checkbool = true;                              //checkbool 참 
