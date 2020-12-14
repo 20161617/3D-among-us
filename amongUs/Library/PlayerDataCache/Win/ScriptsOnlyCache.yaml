@@ -52,7 +52,6 @@ ScriptsOnlyBuild:
     - UseButton
     - VoteManager
     - WatingRoomManager
-    - testA
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
     - Photon.Pun.Demo.Asteroids.Bullet
@@ -287,8 +286,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14470}
     - Class: 114
       Script: {instanceID: 14482}
-    - Class: 114
-      Script: {instanceID: 14558}
     - Class: 114
       Script: {instanceID: 15270}
     - Class: 114

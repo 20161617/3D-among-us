@@ -18,8 +18,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     public PhotonView PV;
     public TargetCtrl targetCtrl;
     bool waitRoom = false;
-    bool isCreateMisson = false;
-    bool isReady = false;
+
     // Start is called before the first frame update
     private void OnEnable()
     {
@@ -30,13 +29,22 @@ public class PlayerScript : MonoBehaviourPunCallbacks
                 if (PV.IsMine)
                 { 
                     transform.GetComponent<PlayerMission>().createMission();
-                    isCreateMisson = true;
                 }
                 else
                 {
-                    isCreateMisson = false;
-                    isReady = true;
+
                 }
+            }
+            else
+            {
+                if(MissionManager.Instance.plusGague==0.0f) 
+                {     //미션 게이지를 받지 못했을떄  인원수에 맞춰 미션 게이지 세팅 
+                    int imposterCount = DatabaseManager.databaseManager.Players.Count <= 5 ? 1 : 2;                                                                                       
+                    MissionManager.Instance.plusGague = (1.0f / (DatabaseManager.databaseManager.Players.Count - imposterCount)) / (MissionManager.Instance.commonMissionNum + MissionManager.Instance.simpleMissionNum + MissionManager.Instance.difficultMissionNum);
+                    //Debug.LogError("미션 게이지 충전 전에 :"+MissionManager.Instance.plusGague);
+                    //Debug.LogError("Imposter 일떄  : player " + DatabaseManager.databaseManager.Players.Count);
+                    //Debug.LogError("미션 게이지 충전 후에 :" + MissionManager.Instance.plusGague);
+                }         
             }
         }
         waitRoom = true;
@@ -63,12 +71,6 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     void Update()
     {
         if (!PV.IsMine) return;
-        if(isReady&&!isCreateMisson&&!isImposter)
-        {
-            transform.GetComponent<PlayerMission>().createMission();
-            isCreateMisson = true;
-        }
-       
     }
 
     void OnDestroy()
