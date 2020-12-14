@@ -57,7 +57,6 @@ public class UIPanel : MonoBehaviour
     {
         //임포스터라면
         if (isImposter)
-<<<<<<< HEAD
         {
             //Kill 버튼 활성화/비활성화
             if (PlayerTargetCtrl.InteractionObject != "" && !OneCall)
@@ -92,40 +91,15 @@ public class UIPanel : MonoBehaviour
             if (PlayerTargetCtrl.InteractionObject != "" && !OneCall)
             {
                 ShowButton("Use");
-=======
-        {
-            //Kill 버튼 활성화/비활성화
-            if (PlayerTargetCtrl.InteractionObject != "" && !OneCall)
-            {
-                if (PlayerTargetCtrl.InteractionObject == "emergencyTable")
-                {
-                    UseButton.gameObject.SetActive(true);
-                    SabotageButton.gameObject.SetActive(false);
-                    ShowButton("Use");
-                }
-                else
-                {
-                    ShowButton("Kill");
-                }
-
->>>>>>> New-메인
                 OneCall = true;
             }
             else if (PlayerTargetCtrl.InteractionObject == "" && OneCall)
             {
-<<<<<<< HEAD
                 HideButton("Use");
-=======
-                UseButton.gameObject.SetActive(false);
-                SabotageButton.gameObject.SetActive(true);
-                HideButton("Use");
-                HideButton("Kill");
->>>>>>> New-메인
                 OneCall = false;
             }
         }
 
-<<<<<<< HEAD
         if (databaseManager.MyPlayer.isDetected)
         {
             ShowButton("Report");
@@ -133,22 +107,6 @@ public class UIPanel : MonoBehaviour
         else
         {
             HideButton("Report");
-=======
-        //임포스터가 아니라면
-        if (!isImposter)
-        {
-            //Use 버튼 활성화/비활성화
-            if (PlayerTargetCtrl.InteractionObject != "" && !OneCall)
-            {
-                ShowButton("Use");
-                OneCall = true;
-            }
-            else if (PlayerTargetCtrl.InteractionObject == "" && OneCall)
-            {
-                HideButton("Use");
-                OneCall = false;
-            }
->>>>>>> New-메인
         }
     }
 

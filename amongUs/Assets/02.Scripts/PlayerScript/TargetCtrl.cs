@@ -67,19 +67,9 @@ public class TargetCtrl : MonoBehaviourPun
                 //선택한 오브젝트의 미션데이터가 현재 임무에 포함되어 있다면
                 if (MissionManager.Instance.ContainsMission(TargetMissionData.MissionType, TargetMissionData.MissionNumber, databaseManager.MyPlayer.isImposter))
                 {
-<<<<<<< HEAD
                     Debug.Log("REPORT 포함되어있음");
                     //반짝이를 켜준다
                     GlowObject selectionGlowObject = selection.GetComponent<GlowObject>();
-=======
-                    if (TargetMissionData.MissionType == MissionCommon || TargetMissionData.MissionType == MissionSimple || TargetMissionData.MissionType == MissionDifficult) //미션 타입 
-                    {
-                        if (!transform.GetComponent<PlayerMission>().myMission.Contains(selection.gameObject))
-                            return;
-                    }
-                        //반짝이를 켜준다
-                        GlowObject selectionGlowObject = selection.GetComponent<GlowObject>();
->>>>>>> New-메인
 
                     selectionGlowObject.OnRaycastEnter();
 
@@ -95,29 +85,22 @@ public class TargetCtrl : MonoBehaviourPun
             Debug.Log(hit.collider.name);
         }
     }
+
     //Use버튼을 누르면 현재 미션데이터에 맞는 미션을 불러오는 함수를 호출
     public void TargetUse()
     {
         MissionManager.Instance.CallMission(TargetMissionData.MissionType, TargetMissionData.MissionNumber);
     }
-<<<<<<< HEAD
     //임포스터일 경우, Kill 버튼을 누르면 상대방을 죽인다.
-=======
-    //Use버튼을 누르면 현재 미션데이터에 맞는 미션을 불러오는 함수를 호출
->>>>>>> New-메인
     public void TargetKill()
     {
         Debug.Log("죽여!");
         databaseManager.MyPlayer.GetComponent<PhotonView>().RPC("KillRPC", RpcTarget.AllViaServer);
-<<<<<<< HEAD
         _selection.GetComponent<PlayerScript>().KillingPlayer();
     }
     //범위안에 죽은 사람이 있을경우, Report 버튼을 누르면 신고한다.
     public void TargetReport()
     {
 
-=======
-         //_selection.GetComponent<PlayerScript>().KillingPlayer();
->>>>>>> New-메인
     }
 }

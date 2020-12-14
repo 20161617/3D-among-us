@@ -7,15 +7,15 @@ public static class MissionList
     public enum COMMON_MISSIONLIST
     {  //공통임무리스트
         ELECTRICFIX = 1, // 전기 배선 고치기 
-        SCRATCHINGCARD = 2, //카드긁기 ->구현  MiniGame_SwipeCard
+        SCRATCHINGCARD = 2, //카드긁기
     }
     public enum SIMPLE_MISSIONLIST //단순임무 리스트 
     {
-        SWITCH = 1, //스위치 켜서 고치기 -> 구현 MiniGame_DivertPower
+        SWITCH = 1, //스위치 켜서 고치기 
         NAVIGATION = 2, // 네비
-        ROUTEFIXING, //항로조종하기 -> 구현  MiniGame_Navagation
-        DOWNLOADING, //다운로드  ->구현  MiniGame_UploadData
-        DECIDUOUSLY, //낙엽버리기  
+        ROUTEFIXING, //항로조종하기 
+        DOWNLOADING, //다운로드 
+        DECIDUOUSLY, //낙엽버리기 
 
     }
     public enum DIFFUCLT_MISSIONLIST //복잡임무 리스트 
@@ -24,7 +24,7 @@ public static class MissionList
         SHOOTING = 2, //총쏘기  ->구현  MiniGame_ClearAsteroids
         TRASHING = 3, // 쓰레기버리기  -> 구현  MiniGame_EmptyGarbage
         DNASEARCHING = 4, //의무실 누르고 60초 기다렸다 오는거  ->구현 MiniGame_InspectSample
-        FILLOIL = 5, //기름채우기  
+        FILLOIL = 5, //기름채우기
         DISTRIBUTOR = 6, // 원 일치시기키기 -> 구현 MiniGame_Distributor
     }
     public enum SAVOTAGE_MISSIONLIST //사보타지 미션 

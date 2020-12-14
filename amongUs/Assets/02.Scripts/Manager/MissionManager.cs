@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -38,8 +38,7 @@ public class MissionManager : MonoBehaviourPun
     public List<int> DifficultMission = new List<int>();
 
     // public List<GameObject> HaveMission = new List<GameObject>(); //맵에 보유 미션 
-
-
+    public GameObject clearObject { get; set; }
     public List<GameObject> myMission = new List<GameObject>(); //자신의 미션 
     public Text displayText;
 
@@ -53,7 +52,6 @@ public class MissionManager : MonoBehaviourPun
     public int commonMissionNum { get; set; } //공통임무
     public int simpleMissionNum { get; set; } //단순임무
     public int difficultMissionNum { get; set; } //복잡임무 
-
 
     private void Awake()
     {
@@ -90,6 +88,7 @@ public class MissionManager : MonoBehaviourPun
     public void PV_GaugeFill(GameObject _object)
     {
         // getGagueFill = _object.GetComponent<Gague>().setGague * 0.01f;
+        myMission.Remove(clearObject);
         PV.RPC("MissionClearGauge", RpcTarget.AllViaServer);
     }
 
@@ -224,8 +223,6 @@ public class MissionManager : MonoBehaviourPun
             return true;
         }
         return false;
-<<<<<<< HEAD
-=======
     }
 
 
@@ -252,7 +249,7 @@ public class MissionManager : MonoBehaviourPun
                 case (int)SIMPLE_MISSIONLIST.SWITCH:
                     text = "스위치 올리기";
                     break;
-                case (int)SIMPLE_MISSIONLIST.ROUTEFIXING:
+                case (int)SIMPLE_MISSIONLIST.NAVIGATION:
                     text = "항로 조정하기";
                     break;
                 case (int)SIMPLE_MISSIONLIST.DOWNLOADING:
@@ -281,6 +278,5 @@ public class MissionManager : MonoBehaviourPun
             }
         }
         return text;
->>>>>>> New-메인
     }
 }
