@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -11,10 +11,11 @@ public class SpawnCenter : MonoBehaviour
 
     Vector3 Center;
 
-    int playerNum = databaseManager.Players.Count;
+    int playerNum;
     // Start is called before the first frame update
     void Start()
     {
+        playerNum = databaseManager.Players.Count;
 
         float radian = 0;
 

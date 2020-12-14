@@ -13,7 +13,10 @@ public class WatingRoomManager : MonoBehaviourPun
     public GameObject RoomPanel;
     public Text RoomInfoText;
 
-
+    private void Awake()
+    {
+        StartCoroutine("Init");
+    }
 
     void Update()
     {
@@ -26,14 +29,20 @@ public class WatingRoomManager : MonoBehaviourPun
         PhotonNetwork.LoadLevel("LobbyScene");
     }
 
-
-
     void RoomRenewal()
     {
         databaseManager.RoomRenewal();
         RoomInfoText.text = databaseManager.roomInfoText;
     }
 
+    IEnumerator Init()
+    {
+        yield return new WaitForSeconds(0.05f);
+
+        databaseManager.SetRandColor();
+
+        //databaseManager.MyPlayer.gameObject.SetActive(true);
+    }
 
     #region 게임시작
     //새로 추가된 부분
@@ -58,6 +67,7 @@ public class WatingRoomManager : MonoBehaviourPun
             databaseManager.Players[rand].GetComponent<PhotonView>().RPC("SetImpoCrew", RpcTarget.AllViaServer, true);
             ImpoList.RemoveAt(rand);
         }
+
     }
 
     void HideCharacter()

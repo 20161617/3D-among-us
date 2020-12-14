@@ -93,7 +93,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         databaseManager.MyPlayer = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity).GetComponent<PlayerScript>();
 
-        databaseManager.setRandColor();
+        //databaseManager.MyPlayer.gameObject.SetActive(false);
+
+        //databaseManager.photonView.RPC("SetRandColor", RpcTarget.AllBuffered);
+
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)

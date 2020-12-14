@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/VoteScene.unity
     guid: e0642d5106789554ba4678575861d022
+  - enabled: 1
+    path: Assets/01.Scenes/DeportScene.unity
+    guid: 04ddadbc518d87b47a6870c4b909f9a2
   m_configObjects: {}

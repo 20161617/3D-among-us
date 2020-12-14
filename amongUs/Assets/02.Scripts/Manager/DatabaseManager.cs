@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.UI;
 
 public enum COLOR
 {
@@ -33,6 +34,13 @@ public class DatabaseManager : MonoBehaviourPun
 
     public string roomInfoText;
 
+    public const int VOTE_TIME = 120;
+
+    public int deportMember = -1;
+
+    public int impoCount;
+
+    public bool isEvent;
     private void Awake()
     {
         if(databaseManager == null)
@@ -53,7 +61,7 @@ public class DatabaseManager : MonoBehaviourPun
     }
 
 
-    public void setRandColor()
+    public void SetRandColor()
     {
         List<int> PlayerColors = new List<int>();
         for(int i=0; i <Players.Count; i++)
@@ -171,5 +179,12 @@ public class DatabaseManager : MonoBehaviourPun
         }
 
         return color;
+    }
+
+
+
+    public void DeportMessage(Text t1, Text t2)
+    {
+
     }
 }

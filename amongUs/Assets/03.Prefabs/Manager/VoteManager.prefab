@@ -49,7 +49,16 @@ MonoBehaviour:
   VoteComponents:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   SkipVoteBtn: {fileID: 0}
+  timerText: {fileID: 0}
 --- !u!114 &6287217417403045759
 MonoBehaviour:
   m_ObjectHideFlags: 0

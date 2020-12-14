@@ -20,9 +20,7 @@ public class ColorManager : MonoBehaviourPun
 
     private void Awake()
     {
-        int index = databaseManager.MyPlayer.colorIndex;
-        copyPlayerMaterial = PlayerCopy.transform.Find("Beta_Surface").GetComponent<SkinnedMeshRenderer>();
-        copyPlayerMaterial.material = databaseManager.Colors[index];
+        StartCoroutine("Init");
     }
 
 
@@ -56,6 +54,14 @@ public class ColorManager : MonoBehaviourPun
         }
     }
 
+    IEnumerator Init()
+    {
+        yield return new WaitForSeconds(0.3f);
+
+        int index = databaseManager.MyPlayer.colorIndex;
+        copyPlayerMaterial = PlayerCopy.transform.Find("Beta_Surface").GetComponent<SkinnedMeshRenderer>();
+        copyPlayerMaterial.material = databaseManager.Colors[index];
+    }
 
     public void OnPanel()
     {

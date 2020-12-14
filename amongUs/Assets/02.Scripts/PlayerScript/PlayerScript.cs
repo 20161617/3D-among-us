@@ -7,6 +7,12 @@ using Photon.Realtime;
 using static UIManager;
 using static DatabaseManager;
 
+public enum PLAYER_STATE
+{
+    ALIVE,
+    DEAD
+}
+
 public class PlayerScript : MonoBehaviourPunCallbacks
 {
     public bool isImposter;
@@ -14,6 +20,8 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 
     public int colorIndex = -1;
     public string nickName;
+
+    public PLAYER_STATE playerState;
 
     PhotonView PV;
     public TargetCtrl targetCtrl;
@@ -27,6 +35,8 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 
         nickName = photonView.Owner.NickName;
 
+        playerState = PLAYER_STATE.ALIVE;
+
         targetCtrl = gameObject.GetComponent<TargetCtrl>();
         
         databaseManager.Players.Add(this);
@@ -38,6 +48,10 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     void Update()
     {
         if (!PV.IsMine) return;
+
+
+        //임시 작용
+        if (playerState == PLAYER_STATE.DEAD) photonView.RPC("HideCharacter", RpcTarget.AllViaServer);
     }
 
     void OnDestroy()
@@ -76,5 +90,10 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     void SetMyPosition(Vector3 postion)
     {
         gameObject.transform.position = postion;
+    }
+
+    public void SetState(PLAYER_STATE playerState)
+    {
+        this.playerState = playerState;
     }
 }
