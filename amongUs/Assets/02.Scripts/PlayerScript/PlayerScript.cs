@@ -9,7 +9,9 @@ using static DatabaseManager;
 
 public class PlayerScript : MonoBehaviourPunCallbacks
 {
-    public bool isImposter;
+    public bool isImposter = false;
+    public bool isAlive = true;
+    public bool isDetected = false;
     public SkinnedMeshRenderer color;
 
     public int colorIndex = -1;
@@ -17,18 +19,21 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 
     PhotonView PV;
     public TargetCtrl targetCtrl;
+    public TwoDimmentionalAnimationStateController playerAnimation;
 
     // Start is called before the first frame update
     void Awake()
     {
         PV = photonView;
-      
+
         color = gameObject.transform.Find("Beta_Surface").GetComponent<SkinnedMeshRenderer>();
 
         nickName = photonView.Owner.NickName;
 
         targetCtrl = gameObject.GetComponent<TargetCtrl>();
-        
+
+        playerAnimation = gameObject.GetComponent<TwoDimmentionalAnimationStateController>();
+
         databaseManager.Players.Add(this);
 
         DontDestroyOnLoad(gameObject);
@@ -43,6 +48,21 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     void OnDestroy()
     {
         databaseManager.Players.Remove(this);
+    }
+
+    public void KillingPlayer()
+    {
+
+        PV.RPC("DieRPC", RpcTarget.AllViaServer);
+    }
+
+    public void OnDetected()
+    {
+        isDetected = true;
+    }
+    public void OffDetected()
+    {
+        isDetected = false;
     }
 
     [PunRPC]
@@ -69,6 +89,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     [PunRPC]
     void ShowCharacter()
     {
+        gameObject.tag = "INTERACTION";
         gameObject.SetActive(true);
     }
 
@@ -76,5 +97,18 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     void SetMyPosition(Vector3 postion)
     {
         gameObject.transform.position = postion;
+    }
+
+    [PunRPC]
+    void DieRPC()
+    {
+        gameObject.tag = "DEAD";
+        isAlive = false;
+        playerAnimation.OnDeath();
+    }
+    [PunRPC]
+    void KillRPC()
+    {
+        playerAnimation.OnKill();
     }
 }
