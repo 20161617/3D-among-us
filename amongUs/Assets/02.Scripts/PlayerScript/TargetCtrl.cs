@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -45,6 +45,7 @@ public class TargetCtrl : MonoBehaviourPun
 
         //Ray를 볼 수 있게 표시 해준다.
         Debug.DrawRay(transform.position, transform.forward * MaxDistance, Color.blue, 0.3f);
+
         //Ray에 닿은 오브젝트가 있다면
         if (Physics.Raycast(transform.position, transform.forward, out hit, MaxDistance))
         {
@@ -66,6 +67,7 @@ public class TargetCtrl : MonoBehaviourPun
 
                     //이전에 선택한 오브젝트에 현재 선택한 오브젝트를 넣어준다
                     _selection = selection;
+
                     //상호작용하는 오브젝트 이름에 현재 충돌하고있는 오브젝트의 이름을 넣어준다
                     InteractionObject = hit.collider.name;
                 }

@@ -1233,6 +1233,7 @@ MonoBehaviour:
   isImposter: 0
   color: {fileID: 0}
   colorIndex: -1
+  nickName: 
   targetCtrl: {fileID: 0}
 --- !u!114 &-851834456733325061
 MonoBehaviour:

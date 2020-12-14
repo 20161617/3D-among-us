@@ -4,6 +4,23 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
+public enum COLOR
+{
+    RED,
+    BLUE,
+    GREEN,
+    PINK,
+    ORANGE,
+    YELLOW,
+    GREY,
+    WHITE,
+    PURPLE,
+    BROWN,
+    MINT,
+    LIGHTGREEN
+}
+
+
 public class DatabaseManager : MonoBehaviourPun
 {
     public static DatabaseManager databaseManager;
@@ -53,7 +70,106 @@ public class DatabaseManager : MonoBehaviourPun
                 break;
             }
         }
-       
     }
 
+
+    public void SortPlayers()
+    {
+        //Players.Sort((p1, p2) => p1.actor.CompareTo(p2.actor)
+    }
+
+
+    public Color SetColorIcon(int colorIndex)
+    {
+        Color color = Color.white;
+
+        switch ((COLOR)colorIndex)
+        {
+            case COLOR.RED:
+                color.r = 180.0f/255.0f;
+                color.g = 0.0f / 255.0f;
+                color.b = 0.0f / 255.0f;
+                color.a = 255.0f / 255.0f;
+                break;
+
+            case COLOR.BLUE:
+                color.r = 0.0f / 255.0f;
+                color.g = 80.0f / 255.0f;
+                color.b = 180.0f / 255.0f;
+                color.a = 255.0f / 255.0f;
+                break;
+
+            case COLOR.GREEN:
+                color.r = 0.0f / 255.0f;
+                color.g = 180.0f / 255.0f;
+                color.b = 0.0f / 255.0f;
+                color.a = 255.0f / 255.0f;
+                break;
+
+            case COLOR.PINK:
+                color.r = 220.0f / 255.0f;
+                color.g = 80.0f / 255.0f;
+                color.b = 170.0f / 255.0f;
+                color.a = 255.0f / 255.0f;
+                break;
+
+            case COLOR.ORANGE:
+                color.r = 255.0f / 255.0f;
+                color.g = 100.0f / 255.0f;
+                color.b = 0.0f / 255.0f;
+                color.a = 255.0f / 255.0f;
+                break;
+
+            case COLOR.YELLOW:
+                color.r = 225.0f / 255.0f;
+                color.g = 230.0f / 255.0f;
+                color.b = 0.0f / 255.0f;
+                color.a = 255.0f / 255.0f;
+                break;
+
+            case COLOR.GREY:
+                color.r = 100.0f / 255.0f;
+                color.g = 100.0f / 255.0f;
+                color.b = 100.0f / 255.0f;
+                color.a = 255.0f / 255.0f;
+                break;
+
+            case COLOR.WHITE:
+                color.r = 255.0f / 255.0f;
+                color.g = 255.0f / 255.0f;
+                color.b = 255.0f / 255.0f;
+                color.a = 255.0f / 255.0f;
+                break;
+
+            case COLOR.PURPLE:
+                color.r = 110.0f / 255.0f;
+                color.g = 0.0f / 255.0f;
+                color.b = 150.0f / 255.0f;
+                color.a = 255.0f / 255.0f;
+                break;
+
+            case COLOR.BROWN:
+                color.r = 110.0f / 255.0f;
+                color.g = 40.0f / 255.0f;
+                color.b = 20.0f / 255.0f;
+                color.a = 255.0f / 255.0f;
+                break;
+
+            case COLOR.MINT:
+                color.r = 20.0f / 255.0f;
+                color.g = 220.0f / 255.0f;
+                color.b = 200.0f / 255.0f;
+                color.a = 255.0f / 255.0f;
+                break;
+
+            case COLOR.LIGHTGREEN:
+                color.r = 170.0f / 255.0f;
+                color.g = 230.0f / 255.0f;
+                color.b = 70.0f / 255.0f;
+                color.a = 255.0f / 255.0f;
+                break;
+        }
+
+        return color;
+    }
 }

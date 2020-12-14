@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/WaitingRoom.unity
     guid: f8ebefbbd085a8d42a45bc15aaf64d14
-  - enabled: 0
-    path: Assets/01.Scenes/InGame.unity
-    guid: 3934c071586552549b1b3175eafeb109
+  - enabled: 1
+    path: Assets/01.Scenes/VoteScene.unity
+    guid: e0642d5106789554ba4678575861d022
   m_configObjects: {}
