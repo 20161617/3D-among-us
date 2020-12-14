@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/WaitingRoom.unity
     guid: f8ebefbbd085a8d42a45bc15aaf64d14
+  - enabled: 0
+    path: Assets/01.Scenes/InGame.unity
+    guid: 3934c071586552549b1b3175eafeb109
   m_configObjects: {}
