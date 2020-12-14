@@ -67,6 +67,9 @@ public class TargetCtrl : MonoBehaviourPun
                 //선택한 오브젝트의 미션데이터가 현재 임무에 포함되어 있다면
                 if (MissionManager.Instance.ContainsMission(TargetMissionData.MissionType, TargetMissionData.MissionNumber, databaseManager.MyPlayer.isImposter))
                 {
+                    if (!(TargetMissionData.MissionType == "PLAYER") && !transform.GetComponent<PlayerMission>().myMission.Contains(selection.gameObject))
+                        return;
+
                     //다른미션도 받아들일까봐
                     //현재미션 체크
                     //if (!transform.GetComponent<PlayerMission>().myMission.Contains(selection.gameObject))

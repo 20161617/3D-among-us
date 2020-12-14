@@ -178,7 +178,7 @@ public class MissionManager : MonoBehaviourPun
         }
         if (MissionType == "EmergencyCall")
         {
-            //ReportGame.GetComponent<GotoVoteManager>().photonView.RPC("ActivePanel", RpcTarget.AllViaServer, MissionNumber);
+            ReportGame.GetComponent<GotoVoteManager>().photonView.RPC("ActivePanel", RpcTarget.AllViaServer, MissionNumber);
         }
     }
 
