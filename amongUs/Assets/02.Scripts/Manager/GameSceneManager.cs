@@ -12,7 +12,7 @@ public class GameSceneManager : MonoBehaviour
     public GameObject Map;
     public GameObject UIPanel;
     public GameObject MissionBar;
-
+  
     GameObject networkManager;
 
 

@@ -10,7 +10,6 @@ ScriptsOnlyBuild:
     - ColorManager
     - Com.MyCompany.MyGame.CameraFollow
     - DatabaseManager
-    - DetectDead
     - DistributorObject
     - DivertButton
     - FadeIn
@@ -23,7 +22,6 @@ ScriptsOnlyBuild:
     - GlowObject
     - GlowPrePass
     - IntroPanel
-    - KillButton
     - LeftBlackMove
     - MiniGame_Asteroid
     - MiniGame_ClearAsteroids
@@ -43,8 +41,8 @@ ScriptsOnlyBuild:
     - PlayerMission
     - PlayerScript
     - PopBody
-    - ReportButton
     - RightBlackMove
+    - SoundManager
     - SpawnCenter
     - TargetCtrl
     - TestPlayerScript
@@ -53,7 +51,6 @@ ScriptsOnlyBuild:
     - UIPanel
     - UploadGague
     - UseButton
-    - VoteManager
     - WatingRoomManager
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
@@ -103,14 +100,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Rendering.Universal.UniversalProjectSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -160,80 +149,28 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11328}
     - Class: 114
-      Script: {instanceID: 11352}
+      Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11358}
-=======
-      Script: {instanceID: 11338}
+      Script: {instanceID: 12632}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 12988}
     - Class: 114
-<<<<<<< HEAD
-      Script: {instanceID: 12616}
->>>>>>> Stashed changes
+      Script: {instanceID: 13686}
     - Class: 114
-      Script: {instanceID: 12970}
+      Script: {instanceID: 14016}
     - Class: 114
-      Script: {instanceID: 13668}
-    - Class: 114
-<<<<<<< Updated upstream
-      Script: {instanceID: 12914}
-    - Class: 114
-      Script: {instanceID: 13628}
-=======
-      Script: {instanceID: 13998}
-    - Class: 114
-      Script: {instanceID: 14714}
->>>>>>> Stashed changes
-=======
-      Script: {instanceID: 11572}
-    - Class: 114
-      Script: {instanceID: 12620}
-    - Class: 114
-      Script: {instanceID: 12950}
-    - Class: 114
-      Script: {instanceID: 13668}
->>>>>>> New-메인
-=======
-      Script: {instanceID: 11338}
-    - Class: 114
-      Script: {instanceID: 11346}
-    - Class: 114
-      Script: {instanceID: 12616}
-    - Class: 114
-      Script: {instanceID: 12970}
-    - Class: 114
-      Script: {instanceID: 13668}
-    - Class: 114
-      Script: {instanceID: 13998}
-    - Class: 114
-      Script: {instanceID: 14714}
->>>>>>> Stashed changes
-=======
-      Script: {instanceID: 11338}
-    - Class: 114
-      Script: {instanceID: 11346}
-    - Class: 114
-      Script: {instanceID: 12616}
-    - Class: 114
-      Script: {instanceID: 12970}
-    - Class: 114
-      Script: {instanceID: 13668}
-    - Class: 114
-      Script: {instanceID: 13998}
-    - Class: 114
-      Script: {instanceID: 14714}
->>>>>>> Stashed changes
+      Script: {instanceID: 14730}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -279,6 +216,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 104
@@ -286,382 +227,89 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+      Script: {instanceID: 11328}
+    - Class: 114
+      Script: {instanceID: 11330}
+    - Class: 114
       Script: {instanceID: 11336}
     - Class: 114
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-      Script: {instanceID: 11338}
+      Script: {instanceID: 12634}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 12692}
     - Class: 114
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      Script: {instanceID: 11352}
+      Script: {instanceID: 12802}
     - Class: 114
-      Script: {instanceID: 11358}
-=======
-      Script: {instanceID: 11346}
+      Script: {instanceID: 12876}
     - Class: 114
-<<<<<<< HEAD
-      Script: {instanceID: 12618}
+      Script: {instanceID: 12882}
     - Class: 114
-      Script: {instanceID: 12676}
->>>>>>> Stashed changes
+      Script: {instanceID: 12886}
     - Class: 114
-      Script: {instanceID: 12858}
+      Script: {instanceID: 12988}
     - Class: 114
-      Script: {instanceID: 12864}
+      Script: {instanceID: 13104}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 13164}
     - Class: 114
-      Script: {instanceID: 12970}
+      Script: {instanceID: 13402}
     - Class: 114
-      Script: {instanceID: 13086}
+      Script: {instanceID: 13528}
     - Class: 114
-      Script: {instanceID: 13146}
+      Script: {instanceID: 13636}
     - Class: 114
-      Script: {instanceID: 13384}
+      Script: {instanceID: 13674}
     - Class: 114
-      Script: {instanceID: 13510}
+      Script: {instanceID: 13844}
     - Class: 114
-      Script: {instanceID: 13618}
+      Script: {instanceID: 13860}
     - Class: 114
-      Script: {instanceID: 13656}
+      Script: {instanceID: 13920}
     - Class: 114
-      Script: {instanceID: 13686}
+      Script: {instanceID: 13962}
     - Class: 114
-<<<<<<< Updated upstream
-      Script: {instanceID: 12742}
-=======
-      Script: {instanceID: 11574}
+      Script: {instanceID: 13964}
     - Class: 114
-      Script: {instanceID: 11632}
+      Script: {instanceID: 14104}
     - Class: 114
-      Script: {instanceID: 11814}
+      Script: {instanceID: 14356}
     - Class: 114
-      Script: {instanceID: 11820}
+      Script: {instanceID: 14434}
     - Class: 114
-      Script: {instanceID: 11824}
+      Script: {instanceID: 14546}
     - Class: 114
-      Script: {instanceID: 12038}
+      Script: {instanceID: 14712}
     - Class: 114
-<<<<<<< Updated upstream
-      Script: {instanceID: 12098}
+      Script: {instanceID: 14768}
     - Class: 114
-      Script: {instanceID: 12338}
-    - Class: 114
-      Script: {instanceID: 12464}
-    - Class: 114
-      Script: {instanceID: 12572}
-    - Class: 114
-      Script: {instanceID: 12610}
-    - Class: 114
-      Script: {instanceID: 12638}
->>>>>>> New-메인
-    - Class: 114
-      Script: {instanceID: 12778}
-    - Class: 114
-      Script: {instanceID: 12794}
-    - Class: 114
-<<<<<<< HEAD
-      Script: {instanceID: 12860}
-=======
-      Script: {instanceID: 13826}
-    - Class: 114
-      Script: {instanceID: 13842}
-    - Class: 114
-      Script: {instanceID: 13902}
-    - Class: 114
-      Script: {instanceID: 13944}
->>>>>>> Stashed changes
-    - Class: 114
-      Script: {instanceID: 13946}
-    - Class: 114
-<<<<<<< Updated upstream
-      Script: {instanceID: 13004}
-=======
-      Script: {instanceID: 12854}
-    - Class: 114
-      Script: {instanceID: 12896}
-    - Class: 114
-      Script: {instanceID: 12898}
->>>>>>> New-메인
-    - Class: 114
-      Script: {instanceID: 13040}
-    - Class: 114
-      Script: {instanceID: 13292}
-    - Class: 114
-      Script: {instanceID: 13370}
-    - Class: 114
-      Script: {instanceID: 13474}
-    - Class: 114
-      Script: {instanceID: 13482}
-    - Class: 114
-      Script: {instanceID: 13650}
-    - Class: 114
-<<<<<<< HEAD
-      Script: {instanceID: 14012}
-=======
-      Script: {instanceID: 14088}
-    - Class: 114
-      Script: {instanceID: 14340}
-    - Class: 114
-      Script: {instanceID: 14418}
-    - Class: 114
-      Script: {instanceID: 14522}
-    - Class: 114
-      Script: {instanceID: 14530}
-    - Class: 114
-      Script: {instanceID: 14696}
-    - Class: 114
-      Script: {instanceID: 14752}
-    - Class: 114
-      Script: {instanceID: 14884}
-    - Class: 114
-      Script: {instanceID: 15090}
->>>>>>> Stashed changes
-    - Class: 114
-      Script: {instanceID: 15100}
-    - Class: 114
-<<<<<<< Updated upstream
-      Script: {instanceID: 14350}
-=======
-      Script: {instanceID: 13836}
-    - Class: 114
-      Script: {instanceID: 14042}
-    - Class: 114
-      Script: {instanceID: 14052}
->>>>>>> New-메인
-    - Class: 114
-      Script: {instanceID: 14058}
-    - Class: 114
-      Script: {instanceID: 14390}
-    - Class: 114
-      Script: {instanceID: 14406}
-    - Class: 114
-<<<<<<< HEAD
-      Script: {instanceID: 15270}
-=======
-      Script: {instanceID: 14510}
-    - Class: 114
-      Script: {instanceID: 14522}
->>>>>>> New-메인
-    - Class: 114
-      Script: {instanceID: 15310}
-    - Class: 114
-      Script: {instanceID: 15358}
-    - Class: 114
-      Script: {instanceID: 15430}
-    - Class: 114
-      Script: {instanceID: 15442}
-    - Class: 114
-      Script: {instanceID: 15578}
-    - Class: 114
-      Script: {instanceID: 15580}
-    - Class: 114
-<<<<<<< HEAD
-      Script: {instanceID: 15636}
-=======
-      Script: {instanceID: 15106}
-    - Class: 114
-      Script: {instanceID: 15438}
-    - Class: 114
-      Script: {instanceID: 15454}
-    - Class: 114
-      Script: {instanceID: 15556}
-    - Class: 114
-      Script: {instanceID: 15568}
-    - Class: 114
-      Script: {instanceID: 16354}
-    - Class: 114
-      Script: {instanceID: 16402}
-    - Class: 114
-      Script: {instanceID: 16474}
-    - Class: 114
-      Script: {instanceID: 16486}
-    - Class: 114
-      Script: {instanceID: 16622}
-    - Class: 114
-      Script: {instanceID: 16624}
-    - Class: 114
-      Script: {instanceID: 16722}
->>>>>>> Stashed changes
-=======
-      Script: {instanceID: 15676}
->>>>>>> New-메인
-=======
-      Script: {instanceID: 11346}
-    - Class: 114
-      Script: {instanceID: 12618}
-    - Class: 114
-      Script: {instanceID: 12676}
-    - Class: 114
-      Script: {instanceID: 12858}
-=======
-      Script: {instanceID: 11346}
-    - Class: 114
-      Script: {instanceID: 12618}
-    - Class: 114
-      Script: {instanceID: 12676}
-    - Class: 114
-      Script: {instanceID: 12858}
-    - Class: 114
-      Script: {instanceID: 12864}
-    - Class: 114
-      Script: {instanceID: 12868}
-    - Class: 114
-      Script: {instanceID: 12970}
-    - Class: 114
-      Script: {instanceID: 13086}
-    - Class: 114
-      Script: {instanceID: 13146}
-    - Class: 114
-      Script: {instanceID: 13384}
-    - Class: 114
-      Script: {instanceID: 13510}
-    - Class: 114
-      Script: {instanceID: 13618}
-    - Class: 114
-      Script: {instanceID: 13656}
-    - Class: 114
-      Script: {instanceID: 13686}
-    - Class: 114
-      Script: {instanceID: 13826}
-    - Class: 114
-      Script: {instanceID: 13842}
-    - Class: 114
-      Script: {instanceID: 13902}
-    - Class: 114
-      Script: {instanceID: 13944}
-    - Class: 114
-      Script: {instanceID: 13946}
->>>>>>> Stashed changes
-    - Class: 114
-      Script: {instanceID: 14088}
-    - Class: 114
-<<<<<<< Updated upstream
-      Script: {instanceID: 12868}
-    - Class: 114
-      Script: {instanceID: 12970}
-    - Class: 114
-      Script: {instanceID: 13086}
-    - Class: 114
-      Script: {instanceID: 13146}
-    - Class: 114
-      Script: {instanceID: 13384}
-    - Class: 114
-      Script: {instanceID: 13510}
-    - Class: 114
-      Script: {instanceID: 13618}
-    - Class: 114
-      Script: {instanceID: 13656}
-    - Class: 114
-      Script: {instanceID: 13686}
-    - Class: 114
-      Script: {instanceID: 13826}
-    - Class: 114
-      Script: {instanceID: 13842}
-    - Class: 114
-      Script: {instanceID: 13902}
-    - Class: 114
-      Script: {instanceID: 13944}
-    - Class: 114
-      Script: {instanceID: 13946}
-    - Class: 114
-      Script: {instanceID: 14088}
-    - Class: 114
-      Script: {instanceID: 14340}
-    - Class: 114
-      Script: {instanceID: 14418}
-    - Class: 114
-      Script: {instanceID: 14522}
-    - Class: 114
-      Script: {instanceID: 14530}
-    - Class: 114
-      Script: {instanceID: 14696}
-    - Class: 114
-      Script: {instanceID: 14752}
-    - Class: 114
-      Script: {instanceID: 14884}
-    - Class: 114
-      Script: {instanceID: 15090}
-    - Class: 114
-      Script: {instanceID: 15100}
+      Script: {instanceID: 14900}
     - Class: 114
       Script: {instanceID: 15106}
     - Class: 114
-      Script: {instanceID: 15438}
+      Script: {instanceID: 15114}
     - Class: 114
-      Script: {instanceID: 15454}
+      Script: {instanceID: 15120}
     - Class: 114
-      Script: {instanceID: 15556}
+      Script: {instanceID: 15452}
     - Class: 114
-      Script: {instanceID: 15568}
+      Script: {instanceID: 15468}
     - Class: 114
-      Script: {instanceID: 16354}
+      Script: {instanceID: 15572}
     - Class: 114
-      Script: {instanceID: 16402}
+      Script: {instanceID: 15584}
     - Class: 114
-      Script: {instanceID: 16474}
+      Script: {instanceID: 16368}
     - Class: 114
-      Script: {instanceID: 16486}
+      Script: {instanceID: 16416}
     - Class: 114
-      Script: {instanceID: 16622}
+      Script: {instanceID: 16488}
     - Class: 114
-      Script: {instanceID: 16624}
+      Script: {instanceID: 16500}
     - Class: 114
-      Script: {instanceID: 16722}
->>>>>>> Stashed changes
-=======
-      Script: {instanceID: 14340}
+      Script: {instanceID: 16636}
     - Class: 114
-      Script: {instanceID: 14418}
+      Script: {instanceID: 16638}
     - Class: 114
-      Script: {instanceID: 14522}
-    - Class: 114
-      Script: {instanceID: 14530}
-    - Class: 114
-      Script: {instanceID: 14696}
-    - Class: 114
-      Script: {instanceID: 14752}
-    - Class: 114
-      Script: {instanceID: 14884}
-    - Class: 114
-      Script: {instanceID: 15090}
-    - Class: 114
-      Script: {instanceID: 15100}
-    - Class: 114
-      Script: {instanceID: 15106}
-    - Class: 114
-      Script: {instanceID: 15438}
-    - Class: 114
-      Script: {instanceID: 15454}
-    - Class: 114
-      Script: {instanceID: 15556}
-    - Class: 114
-      Script: {instanceID: 15568}
-    - Class: 114
-      Script: {instanceID: 16354}
-    - Class: 114
-      Script: {instanceID: 16402}
-    - Class: 114
-      Script: {instanceID: 16474}
-    - Class: 114
-      Script: {instanceID: 16486}
-    - Class: 114
-      Script: {instanceID: 16622}
-    - Class: 114
-      Script: {instanceID: 16624}
-    - Class: 114
-      Script: {instanceID: 16722}
->>>>>>> Stashed changes
+      Script: {instanceID: 16736}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -711,80 +359,28 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11328}
     - Class: 114
-      Script: {instanceID: 11352}
+      Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11358}
-=======
-      Script: {instanceID: 11338}
+      Script: {instanceID: 12632}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 12988}
     - Class: 114
-      Script: {instanceID: 12616}
->>>>>>> Stashed changes
+      Script: {instanceID: 13686}
     - Class: 114
-<<<<<<< HEAD
-      Script: {instanceID: 12970}
+      Script: {instanceID: 14016}
     - Class: 114
-      Script: {instanceID: 13668}
-    - Class: 114
-<<<<<<< Updated upstream
-      Script: {instanceID: 12914}
-    - Class: 114
-      Script: {instanceID: 13628}
-=======
-      Script: {instanceID: 13998}
-    - Class: 114
-      Script: {instanceID: 14714}
->>>>>>> Stashed changes
-=======
-      Script: {instanceID: 11572}
-    - Class: 114
-      Script: {instanceID: 12620}
-    - Class: 114
-      Script: {instanceID: 12950}
-    - Class: 114
-      Script: {instanceID: 13668}
->>>>>>> New-메인
-=======
-      Script: {instanceID: 11338}
-    - Class: 114
-      Script: {instanceID: 11346}
-    - Class: 114
-      Script: {instanceID: 12616}
-    - Class: 114
-      Script: {instanceID: 12970}
-    - Class: 114
-      Script: {instanceID: 13668}
-    - Class: 114
-      Script: {instanceID: 13998}
-    - Class: 114
-      Script: {instanceID: 14714}
->>>>>>> Stashed changes
-=======
-      Script: {instanceID: 11338}
-    - Class: 114
-      Script: {instanceID: 11346}
-    - Class: 114
-      Script: {instanceID: 12616}
-    - Class: 114
-      Script: {instanceID: 12970}
-    - Class: 114
-      Script: {instanceID: 13668}
-    - Class: 114
-      Script: {instanceID: 13998}
-    - Class: 114
-      Script: {instanceID: 14714}
->>>>>>> Stashed changes
+      Script: {instanceID: 14730}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -828,6 +424,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -837,532 +437,145 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 11324}
+    - Class: 114
+      Script: {instanceID: 11326}
+    - Class: 114
+      Script: {instanceID: 11328}
+    - Class: 114
+      Script: {instanceID: 11330}
+    - Class: 114
+      Script: {instanceID: 11332}
+    - Class: 114
       Script: {instanceID: 11334}
     - Class: 114
       Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11338}
+      Script: {instanceID: 12478}
     - Class: 114
-      Script: {instanceID: 11340}
+      Script: {instanceID: 12488}
     - Class: 114
-      Script: {instanceID: 11342}
+      Script: {instanceID: 12630}
     - Class: 114
-      Script: {instanceID: 11344}
+      Script: {instanceID: 12762}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 12786}
     - Class: 114
-      Script: {instanceID: 12462}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
+      Script: {instanceID: 12794}
     - Class: 114
-      Script: {instanceID: 12472}
+      Script: {instanceID: 12802}
     - Class: 114
-      Script: {instanceID: 12614}
+      Script: {instanceID: 12834}
     - Class: 114
-      Script: {instanceID: 12746}
+      Script: {instanceID: 12988}
     - Class: 114
-      Script: {instanceID: 12770}
+      Script: {instanceID: 13032}
     - Class: 114
-      Script: {instanceID: 12778}
-<<<<<<< Updated upstream
+      Script: {instanceID: 13098}
     - Class: 114
-<<<<<<< HEAD
-      Script: {instanceID: 12816}
+      Script: {instanceID: 13140}
     - Class: 114
-      Script: {instanceID: 12970}
+      Script: {instanceID: 13228}
     - Class: 114
-      Script: {instanceID: 13014}
+      Script: {instanceID: 13372}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 13432}
     - Class: 114
-      Script: {instanceID: 13122}
+      Script: {instanceID: 13626}
     - Class: 114
-      Script: {instanceID: 13210}
+      Script: {instanceID: 13676}
     - Class: 114
-      Script: {instanceID: 13354}
+      Script: {instanceID: 13706}
     - Class: 114
-      Script: {instanceID: 13384}
+      Script: {instanceID: 13812}
     - Class: 114
-      Script: {instanceID: 13414}
+      Script: {instanceID: 13844}
     - Class: 114
-      Script: {instanceID: 13510}
+      Script: {instanceID: 13918}
     - Class: 114
-      Script: {instanceID: 13608}
+      Script: {instanceID: 13978}
     - Class: 114
-<<<<<<< Updated upstream
-      Script: {instanceID: 12334}
-=======
-      Script: {instanceID: 11416}
+      Script: {instanceID: 13988}
     - Class: 114
-      Script: {instanceID: 11426}
+      Script: {instanceID: 14174}
     - Class: 114
-      Script: {instanceID: 11570}
+      Script: {instanceID: 14212}
     - Class: 114
-      Script: {instanceID: 11702}
+      Script: {instanceID: 14260}
     - Class: 114
-      Script: {instanceID: 11726}
-    - Class: 114
-      Script: {instanceID: 11734}
-    - Class: 114
-      Script: {instanceID: 11772}
-    - Class: 114
-      Script: {instanceID: 11968}
-    - Class: 114
-      Script: {instanceID: 12074}
-    - Class: 114
-      Script: {instanceID: 12164}
-    - Class: 114
-      Script: {instanceID: 12308}
-    - Class: 114
-      Script: {instanceID: 12338}
-    - Class: 114
-      Script: {instanceID: 12368}
->>>>>>> New-메인
-    - Class: 114
-      Script: {instanceID: 12464}
-    - Class: 114
-      Script: {instanceID: 12562}
-    - Class: 114
-      Script: {instanceID: 12640}
-    - Class: 114
-      Script: {instanceID: 12746}
-    - Class: 114
-      Script: {instanceID: 12778}
-    - Class: 114
-      Script: {instanceID: 12852}
-    - Class: 114
-      Script: {instanceID: 12912}
-    - Class: 114
-      Script: {instanceID: 12922}
-    - Class: 114
-      Script: {instanceID: 13110}
-    - Class: 114
-      Script: {instanceID: 13148}
-    - Class: 114
-      Script: {instanceID: 13196}
-    - Class: 114
-      Script: {instanceID: 13258}
-    - Class: 114
-      Script: {instanceID: 13374}
-    - Class: 114
-      Script: {instanceID: 13380}
-    - Class: 114
-      Script: {instanceID: 13418}
-    - Class: 114
-      Script: {instanceID: 13490}
-    - Class: 114
-      Script: {instanceID: 13734}
-    - Class: 114
-      Script: {instanceID: 13792}
-    - Class: 114
-      Script: {instanceID: 13912}
-    - Class: 114
-      Script: {instanceID: 14040}
-    - Class: 114
-      Script: {instanceID: 14068}
-    - Class: 114
-      Script: {instanceID: 14070}
-    - Class: 114
-      Script: {instanceID: 14134}
-    - Class: 114
-      Script: {instanceID: 14156}
-    - Class: 114
-      Script: {instanceID: 14306}
-    - Class: 114
-      Script: {instanceID: 14344}
-    - Class: 114
-      Script: {instanceID: 14354}
-    - Class: 114
-      Script: {instanceID: 14362}
-    - Class: 114
-      Script: {instanceID: 14380}
+      Script: {instanceID: 14322}
     - Class: 114
       Script: {instanceID: 14438}
     - Class: 114
-      Script: {instanceID: 14468}
+      Script: {instanceID: 14444}
     - Class: 114
-      Script: {instanceID: 14490}
+      Script: {instanceID: 14554}
     - Class: 114
-      Script: {instanceID: 14714}
+      Script: {instanceID: 14768}
     - Class: 114
-      Script: {instanceID: 14782}
+      Script: {instanceID: 14798}
     - Class: 114
-      Script: {instanceID: 15048}
+      Script: {instanceID: 14856}
     - Class: 114
-      Script: {instanceID: 15248}
+      Script: {instanceID: 14976}
     - Class: 114
-      Script: {instanceID: 15302}
+      Script: {instanceID: 15104}
     - Class: 114
-      Script: {instanceID: 15430}
+      Script: {instanceID: 15130}
+    - Class: 114
+      Script: {instanceID: 15132}
+    - Class: 114
+      Script: {instanceID: 15152}
+    - Class: 114
+      Script: {instanceID: 15198}
+    - Class: 114
+      Script: {instanceID: 15220}
+    - Class: 114
+      Script: {instanceID: 15370}
+    - Class: 114
+      Script: {instanceID: 15408}
+    - Class: 114
+      Script: {instanceID: 15416}
+    - Class: 114
+      Script: {instanceID: 15424}
     - Class: 114
       Script: {instanceID: 15442}
     - Class: 114
-      Script: {instanceID: 15540}
-=======
+      Script: {instanceID: 15500}
     - Class: 114
-      Script: {instanceID: 12472}
+      Script: {instanceID: 15530}
     - Class: 114
-      Script: {instanceID: 12614}
+      Script: {instanceID: 15552}
     - Class: 114
-      Script: {instanceID: 12746}
+      Script: {instanceID: 15774}
     - Class: 114
-      Script: {instanceID: 12770}
+      Script: {instanceID: 15842}
     - Class: 114
-      Script: {instanceID: 12778}
+      Script: {instanceID: 16106}
     - Class: 114
-      Script: {instanceID: 12816}
+      Script: {instanceID: 16306}
     - Class: 114
-      Script: {instanceID: 12970}
+      Script: {instanceID: 16360}
     - Class: 114
-      Script: {instanceID: 13014}
+      Script: {instanceID: 16488}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 16500}
     - Class: 114
-      Script: {instanceID: 13122}
+      Script: {instanceID: 16598}
     - Class: 114
-      Script: {instanceID: 13210}
+      Script: {instanceID: 16602}
     - Class: 114
-      Script: {instanceID: 13354}
-=======
+      Script: {instanceID: 16636}
     - Class: 114
-      Script: {instanceID: 12816}
+      Script: {instanceID: 16662}
     - Class: 114
-      Script: {instanceID: 12970}
+      Script: {instanceID: 16692}
     - Class: 114
-      Script: {instanceID: 13014}
+      Script: {instanceID: 16704}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 16808}
     - Class: 114
-      Script: {instanceID: 13122}
-    - Class: 114
-      Script: {instanceID: 13210}
-    - Class: 114
-      Script: {instanceID: 13354}
-    - Class: 114
-      Script: {instanceID: 13384}
-    - Class: 114
-      Script: {instanceID: 13414}
-    - Class: 114
-      Script: {instanceID: 13510}
-    - Class: 114
-      Script: {instanceID: 13608}
-    - Class: 114
-      Script: {instanceID: 13658}
-    - Class: 114
-      Script: {instanceID: 13688}
-    - Class: 114
-      Script: {instanceID: 13794}
-    - Class: 114
-      Script: {instanceID: 13826}
-    - Class: 114
-      Script: {instanceID: 13900}
-    - Class: 114
-      Script: {instanceID: 13960}
-    - Class: 114
-      Script: {instanceID: 13970}
-    - Class: 114
-      Script: {instanceID: 14158}
-    - Class: 114
-      Script: {instanceID: 14196}
-    - Class: 114
-      Script: {instanceID: 14244}
-    - Class: 114
-      Script: {instanceID: 14306}
-    - Class: 114
-      Script: {instanceID: 14422}
-    - Class: 114
-      Script: {instanceID: 14428}
-    - Class: 114
-      Script: {instanceID: 14466}
-    - Class: 114
-      Script: {instanceID: 14538}
-    - Class: 114
-      Script: {instanceID: 14752}
->>>>>>> Stashed changes
-    - Class: 114
-      Script: {instanceID: 14782}
-    - Class: 114
-<<<<<<< Updated upstream
-      Script: {instanceID: 13414}
-    - Class: 114
-      Script: {instanceID: 13510}
-    - Class: 114
-      Script: {instanceID: 13608}
-    - Class: 114
-      Script: {instanceID: 13658}
-    - Class: 114
-      Script: {instanceID: 13688}
-    - Class: 114
-      Script: {instanceID: 13794}
-    - Class: 114
-      Script: {instanceID: 13826}
-    - Class: 114
-      Script: {instanceID: 13900}
-    - Class: 114
-      Script: {instanceID: 13960}
-    - Class: 114
-      Script: {instanceID: 13970}
-    - Class: 114
-      Script: {instanceID: 14158}
-    - Class: 114
-      Script: {instanceID: 14196}
-    - Class: 114
-      Script: {instanceID: 14244}
-    - Class: 114
-      Script: {instanceID: 14306}
-    - Class: 114
-      Script: {instanceID: 14422}
-    - Class: 114
-      Script: {instanceID: 14428}
-    - Class: 114
-      Script: {instanceID: 14466}
-    - Class: 114
-      Script: {instanceID: 14538}
-    - Class: 114
-      Script: {instanceID: 14752}
-    - Class: 114
-      Script: {instanceID: 14782}
-    - Class: 114
-      Script: {instanceID: 14840}
-    - Class: 114
-      Script: {instanceID: 14960}
-    - Class: 114
-      Script: {instanceID: 15088}
-    - Class: 114
-      Script: {instanceID: 15116}
-    - Class: 114
-      Script: {instanceID: 15118}
-    - Class: 114
-      Script: {instanceID: 15138}
-    - Class: 114
-      Script: {instanceID: 15184}
-    - Class: 114
-      Script: {instanceID: 15206}
-    - Class: 114
-      Script: {instanceID: 15356}
-    - Class: 114
-      Script: {instanceID: 15394}
-    - Class: 114
-      Script: {instanceID: 15402}
-    - Class: 114
-      Script: {instanceID: 15410}
-    - Class: 114
-      Script: {instanceID: 15428}
-    - Class: 114
-      Script: {instanceID: 15486}
-    - Class: 114
-      Script: {instanceID: 15516}
-    - Class: 114
-      Script: {instanceID: 15538}
-    - Class: 114
-      Script: {instanceID: 15760}
-    - Class: 114
-      Script: {instanceID: 15828}
-    - Class: 114
-      Script: {instanceID: 16092}
-    - Class: 114
-      Script: {instanceID: 16292}
-    - Class: 114
-      Script: {instanceID: 16346}
-    - Class: 114
-      Script: {instanceID: 16474}
-    - Class: 114
-      Script: {instanceID: 16486}
-    - Class: 114
-      Script: {instanceID: 16584}
-    - Class: 114
-      Script: {instanceID: 16588}
-    - Class: 114
-      Script: {instanceID: 16622}
->>>>>>> Stashed changes
-    - Class: 114
-      Script: {instanceID: 16648}
-    - Class: 114
-<<<<<<< Updated upstream
-      Script: {instanceID: 15578}
-    - Class: 114
-      Script: {instanceID: 15604}
-    - Class: 114
-      Script: {instanceID: 15634}
-    - Class: 114
-      Script: {instanceID: 15748}
-    - Class: 114
-<<<<<<< HEAD
-      Script: {instanceID: 15714}
-=======
-      Script: {instanceID: 13658}
-    - Class: 114
-      Script: {instanceID: 13688}
-    - Class: 114
-      Script: {instanceID: 13794}
-    - Class: 114
-      Script: {instanceID: 13826}
-    - Class: 114
-      Script: {instanceID: 13900}
-    - Class: 114
-      Script: {instanceID: 13960}
-    - Class: 114
-      Script: {instanceID: 13970}
-    - Class: 114
-      Script: {instanceID: 14158}
-    - Class: 114
-      Script: {instanceID: 14196}
-    - Class: 114
-      Script: {instanceID: 14244}
-    - Class: 114
-      Script: {instanceID: 14306}
-    - Class: 114
-      Script: {instanceID: 14422}
-    - Class: 114
-      Script: {instanceID: 14428}
-    - Class: 114
-      Script: {instanceID: 14466}
-    - Class: 114
-      Script: {instanceID: 14538}
-    - Class: 114
-      Script: {instanceID: 14752}
-    - Class: 114
-      Script: {instanceID: 14782}
-    - Class: 114
-      Script: {instanceID: 14840}
-    - Class: 114
-      Script: {instanceID: 14960}
-    - Class: 114
-      Script: {instanceID: 15088}
-    - Class: 114
-      Script: {instanceID: 15116}
-    - Class: 114
-      Script: {instanceID: 15118}
-    - Class: 114
-      Script: {instanceID: 15138}
-    - Class: 114
-      Script: {instanceID: 15184}
-    - Class: 114
-      Script: {instanceID: 15206}
-    - Class: 114
-      Script: {instanceID: 15356}
-    - Class: 114
-      Script: {instanceID: 15394}
-    - Class: 114
-      Script: {instanceID: 15402}
-    - Class: 114
-      Script: {instanceID: 15410}
-    - Class: 114
-      Script: {instanceID: 15428}
-    - Class: 114
-      Script: {instanceID: 15486}
-    - Class: 114
-      Script: {instanceID: 15516}
-    - Class: 114
-      Script: {instanceID: 15538}
-    - Class: 114
-      Script: {instanceID: 15760}
-    - Class: 114
-      Script: {instanceID: 15828}
-    - Class: 114
-      Script: {instanceID: 16092}
-    - Class: 114
-      Script: {instanceID: 16292}
-    - Class: 114
-      Script: {instanceID: 16346}
-    - Class: 114
-      Script: {instanceID: 16474}
-    - Class: 114
-      Script: {instanceID: 16486}
-    - Class: 114
-      Script: {instanceID: 16584}
-    - Class: 114
-      Script: {instanceID: 16588}
-    - Class: 114
-      Script: {instanceID: 16622}
-    - Class: 114
-      Script: {instanceID: 16648}
-    - Class: 114
-      Script: {instanceID: 16678}
-    - Class: 114
-      Script: {instanceID: 16690}
-    - Class: 114
-      Script: {instanceID: 16794}
-    - Class: 114
-      Script: {instanceID: 16800}
->>>>>>> Stashed changes
-=======
-      Script: {instanceID: 15754}
->>>>>>> New-메인
-=======
-      Script: {instanceID: 16678}
-    - Class: 114
-      Script: {instanceID: 16690}
-    - Class: 114
-      Script: {instanceID: 16794}
-    - Class: 114
-      Script: {instanceID: 16800}
->>>>>>> Stashed changes
-=======
-      Script: {instanceID: 14840}
-    - Class: 114
-      Script: {instanceID: 14960}
-    - Class: 114
-      Script: {instanceID: 15088}
-    - Class: 114
-      Script: {instanceID: 15116}
-    - Class: 114
-      Script: {instanceID: 15118}
-    - Class: 114
-      Script: {instanceID: 15138}
-    - Class: 114
-      Script: {instanceID: 15184}
-    - Class: 114
-      Script: {instanceID: 15206}
-    - Class: 114
-      Script: {instanceID: 15356}
-    - Class: 114
-      Script: {instanceID: 15394}
-    - Class: 114
-      Script: {instanceID: 15402}
-    - Class: 114
-      Script: {instanceID: 15410}
-    - Class: 114
-      Script: {instanceID: 15428}
-    - Class: 114
-      Script: {instanceID: 15486}
-    - Class: 114
-      Script: {instanceID: 15516}
-    - Class: 114
-      Script: {instanceID: 15538}
-    - Class: 114
-      Script: {instanceID: 15760}
-    - Class: 114
-      Script: {instanceID: 15828}
-    - Class: 114
-      Script: {instanceID: 16092}
-    - Class: 114
-      Script: {instanceID: 16292}
-    - Class: 114
-      Script: {instanceID: 16346}
-    - Class: 114
-      Script: {instanceID: 16474}
-    - Class: 114
-      Script: {instanceID: 16486}
-    - Class: 114
-      Script: {instanceID: 16584}
-    - Class: 114
-      Script: {instanceID: 16588}
-    - Class: 114
-      Script: {instanceID: 16622}
-    - Class: 114
-      Script: {instanceID: 16648}
-    - Class: 114
-      Script: {instanceID: 16678}
-    - Class: 114
-      Script: {instanceID: 16690}
-    - Class: 114
-      Script: {instanceID: 16794}
-    - Class: 114
-      Script: {instanceID: 16800}
->>>>>>> Stashed changes
+      Script: {instanceID: 16814}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1392,142 +605,6 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 225
-      Script: {instanceID: 0}
-    Assets/01.Scenes/VoteScene.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      Script: {instanceID: 11336}
-    - Class: 114
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-      Script: {instanceID: 11338}
-    - Class: 114
-      Script: {instanceID: 11340}
-    - Class: 114
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      Script: {instanceID: 11348}
-    - Class: 114
-      Script: {instanceID: 11352}
-    - Class: 114
-      Script: {instanceID: 11358}
-    - Class: 114
-      Script: {instanceID: 12778}
-    - Class: 114
-      Script: {instanceID: 14050}
-    - Class: 114
-      Script: {instanceID: 15430}
-    - Class: 114
-      Script: {instanceID: 15442}
-    - Class: 114
-<<<<<<< HEAD
-      Script: {instanceID: 15538}
-=======
-      Script: {instanceID: 11346}
-    - Class: 114
-      Script: {instanceID: 12970}
-    - Class: 114
-      Script: {instanceID: 13080}
-    - Class: 114
-      Script: {instanceID: 13826}
-    - Class: 114
-      Script: {instanceID: 14752}
-    - Class: 114
-      Script: {instanceID: 15098}
-    - Class: 114
-      Script: {instanceID: 16474}
-    - Class: 114
-      Script: {instanceID: 16486}
-    - Class: 114
-      Script: {instanceID: 16622}
->>>>>>> Stashed changes
-=======
-      Script: {instanceID: 15578}
->>>>>>> New-메인
-=======
-      Script: {instanceID: 11346}
-    - Class: 114
-      Script: {instanceID: 12970}
-    - Class: 114
-      Script: {instanceID: 13080}
-    - Class: 114
-      Script: {instanceID: 13826}
-    - Class: 114
-      Script: {instanceID: 14752}
-    - Class: 114
-      Script: {instanceID: 15098}
-    - Class: 114
-      Script: {instanceID: 16474}
-    - Class: 114
-      Script: {instanceID: 16486}
-    - Class: 114
-      Script: {instanceID: 16622}
->>>>>>> Stashed changes
-=======
-      Script: {instanceID: 11346}
-    - Class: 114
-      Script: {instanceID: 12970}
-    - Class: 114
-      Script: {instanceID: 13080}
-    - Class: 114
-      Script: {instanceID: 13826}
-    - Class: 114
-      Script: {instanceID: 14752}
-    - Class: 114
-      Script: {instanceID: 15098}
-    - Class: 114
-      Script: {instanceID: 16474}
-    - Class: 114
-      Script: {instanceID: 16486}
-    - Class: 114
-      Script: {instanceID: 16622}
->>>>>>> Stashed changes
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
       Script: {instanceID: 0}
     Assets/01.Scenes/WaitingRoom.unity:
     - Class: 1
@@ -1563,129 +640,43 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 11326}
+    - Class: 114
+      Script: {instanceID: 11328}
+    - Class: 114
+      Script: {instanceID: 11330}
+    - Class: 114
+      Script: {instanceID: 11334}
+    - Class: 114
       Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11338}
+      Script: {instanceID: 12988}
     - Class: 114
-      Script: {instanceID: 11340}
+      Script: {instanceID: 13098}
     - Class: 114
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      Script: {instanceID: 11342}
+      Script: {instanceID: 13626}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 13844}
     - Class: 114
-      Script: {instanceID: 11352}
-=======
-      Script: {instanceID: 11344}
+      Script: {instanceID: 13982}
     - Class: 114
-      Script: {instanceID: 11346}
->>>>>>> Stashed changes
-=======
-      Script: {instanceID: 11344}
+      Script: {instanceID: 14322}
     - Class: 114
-      Script: {instanceID: 11346}
->>>>>>> Stashed changes
+      Script: {instanceID: 14768}
     - Class: 114
-      Script: {instanceID: 12970}
+      Script: {instanceID: 15152}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 15264}
     - Class: 114
-      Script: {instanceID: 13608}
+      Script: {instanceID: 16488}
     - Class: 114
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-      Script: {instanceID: 13826}
+      Script: {instanceID: 16500}
     - Class: 114
-<<<<<<< Updated upstream
-      Script: {instanceID: 12742}
-=======
-      Script: {instanceID: 12562}
+      Script: {instanceID: 16606}
     - Class: 114
-      Script: {instanceID: 12778}
->>>>>>> New-메인
+      Script: {instanceID: 16636}
     - Class: 114
-      Script: {instanceID: 12916}
-    - Class: 114
-      Script: {instanceID: 13258}
-    - Class: 114
-      Script: {instanceID: 14200}
-    - Class: 114
-      Script: {instanceID: 15430}
-    - Class: 114
-      Script: {instanceID: 15442}
-    - Class: 114
-      Script: {instanceID: 15548}
-    - Class: 114
-      Script: {instanceID: 15578}
-    - Class: 114
-<<<<<<< HEAD
-      Script: {instanceID: 15698}
-=======
-=======
-      Script: {instanceID: 11344}
-    - Class: 114
-      Script: {instanceID: 11346}
-    - Class: 114
-      Script: {instanceID: 12970}
-    - Class: 114
-      Script: {instanceID: 13080}
-    - Class: 114
-      Script: {instanceID: 13608}
-    - Class: 114
-      Script: {instanceID: 13826}
-    - Class: 114
->>>>>>> Stashed changes
-      Script: {instanceID: 13964}
-    - Class: 114
-      Script: {instanceID: 14306}
-    - Class: 114
-      Script: {instanceID: 14752}
-    - Class: 114
-      Script: {instanceID: 15138}
-    - Class: 114
-      Script: {instanceID: 15250}
-    - Class: 114
-      Script: {instanceID: 16474}
-    - Class: 114
-      Script: {instanceID: 16486}
-    - Class: 114
-      Script: {instanceID: 16592}
-    - Class: 114
-      Script: {instanceID: 16622}
-    - Class: 114
-      Script: {instanceID: 16784}
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
-      Script: {instanceID: 15738}
->>>>>>> New-메인
-=======
-      Script: {instanceID: 13826}
-    - Class: 114
-      Script: {instanceID: 13964}
-    - Class: 114
-      Script: {instanceID: 14306}
-    - Class: 114
-      Script: {instanceID: 14752}
-    - Class: 114
-      Script: {instanceID: 15138}
-    - Class: 114
-      Script: {instanceID: 15250}
-    - Class: 114
-      Script: {instanceID: 16474}
-    - Class: 114
-      Script: {instanceID: 16486}
-    - Class: 114
-      Script: {instanceID: 16592}
-    - Class: 114
-      Script: {instanceID: 16622}
-    - Class: 114
-      Script: {instanceID: 16784}
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+      Script: {instanceID: 16798}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1720,58 +711,27 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
       Hash: aeb62f729c52c814dec86c47dcac1471
-=======
->>>>>>> Stashed changes
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: aeb62f729c52c814dec86c47dcac1471
-=======
->>>>>>> Stashed changes
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
-  - hash:
-      serializedVersion: 2
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      Hash: 5ad4aa237d47ac2bab17bacb672edf7a
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: VerticalLayoutGroup
-=======
-=======
-      Hash: aeb62f729c52c814dec86c47dcac1471
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
-  - hash:
-      serializedVersion: 2
->>>>>>> Stashed changes
       Hash: 499fd23433e68e265d153aa6b95d0047
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Scrollbar
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   - hash:
       serializedVersion: 2
-      Hash: 4bc4346a71a8df53a6b106f68ef3a190
+      Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
-    className: CanvasScaler
+    className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -1982,6 +942,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.PunBasics
     className: PlayerAnimatorManager
+  - hash:
+      serializedVersion: 2
+      Hash: 3be1d481b218cc604c3da5c0b3665df1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundManager
   - hash:
       serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
@@ -2608,12 +1574,6 @@ ScriptsOnlyBuild:
     className: CurrentRoomPlayerTtlProperty
   - hash:
       serializedVersion: 2
-      Hash: 235a1e8275c5d1ab2a1c0f017d90e1b5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LoadingPanel
-  - hash:
-      serializedVersion: 2
       Hash: e7c54c03aeff639d28e86736c985e3da
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -3058,12 +2018,6 @@ ScriptsOnlyBuild:
     className: PointedAtGameObjectInfo
   - hash:
       serializedVersion: 2
-      Hash: 7b260f1f9cbfeaf81f3410a5ce59eb89
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: VoteManager
-  - hash:
-      serializedVersion: 2
       Hash: 77ec49e940daf3a81e8e8a8992ba5b0d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -3320,12 +2274,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Garbage
-  - hash:
-      serializedVersion: 2
-      Hash: c633c4b83e85a4897b73516de1be2e8b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GotoVoteManager
   - hash:
       serializedVersion: 2
       Hash: 7829e932aec962afd9bcfad28ffff27d
@@ -3921,21 +2869,4 @@ ScriptsOnlyBuild:
   - Assets/01.Scenes/Impo Team.unity
   - Assets/01.Scenes/Crew Team.unity
   - Assets/01.Scenes/WaitingRoom.unity
-  - Assets/01.Scenes/VoteScene.unity
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-  playerPath: "C:/Users/USER-PC/Desktop/\uAC8C\uC784\uD14C\uC2A4\uD2B8/amongUs.exe"
-=======
   playerPath: C:/Users/USER-PC/Desktop/111/amongUs.exe
->>>>>>> Stashed changes
-=======
-  playerPath: "D:/\uC870\uD604\uC131GF/3D-among-us/amongUs/amongUs.exe"
->>>>>>> New-메인
-=======
-  playerPath: C:/Users/USER-PC/Desktop/111/amongUs.exe
->>>>>>> Stashed changes
-=======
-  playerPath: C:/Users/USER-PC/Desktop/111/amongUs.exe
->>>>>>> Stashed changes
