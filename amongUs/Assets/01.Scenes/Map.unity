@@ -1942,7 +1942,7 @@ GameObject:
   - component: {fileID: 216423316}
   m_Layer: 0
   m_Name: floor_4 (11)
-  m_TagString: Untagged
+  m_TagString: Communications
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1969,11 +1969,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216423314}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &216423317
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2184,8 +2184,8 @@ Transform:
   m_Children:
   - {fileID: 457742510}
   - {fileID: 1064376021}
-  - {fileID: 265246734}
   - {fileID: 1273110918}
+  - {fileID: 265246734}
   m_Father: {fileID: 707270383}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2569,7 +2569,7 @@ GameObject:
   - component: {fileID: 300256503}
   m_Layer: 0
   m_Name: floor_4 (14)
-  m_TagString: Untagged
+  m_TagString: Admin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2596,11 +2596,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300256501}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &300256504
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5912,7 +5912,7 @@ GameObject:
   - component: {fileID: 582591759}
   m_Layer: 0
   m_Name: floor_4 (27)
-  m_TagString: Untagged
+  m_TagString: MedBay
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5939,11 +5939,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582591757}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &582591760
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6359,7 +6359,7 @@ GameObject:
   - component: {fileID: 627616623}
   m_Layer: 0
   m_Name: floor_4 (18)
-  m_TagString: Untagged
+  m_TagString: ElectricChamber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6386,11 +6386,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627616621}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &627616624
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7004,7 +7004,7 @@ GameObject:
   - component: {fileID: 661175314}
   m_Layer: 0
   m_Name: floor_4 (2)
-  m_TagString: Untagged
+  m_TagString: OxygenSupplyRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7031,11 +7031,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661175312}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &661175315
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7514,7 +7514,7 @@ GameObject:
   - component: {fileID: 687697555}
   m_Layer: 0
   m_Name: floor_4 (34)
-  m_TagString: Untagged
+  m_TagString: Security
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7541,11 +7541,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687697553}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 5.158387, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &687697556
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9935,6 +9935,7 @@ Transform:
   - {fileID: 1015764182}
   - {fileID: 687697554}
   - {fileID: 1104207777}
+  - {fileID: 1755911626}
   m_Father: {fileID: 707270383}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10861,7 +10862,7 @@ GameObject:
   - component: {fileID: 924695383}
   m_Layer: 0
   m_Name: floor_4 (17)
-  m_TagString: Untagged
+  m_TagString: Storage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10888,11 +10889,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924695381}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &924695384
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13964,8 +13965,8 @@ Transform:
   - {fileID: 1255944561}
   - {fileID: 1196208214}
   - {fileID: 1387410306}
-  - {fileID: 828961157}
   - {fileID: 1621031001}
+  - {fileID: 828961157}
   m_Father: {fileID: 707270383}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14233,7 +14234,7 @@ GameObject:
   - component: {fileID: 1137618642}
   m_Layer: 0
   m_Name: floor_4 (29)
-  m_TagString: Untagged
+  m_TagString: Reactor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14260,11 +14261,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137618640}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &1137618643
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16086,7 +16087,7 @@ GameObject:
   - component: {fileID: 1288271936}
   m_Layer: 0
   m_Name: floor_4 (10)
-  m_TagString: Untagged
+  m_TagString: ProtectiveMembraneControlRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16113,11 +16114,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288271934}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &1288271937
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16191,7 +16192,7 @@ GameObject:
   - component: {fileID: 1315380901}
   m_Layer: 0
   m_Name: floor_4 (6)
-  m_TagString: Untagged
+  m_TagString: NavigationalChamber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16218,11 +16219,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315380899}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &1315380902
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18197,7 +18198,7 @@ GameObject:
   - component: {fileID: 1499473423}
   m_Layer: 0
   m_Name: floor_4 (28)
-  m_TagString: Untagged
+  m_TagString: UpperEngine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18224,11 +18225,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499473421}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &1499473424
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18412,7 +18413,7 @@ GameObject:
   - component: {fileID: 1520384116}
   m_Layer: 0
   m_Name: floor_4 (20)
-  m_TagString: Untagged
+  m_TagString: ElectricChamber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18439,11 +18440,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520384114}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &1520384117
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20340,7 +20341,7 @@ GameObject:
   - component: {fileID: 1631576704}
   m_Layer: 0
   m_Name: floor_4 (24)
-  m_TagString: Untagged
+  m_TagString: LowerEngine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20367,11 +20368,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631576702}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &1631576705
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22092,6 +22093,99 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1754038663}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1755911625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1755911626}
+  - component: {fileID: 1755911629}
+  - component: {fileID: 1755911628}
+  - component: {fileID: 1755911627}
+  m_Layer: 0
+  m_Name: floor_4 (36)
+  m_TagString: NavigationalChamber
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1755911626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755911625}
+  m_LocalRotation: {x: 0.7071068, y: 0.000001643727, z: -0.7071068, w: 0.000001643727}
+  m_LocalPosition: {x: 72, y: 60.62, z: -20}
+  m_LocalScale: {x: 1, y: 1, z: 3}
+  m_Children: []
+  m_Father: {fileID: 839753373}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0.00029999999, y: -180, z: -180}
+--- !u!65 &1755911627
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755911625}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
+--- !u!23 &1755911628
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755911625}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 10de6384af0c3b54e8166f9c3f936e88, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1755911629
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755911625}
+  m_Mesh: {fileID: 4300000, guid: 106d47cb2df648043a2127f1a030963f, type: 3}
 --- !u!1001 &1760786346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22357,7 +22451,7 @@ GameObject:
   - component: {fileID: 1797268740}
   m_Layer: 0
   m_Name: floor_4 (31)
-  m_TagString: Untagged
+  m_TagString: Reactor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22384,11 +22478,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797268738}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &1797268741
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22737,7 +22831,7 @@ GameObject:
   - component: {fileID: 1815123447}
   m_Layer: 0
   m_Name: floor_4 (5)
-  m_TagString: Untagged
+  m_TagString: NavigationalChamber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22764,11 +22858,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815123445}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &1815123448
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22929,8 +23023,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821333625}
   m_LocalRotation: {x: 0.7071068, y: 0.000001643727, z: -0.7071068, w: 0.000001643727}
-  m_LocalPosition: {x: 66, y: 60.62, z: -20}
-  m_LocalScale: {x: 1, y: 1, z: 6}
+  m_LocalPosition: {x: 60, y: 60.62, z: -20}
+  m_LocalScale: {x: 1, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 839753373}
   m_RootOrder: 3
@@ -23486,7 +23580,7 @@ GameObject:
   - component: {fileID: 1858573482}
   m_Layer: 0
   m_Name: floor_4 (15)
-  m_TagString: Untagged
+  m_TagString: Restaurant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23513,11 +23607,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858573480}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.158386, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &1858573483
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23717,7 +23811,7 @@ GameObject:
   - component: {fileID: 1870719667}
   m_Layer: 0
   m_Name: floor_4 (19)
-  m_TagString: Untagged
+  m_TagString: ElectricChamber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23744,11 +23838,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870719665}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &1870719668
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24521,7 +24615,7 @@ GameObject:
   - component: {fileID: 1925260471}
   m_Layer: 0
   m_Name: floor_4 (1)
-  m_TagString: Untagged
+  m_TagString: Armory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24548,11 +24642,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925260469}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &1925260472
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26133,7 +26227,7 @@ GameObject:
   - component: {fileID: 2067372920}
   m_Layer: 0
   m_Name: floor_4 (30)
-  m_TagString: Untagged
+  m_TagString: Reactor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26160,11 +26254,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067372918}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &2067372921
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26644,7 +26738,7 @@ GameObject:
   - component: {fileID: 2091675842}
   m_Layer: 0
   m_Name: floor_4 (23)
-  m_TagString: Untagged
+  m_TagString: MedBay
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26671,11 +26765,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091675840}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.15838647, z: 4}
-  m_Center: {x: -0.00000011920929, y: 0.079193085, z: 0.00000047683716}
+  m_Size: {x: 4, y: 4.1583867, z: 4}
+  m_Center: {x: -0.00000011920929, y: 2.079193, z: 0.00000047683716}
 --- !u!23 &2091675843
 MeshRenderer:
   m_ObjectHideFlags: 0

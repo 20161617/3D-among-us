@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -46,9 +46,10 @@ public class MoveCtrl : MonoBehaviourPunCallbacks, IPunObservable
 
             if (isMove)
             {
-
+             
                 transform.Rotate(0f, moveHorizontal, 0f);
-
+                SoundManger.instance.PlayFootStep();
+              
             }
 
 
