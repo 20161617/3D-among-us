@@ -10,6 +10,7 @@ public class KillButton : MonoBehaviour
 
     void Start()
     {
+        Debug.LogError("죽이기실행");
         button = GetComponent<Button>();
         button.onClick.AddListener(() => databaseManager.MyPlayer.targetCtrl.TargetKill());
     }

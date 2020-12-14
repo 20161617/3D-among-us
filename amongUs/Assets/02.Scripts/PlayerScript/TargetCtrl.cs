@@ -72,8 +72,8 @@ public class TargetCtrl : MonoBehaviourPun
 
                     //다른미션도 받아들일까봐
                     //현재미션 체크
-                    //if (!transform.GetComponent<PlayerMission>().myMission.Contains(selection.gameObject))
-                    //  return;
+                    if(!(TargetMissionData.MissionType == "PLAYER")&& !transform.GetComponent<PlayerMission>().myMission.Contains(selection.gameObject))
+                      return;
 
                     //반짝이를 켜준다
                     GlowObject selectionGlowObject = selection.GetComponent<GlowObject>();
