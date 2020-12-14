@@ -7,6 +7,7 @@ using Photon.Realtime;
 using static UIManager;
 using static DatabaseManager;
 
+
 public class PlayerScript : MonoBehaviourPunCallbacks
 {
     public bool isImposter = false;
@@ -20,10 +21,42 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     PhotonView PV;
     public TargetCtrl targetCtrl;
     public TwoDimmentionalAnimationStateController playerAnimation;
+    public PlayerMission CurrentMyMission;
 
+    bool waitRoom = false;
+    bool isCreateMisson = false;
+    bool isReady = false;
     // Start is called before the first frame update
+    private void OnEnable()
+    {
+        if (waitRoom)
+        {
+            if (!isImposter)
+            {
+                if (PV.IsMine)
+                {
+                    transform.GetComponent<PlayerMission>().createMission();
+                    isCreateMisson = true;
+                }
+                else
+                {
+                    isCreateMisson = false;
+                    isReady = true;
+                }
+            }
+            else
+            {
+                int imposterCount = DatabaseManager.databaseManager.Players.Count <= 5 ? 1 : 2; //임포수 5명이하면 1빼기 이상이면 2빼기 
+                //게이지 최대 100이라고 봤을떄  미션최대게이지/ 플레이어 수 - 임포수 / 미션수 
+                MissionManager.Instance.plusGague = (1.0f / (DatabaseManager.databaseManager.Players.Count - imposterCount)) / (MissionManager.Instance.commonMissionNum + MissionManager.Instance.simpleMissionNum + MissionManager.Instance.difficultMissionNum);
+            }
+        }
+        waitRoom = true;
+    }
+
     void Awake()
     {
+
         PV = photonView;
 
         color = gameObject.transform.Find("Beta_Surface").GetComponent<SkinnedMeshRenderer>();
@@ -34,15 +67,24 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 
         playerAnimation = gameObject.GetComponent<TwoDimmentionalAnimationStateController>();
 
+        CurrentMyMission = gameObject.GetComponent<PlayerMission>();
+
         databaseManager.Players.Add(this);
 
         DontDestroyOnLoad(gameObject);
+
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!PV.IsMine) return;
+        if (isReady && !isCreateMisson && !isImposter)
+        {
+            transform.GetComponent<PlayerMission>().createMission();
+            isCreateMisson = true;
+        }
+
     }
 
     void OnDestroy()
@@ -64,6 +106,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     {
         isDetected = false;
     }
+
 
     [PunRPC]
     void HideCharacter()

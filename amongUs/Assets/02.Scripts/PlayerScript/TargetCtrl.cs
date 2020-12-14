@@ -26,6 +26,7 @@ public class TargetCtrl : MonoBehaviourPun
 
 
 
+
     void Start()
     {
         PV = photonView;
@@ -63,11 +64,14 @@ public class TargetCtrl : MonoBehaviourPun
                 //선택한 오브젝트의 미션데이터를 현재미션데이터에 저장
                 TargetMissionData = selection.GetComponent<MissionData>();
 
-
                 //선택한 오브젝트의 미션데이터가 현재 임무에 포함되어 있다면
                 if (MissionManager.Instance.ContainsMission(TargetMissionData.MissionType, TargetMissionData.MissionNumber, databaseManager.MyPlayer.isImposter))
                 {
-                    Debug.Log("REPORT 포함되어있음");
+                    //다른미션도 받아들일까봐
+                    //현재미션 체크
+                    //if (!transform.GetComponent<PlayerMission>().myMission.Contains(selection.gameObject))
+                    //  return;
+
                     //반짝이를 켜준다
                     GlowObject selectionGlowObject = selection.GetComponent<GlowObject>();
 
@@ -78,15 +82,18 @@ public class TargetCtrl : MonoBehaviourPun
 
                     //상호작용하는 오브젝트 이름에 현재 충돌하고있는 오브젝트의 이름을 넣어준다
                     InteractionObject = hit.collider.name;
+
                     MissionManager.Instance.myMission = transform.GetComponent<PlayerMission>().myMission;
                     MissionManager.Instance.clearObject = selection.gameObject;
                 }
             }
 
-            //충돌하고 있는 오브젝트의 이름을 넣어준다
             Debug.Log(hit.collider.name);
+
         }
+        //충돌하고 있는 오브젝트의 이름을 넣어준다
     }
+
 
     //Use버튼을 누르면 현재 미션데이터에 맞는 미션을 불러오는 함수를 호출
     public void TargetUse()

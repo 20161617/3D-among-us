@@ -1188,6 +1188,7 @@ GameObject:
   - component: {fileID: -1849553579890175928}
   - component: {fileID: -6891912118211326180}
   - component: {fileID: -9188510596639402823}
+  - component: {fileID: 5561804157405283957}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1321,6 +1322,7 @@ MonoBehaviour:
   nickName: 
   targetCtrl: {fileID: 0}
   playerAnimation: {fileID: 0}
+  CurrentMyMission: {fileID: 0}
 --- !u!114 &-851834456733325061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1430,6 +1432,20 @@ MonoBehaviour:
   GlowColor: {r: 1, g: 0.9647059, b: 0.40784314, a: 0}
   LerpFactor: 10
   RaycastInteraction: 0
+--- !u!114 &5561804157405283957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4450092894471199211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ace24264cddfea4b8069a41ea50b183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMission: []
+  displayText: {fileID: 0}
 --- !u!1 &4469135047442823856
 GameObject:
   m_ObjectHideFlags: 0

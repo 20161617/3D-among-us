@@ -28,7 +28,7 @@ public class UIPanel : MonoBehaviour
 
     void Start()
     {
-        if (databaseManager.MyPlayer.isImposter)
+        if (isImposter)
         {
             KillButton.gameObject.SetActive(true);
             SabotageButton.gameObject.SetActive(true);
