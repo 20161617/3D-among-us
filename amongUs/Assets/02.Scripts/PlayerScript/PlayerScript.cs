@@ -17,13 +17,41 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     public int colorIndex = -1;
     public string nickName;
 
-    PhotonView PV;
+    public PhotonView PV;
     public TargetCtrl targetCtrl;
+<<<<<<< HEAD
     public TwoDimmentionalAnimationStateController playerAnimation;
 
+=======
+    bool waitRoom = false;
+    bool isCreateMisson = false;
+    bool isReady = false;
+>>>>>>> New-메인
     // Start is called before the first frame update
+    private void OnEnable()
+    {
+        if (waitRoom)
+        {
+            if (!isImposter)
+            {
+                if (PV.IsMine)
+                { 
+                    transform.GetComponent<PlayerMission>().createMission();
+                    isCreateMisson = true;
+                }
+                else
+                {
+                    isCreateMisson = false;
+                    isReady = true;
+                }
+            }
+        }
+        waitRoom = true;
+    }
+
     void Awake()
     {
+       
         PV = photonView;
 
         color = gameObject.transform.Find("Beta_Surface").GetComponent<SkinnedMeshRenderer>();
@@ -37,12 +65,19 @@ public class PlayerScript : MonoBehaviourPunCallbacks
         databaseManager.Players.Add(this);
 
         DontDestroyOnLoad(gameObject);
+      
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!PV.IsMine) return;
+        if(isReady&&!isCreateMisson&&!isImposter)
+        {
+            transform.GetComponent<PlayerMission>().createMission();
+            isCreateMisson = true;
+        }
+       
     }
 
     void OnDestroy()

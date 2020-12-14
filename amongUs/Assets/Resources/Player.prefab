@@ -1186,8 +1186,12 @@ GameObject:
   - component: {fileID: 4230105031625750077}
   - component: {fileID: 4101267405289613908}
   - component: {fileID: -1849553579890175928}
+<<<<<<< HEAD
   - component: {fileID: -6891912118211326180}
   - component: {fileID: -9188510596639402823}
+=======
+  - component: {fileID: 1767637032086524887}
+>>>>>>> New-메인
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1319,6 +1323,7 @@ MonoBehaviour:
   color: {fileID: 0}
   colorIndex: -1
   nickName: 
+  PV: {fileID: 0}
   targetCtrl: {fileID: 0}
   playerAnimation: {fileID: 0}
 --- !u!114 &-851834456733325061
@@ -1400,7 +1405,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractionObject: 
+<<<<<<< HEAD
 --- !u!114 &-6891912118211326180
+=======
+--- !u!114 &1767637032086524887
+>>>>>>> New-메인
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1409,6 +1418,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4450092894471199211}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: e9ef9f63a1bc75a408507e146f274501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -1429,6 +1439,13 @@ MonoBehaviour:
   GlowColor: {r: 1, g: 0.9647059, b: 0.40784314, a: 0}
   LerpFactor: 10
   RaycastInteraction: 0
+=======
+  m_Script: {fileID: 11500000, guid: 0ace24264cddfea4b8069a41ea50b183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMission: []
+  displayText: {fileID: 0}
+>>>>>>> New-메인
 --- !u!1 &4469135047442823856
 GameObject:
   m_ObjectHideFlags: 0

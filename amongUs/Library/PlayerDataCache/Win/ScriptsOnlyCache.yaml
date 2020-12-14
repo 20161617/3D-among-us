@@ -2,6 +2,8 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AnimationStateController
+    - AsteroidCusor
+    - AsteroidScreen
     - ChatManager
     - CircleRotate
     - ClickButton
@@ -10,26 +12,35 @@ ScriptsOnlyBuild:
     - DatabaseManager
     - DetectDead
     - DistributorObject
+    - DivertButton
     - FadeIn
     - FadeOut
     - Gague
     - GameSceneManager
+    - Garbage
+    - GarbageGrip
     - GlowComposite
     - GlowObject
     - GlowPrePass
-    - GotoVoteManager
     - IntroPanel
     - KillButton
     - LeftBlackMove
+    - MiniGame_Asteroid
+    - MiniGame_ClearAsteroids
     - MiniGame_Distributor
+    - MiniGame_DivertPower
+    - MiniGame_EmptyGarbage
+    - MiniGame_InspectSample
     - MiniGame_Navigation
     - MiniGame_SwipeCard
     - MiniGame_UploadData
     - MissionData
     - MissionManager
+    - MissionTimer
     - MoveCtrl
     - NetworkManager
     - PingerRotate
+    - PlayerMission
     - PlayerScript
     - PopBody
     - ReportButton
@@ -40,6 +51,7 @@ ScriptsOnlyBuild:
     - TwoDimmentionalAnimationStateController
     - UIManager
     - UIPanel
+    - UploadGague
     - UseButton
     - VoteManager
     - WatingRoomManager
@@ -92,14 +104,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Rendering.Universal.UniversalProjectSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -156,6 +160,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11348}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 11352}
     - Class: 114
       Script: {instanceID: 11358}
@@ -167,6 +172,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12914}
     - Class: 114
       Script: {instanceID: 13626}
+=======
+      Script: {instanceID: 11356}
+    - Class: 114
+      Script: {instanceID: 11358}
+    - Class: 114
+      Script: {instanceID: 11564}
+    - Class: 114
+      Script: {instanceID: 12612}
+    - Class: 114
+      Script: {instanceID: 12940}
+    - Class: 114
+      Script: {instanceID: 13654}
+>>>>>>> New-메인
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -202,19 +220,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
-    - Class: 74
+    - Class: 75
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 84
-      Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -227,6 +243,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11348}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 11352}
     - Class: 114
       Script: {instanceID: 11358}
@@ -234,9 +251,39 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11540}
     - Class: 114
       Script: {instanceID: 11786}
+=======
+      Script: {instanceID: 11356}
+    - Class: 114
+      Script: {instanceID: 11358}
+    - Class: 114
+      Script: {instanceID: 11566}
+    - Class: 114
+      Script: {instanceID: 11624}
+    - Class: 114
+      Script: {instanceID: 11806}
+    - Class: 114
+      Script: {instanceID: 11812}
+    - Class: 114
+      Script: {instanceID: 11816}
+    - Class: 114
+      Script: {instanceID: 12030}
+    - Class: 114
+      Script: {instanceID: 12090}
+    - Class: 114
+      Script: {instanceID: 12330}
+    - Class: 114
+      Script: {instanceID: 12456}
+    - Class: 114
+      Script: {instanceID: 12564}
+    - Class: 114
+      Script: {instanceID: 12602}
+    - Class: 114
+      Script: {instanceID: 12768}
+>>>>>>> New-메인
     - Class: 114
       Script: {instanceID: 11790}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 12064}
     - Class: 114
       Script: {instanceID: 12304}
@@ -286,11 +333,62 @@ ScriptsOnlyBuild:
       Script: {instanceID: 90432}
     - Class: 114
       Script: {instanceID: 271336}
+=======
+      Script: {instanceID: 12844}
+    - Class: 114
+      Script: {instanceID: 12886}
+    - Class: 114
+      Script: {instanceID: 12888}
+    - Class: 114
+      Script: {instanceID: 13030}
+    - Class: 114
+      Script: {instanceID: 13282}
+    - Class: 114
+      Script: {instanceID: 13360}
+    - Class: 114
+      Script: {instanceID: 13468}
+    - Class: 114
+      Script: {instanceID: 13636}
+    - Class: 114
+      Script: {instanceID: 13822}
+    - Class: 114
+      Script: {instanceID: 14028}
+    - Class: 114
+      Script: {instanceID: 14038}
+    - Class: 114
+      Script: {instanceID: 14044}
+    - Class: 114
+      Script: {instanceID: 14376}
+    - Class: 114
+      Script: {instanceID: 14392}
+    - Class: 114
+      Script: {instanceID: 14496}
+    - Class: 114
+      Script: {instanceID: 14508}
+    - Class: 114
+      Script: {instanceID: 14584}
+    - Class: 114
+      Script: {instanceID: 15296}
+    - Class: 114
+      Script: {instanceID: 15344}
+    - Class: 114
+      Script: {instanceID: 15416}
+    - Class: 114
+      Script: {instanceID: 15428}
+    - Class: 114
+      Script: {instanceID: 15564}
+    - Class: 114
+      Script: {instanceID: 15566}
+    - Class: 114
+      Script: {instanceID: 15662}
+>>>>>>> New-메인
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -340,6 +438,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11348}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 11352}
     - Class: 114
       Script: {instanceID: 11358}
@@ -351,6 +450,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12914}
     - Class: 114
       Script: {instanceID: 13626}
+=======
+      Script: {instanceID: 11356}
+    - Class: 114
+      Script: {instanceID: 11358}
+    - Class: 114
+      Script: {instanceID: 11564}
+    - Class: 114
+      Script: {instanceID: 12612}
+    - Class: 114
+      Script: {instanceID: 12940}
+    - Class: 114
+      Script: {instanceID: 13654}
+>>>>>>> New-메인
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -429,6 +541,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11358}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 11382}
     - Class: 114
       Script: {instanceID: 11392}
@@ -544,6 +657,119 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15712}
     - Class: 114
       Script: {instanceID: 270076}
+=======
+      Script: {instanceID: 11408}
+    - Class: 114
+      Script: {instanceID: 11418}
+    - Class: 114
+      Script: {instanceID: 11562}
+    - Class: 114
+      Script: {instanceID: 11694}
+    - Class: 114
+      Script: {instanceID: 11718}
+    - Class: 114
+      Script: {instanceID: 11726}
+    - Class: 114
+      Script: {instanceID: 11764}
+    - Class: 114
+      Script: {instanceID: 11960}
+    - Class: 114
+      Script: {instanceID: 12066}
+    - Class: 114
+      Script: {instanceID: 12156}
+    - Class: 114
+      Script: {instanceID: 12300}
+    - Class: 114
+      Script: {instanceID: 12360}
+    - Class: 114
+      Script: {instanceID: 12554}
+    - Class: 114
+      Script: {instanceID: 12630}
+    - Class: 114
+      Script: {instanceID: 12736}
+    - Class: 114
+      Script: {instanceID: 12768}
+    - Class: 114
+      Script: {instanceID: 12842}
+    - Class: 114
+      Script: {instanceID: 12902}
+    - Class: 114
+      Script: {instanceID: 12912}
+    - Class: 114
+      Script: {instanceID: 13100}
+    - Class: 114
+      Script: {instanceID: 13138}
+    - Class: 114
+      Script: {instanceID: 13186}
+    - Class: 114
+      Script: {instanceID: 13248}
+    - Class: 114
+      Script: {instanceID: 13364}
+    - Class: 114
+      Script: {instanceID: 13370}
+    - Class: 114
+      Script: {instanceID: 13476}
+    - Class: 114
+      Script: {instanceID: 13720}
+    - Class: 114
+      Script: {instanceID: 13778}
+    - Class: 114
+      Script: {instanceID: 13898}
+    - Class: 114
+      Script: {instanceID: 14026}
+    - Class: 114
+      Script: {instanceID: 14054}
+    - Class: 114
+      Script: {instanceID: 14056}
+    - Class: 114
+      Script: {instanceID: 14120}
+    - Class: 114
+      Script: {instanceID: 14142}
+    - Class: 114
+      Script: {instanceID: 14292}
+    - Class: 114
+      Script: {instanceID: 14330}
+    - Class: 114
+      Script: {instanceID: 14340}
+    - Class: 114
+      Script: {instanceID: 14348}
+    - Class: 114
+      Script: {instanceID: 14366}
+    - Class: 114
+      Script: {instanceID: 14424}
+    - Class: 114
+      Script: {instanceID: 14454}
+    - Class: 114
+      Script: {instanceID: 14476}
+    - Class: 114
+      Script: {instanceID: 14700}
+    - Class: 114
+      Script: {instanceID: 14768}
+    - Class: 114
+      Script: {instanceID: 15034}
+    - Class: 114
+      Script: {instanceID: 15234}
+    - Class: 114
+      Script: {instanceID: 15288}
+    - Class: 114
+      Script: {instanceID: 15416}
+    - Class: 114
+      Script: {instanceID: 15428}
+    - Class: 114
+      Script: {instanceID: 15526}
+    - Class: 114
+      Script: {instanceID: 15530}
+    - Class: 114
+      Script: {instanceID: 15564}
+    - Class: 114
+      Script: {instanceID: 15590}
+    - Class: 114
+      Script: {instanceID: 15620}
+    - Class: 114
+      Script: {instanceID: 15734}
+    - Class: 114
+      Script: {instanceID: 15740}
+>>>>>>> New-메인
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -608,6 +834,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11348}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 11352}
     - Class: 114
       Script: {instanceID: 11358}
@@ -621,6 +848,21 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15400}
     - Class: 114
       Script: {instanceID: 15536}
+=======
+      Script: {instanceID: 11356}
+    - Class: 114
+      Script: {instanceID: 11358}
+    - Class: 114
+      Script: {instanceID: 12768}
+    - Class: 114
+      Script: {instanceID: 14036}
+    - Class: 114
+      Script: {instanceID: 15416}
+    - Class: 114
+      Script: {instanceID: 15428}
+    - Class: 114
+      Script: {instanceID: 15564}
+>>>>>>> New-메인
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -689,6 +931,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11358}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 12528}
     - Class: 114
       Script: {instanceID: 12742}
@@ -708,6 +951,27 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15536}
     - Class: 114
       Script: {instanceID: 15696}
+=======
+      Script: {instanceID: 12554}
+    - Class: 114
+      Script: {instanceID: 12768}
+    - Class: 114
+      Script: {instanceID: 12906}
+    - Class: 114
+      Script: {instanceID: 13248}
+    - Class: 114
+      Script: {instanceID: 14186}
+    - Class: 114
+      Script: {instanceID: 15416}
+    - Class: 114
+      Script: {instanceID: 15428}
+    - Class: 114
+      Script: {instanceID: 15534}
+    - Class: 114
+      Script: {instanceID: 15564}
+    - Class: 114
+      Script: {instanceID: 15724}
+>>>>>>> New-메인
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1191,7 +1455,11 @@ ScriptsOnlyBuild:
     className: ScreenSpaceReflections
   - hash:
       serializedVersion: 2
+<<<<<<< HEAD
       Hash: 8c9729e7048a02026cf65261639fe56c
+=======
+      Hash: a4a2c691edd999d003fd36e1a59de23f
+>>>>>>> New-메인
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerScript
@@ -1323,7 +1591,7 @@ ScriptsOnlyBuild:
     className: CameraSwitcher
   - hash:
       serializedVersion: 2
-      Hash: 7e3587c74ab7372e077f6081cbcd42ca
+      Hash: 27a6e75aaf0b2e60b605e3c9a91144e4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MissionData
@@ -1557,7 +1825,7 @@ ScriptsOnlyBuild:
     className: UIPanel
   - hash:
       serializedVersion: 2
-      Hash: efc83411a720df1a2895af7263eb99ca
+      Hash: e52e140ed2a1bcc90da7bba908e506cb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MissionManager
@@ -1645,6 +1913,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: CurrentRoomIsOpenToggle
+  - hash:
+      serializedVersion: 2
+      Hash: 9cac891ce5561495480fab1f6da2a03e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerMission
   - hash:
       serializedVersion: 2
       Hash: 5e1eefcd5106de6c2e85908a3b2d3f04
@@ -2881,6 +3155,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+<<<<<<< HEAD
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -2899,6 +3174,8 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ReportButton
+=======
+>>>>>>> New-메인
   platform: 5
   scenePathNames:
   - Assets/01.Scenes/LobbyScene.unity
@@ -2907,4 +3184,8 @@ ScriptsOnlyBuild:
   - Assets/01.Scenes/Crew Team.unity
   - Assets/01.Scenes/WaitingRoom.unity
   - Assets/01.Scenes/VoteScene.unity
+<<<<<<< HEAD
   playerPath: "D:/\uC870\uD604\uC131GF/3D-among-us/amongUs/amongUs.exe"
+=======
+  playerPath: "C:/Users/USER-PC/Desktop/\uAC8C\uC784\uD14C\uC2A4\uD2B8/amongUs.exe"
+>>>>>>> New-메인

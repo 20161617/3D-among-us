@@ -11278,6 +11278,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniGame_InspectSample
       objectReference: {fileID: 0}
+    - target: {fileID: 618326243687297452, guid: 957ada68876073744a6d17e118831d89,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 618326243687297453, guid: 957ada68876073744a6d17e118831d89,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11341,7 +11346,7 @@ PrefabInstance:
     - target: {fileID: 618326243687297453, guid: 957ada68876073744a6d17e118831d89,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -36
       objectReference: {fileID: 0}
     - target: {fileID: 618326243687297453, guid: 957ada68876073744a6d17e118831d89,
         type: 3}
