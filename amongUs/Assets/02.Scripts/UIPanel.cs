@@ -13,6 +13,7 @@ public class UIPanel : MonoBehaviour
     public Button SabotageButton;
     public Button VentButton;
 
+    bool isImposter;
     bool OneCall = false;
 
     TargetCtrl PlayerTargetCtrl;
@@ -22,6 +23,7 @@ public class UIPanel : MonoBehaviour
     void Awake()
     {
         PlayerTargetCtrl = databaseManager.MyPlayer.targetCtrl;
+        isImposter = databaseManager.MyPlayer.isImposter;
     }
 
     void Start()
@@ -37,6 +39,7 @@ public class UIPanel : MonoBehaviour
             ButtonList.Add("Sabotage", SabotageButton);
             ButtonList.Add("Report", ReportButton);
             ButtonList.Add("Vent", VentButton);
+            ButtonList.Add("Use", UseButton);
 
         }
         else
@@ -52,19 +55,49 @@ public class UIPanel : MonoBehaviour
 
     void Update()
     {
-        if (databaseManager.MyPlayer.isImposter)
-            return;
+        //임포스터라면
+        if (isImposter)
+        {
+            //Kill 버튼 활성화/비활성화
+            if (PlayerTargetCtrl.InteractionObject != "" && !OneCall)
+            {
+                if (PlayerTargetCtrl.InteractionObject == "emergencyTable")
+                {
+                    UseButton.gameObject.SetActive(true);
+                    SabotageButton.gameObject.SetActive(false);
+                    ShowButton("Use");
+                }
+                else
+                {
+                    ShowButton("Kill");
+                }
 
-        //Use 버튼 활성화/비활성화
-        if (PlayerTargetCtrl.InteractionObject != "" && !OneCall)
-        {
-            ShowButton("Use");
-            OneCall = true;
+                OneCall = true;
+            }
+            else if (PlayerTargetCtrl.InteractionObject == "" && OneCall)
+            {
+                UseButton.gameObject.SetActive(false);
+                SabotageButton.gameObject.SetActive(true);
+                HideButton("Use");
+                HideButton("Kill");
+                OneCall = false;
+            }
         }
-        else if (PlayerTargetCtrl.InteractionObject == "" && OneCall)
+
+        //임포스터가 아니라면
+        if (!isImposter)
         {
-            HideButton("Use");
-            OneCall = false;
+            //Use 버튼 활성화/비활성화
+            if (PlayerTargetCtrl.InteractionObject != "" && !OneCall)
+            {
+                ShowButton("Use");
+                OneCall = true;
+            }
+            else if (PlayerTargetCtrl.InteractionObject == "" && OneCall)
+            {
+                HideButton("Use");
+                OneCall = false;
+            }
         }
     }
 

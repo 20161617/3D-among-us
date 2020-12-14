@@ -13,12 +13,36 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     public SkinnedMeshRenderer color;
     public int colorIndex = -1;
 
-    PhotonView PV;
+    public PhotonView PV;
     public TargetCtrl targetCtrl;
-
+    bool waitRoom = false;
+    bool isCreateMisson = false;
+    bool isReady = false;
     // Start is called before the first frame update
+    private void OnEnable()
+    {
+        if (waitRoom)
+        {
+            if (!isImposter)
+            {
+                if (PV.IsMine)
+                { 
+                    transform.GetComponent<PlayerMission>().createMission();
+                    isCreateMisson = true;
+                }
+                else
+                {
+                    isCreateMisson = false;
+                    isReady = true;
+                }
+            }
+        }
+        waitRoom = true;
+    }
+
     void Awake()
     {
+       
         PV = photonView;
         databaseManager.Players.Add(this);
 
@@ -27,12 +51,19 @@ public class PlayerScript : MonoBehaviourPunCallbacks
         targetCtrl = gameObject.GetComponent<TargetCtrl>();
 
         DontDestroyOnLoad(gameObject);
+      
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!PV.IsMine) return;
+        if(isReady&&!isCreateMisson&&!isImposter)
+        {
+            transform.GetComponent<PlayerMission>().createMission();
+            isCreateMisson = true;
+        }
+       
     }
 
     void OnDestroy()

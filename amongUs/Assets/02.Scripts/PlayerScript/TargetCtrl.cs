@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using static MissionManager;
+using static DatabaseManager;
 
 public class TargetCtrl : MonoBehaviourPun
 {
@@ -21,6 +22,9 @@ public class TargetCtrl : MonoBehaviourPun
 
     //이전에 선택한 오브젝트
     private Transform _selection;
+
+
+
 
     void Start()
     {
@@ -44,9 +48,10 @@ public class TargetCtrl : MonoBehaviourPun
         }
 
         //Ray를 볼 수 있게 표시 해준다.
-        Debug.DrawRay(transform.position, transform.forward * MaxDistance, Color.blue, 0.3f);
+        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 0.25f, transform.position.z), transform.forward * MaxDistance, Color.blue, 0.3f);
+
         //Ray에 닿은 오브젝트가 있다면
-        if (Physics.Raycast(transform.position, transform.forward, out hit, MaxDistance))
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 0.25f, transform.position.z), transform.forward, out hit, MaxDistance))
         {
             //닿은 오브젝트가 상호작용 할 수 있는 오브젝트 라면
             if (hit.transform.CompareTag("INTERACTION"))
@@ -56,9 +61,17 @@ public class TargetCtrl : MonoBehaviourPun
                 //선택한 오브젝트의 미션데이터를 현재미션데이터에 저장
                 TargetMissionData = selection.GetComponent<MissionData>();
 
+
                 //선택한 오브젝트의 미션데이터가 현재 임무에 포함되어 있다면
-                if (MissionManager.Instance.ContainsMission(TargetMissionData.MissionType, TargetMissionData.MissionNumber))
+                if (MissionManager.Instance.ContainsMission(TargetMissionData.MissionType, TargetMissionData.MissionNumber,databaseManager.MyPlayer.isImposter))
                 {
+                    if (TargetMissionData.MissionType == MissionCommon || TargetMissionData.MissionType == MissionSimple || TargetMissionData.MissionType == MissionDifficult) //미션 타입 
+                    {
+                        if (!transform.GetComponent<PlayerMission>().myMission.Contains(selection.gameObject)) 
+                            return;
+                        
+                    }
+                    Debug.Log("REPORT 포함되어있음");
                     //반짝이를 켜준다
                     GlowObject selectionGlowObject = selection.GetComponent<GlowObject>();
 
@@ -66,10 +79,15 @@ public class TargetCtrl : MonoBehaviourPun
 
                     //이전에 선택한 오브젝트에 현재 선택한 오브젝트를 넣어준다
                     _selection = selection;
+
                     //상호작용하는 오브젝트 이름에 현재 충돌하고있는 오브젝트의 이름을 넣어준다
                     InteractionObject = hit.collider.name;
                 }
+
+               
+
             }
+
             //충돌하고 있는 오브젝트의 이름을 넣어준다
             Debug.Log(hit.collider.name);
         }
@@ -80,4 +98,15 @@ public class TargetCtrl : MonoBehaviourPun
     {
         MissionManager.Instance.CallMission(TargetMissionData.MissionType, TargetMissionData.MissionNumber);
     }
+
+    public void TargetKill()
+    {
+        Debug.Log("죽여!");
+        databaseManager.MyPlayer.GetComponent<PhotonView>().RPC("KillRPC", RpcTarget.AllViaServer);
+       // _selection.GetComponent<PlayerScript>().KillingPlayer();
+    }
 }
+
+
+
+
