@@ -1,0 +1,1148 @@
+fileFormatVersion: 2
+guid: a9eae2c70e16a6748ac502dc078ee8dd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4269678726173183006
+    second: Among Us - Buttons & Menu_0
+  - first:
+      213: 5779988953406803855
+    second: Among Us - Buttons & Menu_1
+  - first:
+      213: 39965902263078784
+    second: Among Us - Buttons & Menu_2
+  - first:
+      213: -738665486321591110
+    second: Among Us - Buttons & Menu_3
+  - first:
+      213: -207640748287303323
+    second: Among Us - Buttons & Menu_4
+  - first:
+      213: -844031349085234340
+    second: Among Us - Buttons & Menu_5
+  - first:
+      213: 7145651695893231330
+    second: Among Us - Buttons & Menu_6
+  - first:
+      213: 5147070914331951141
+    second: Among Us - Buttons & Menu_7
+  - first:
+      213: 7590890856230634773
+    second: Among Us - Buttons & Menu_8
+  - first:
+      213: -5096366522633857463
+    second: Among Us - Buttons & Menu_9
+  - first:
+      213: 6641700123707221879
+    second: Among Us - Buttons & Menu_10
+  - first:
+      213: 3163385917759177517
+    second: Among Us - Buttons & Menu_11
+  - first:
+      213: 2387052231196257464
+    second: Among Us - Buttons & Menu_12
+  - first:
+      213: 6916967244007741718
+    second: Among Us - Buttons & Menu_13
+  - first:
+      213: 3568184607798080894
+    second: Among Us - Buttons & Menu_14
+  - first:
+      213: 8879065149424323618
+    second: Among Us - Buttons & Menu_15
+  - first:
+      213: 7690638978007129894
+    second: Among Us - Buttons & Menu_16
+  - first:
+      213: 579642278563435337
+    second: Among Us - Buttons & Menu_17
+  - first:
+      213: 5571249024557365533
+    second: Among Us - Buttons & Menu_18
+  - first:
+      213: 7440400497991776402
+    second: Among Us - Buttons & Menu_19
+  - first:
+      213: -6110668413252767851
+    second: Among Us - Buttons & Menu_20
+  - first:
+      213: 2533776985947211883
+    second: Among Us - Buttons & Menu_21
+  - first:
+      213: 9151450912066679391
+    second: Among Us - Buttons & Menu_22
+  - first:
+      213: 3290889630444847925
+    second: Among Us - Buttons & Menu_23
+  - first:
+      213: -8109187214724301756
+    second: Among Us - Buttons & Menu_24
+  - first:
+      213: 4183227054463367602
+    second: Among Us - Buttons & Menu_25
+  - first:
+      213: -1999689891377273122
+    second: Among Us - Buttons & Menu_26
+  - first:
+      213: -2762852522872806125
+    second: Among Us - Buttons & Menu_27
+  - first:
+      213: 5810308514606974490
+    second: Among Us - Buttons & Menu_28
+  - first:
+      213: 7118720941113387286
+    second: Among Us - Buttons & Menu_29
+  - first:
+      213: 4238996178241546170
+    second: Among Us - Buttons & Menu_30
+  - first:
+      213: -2301307839796201322
+    second: Among Us - Buttons & Menu_31
+  - first:
+      213: -5224216804667530937
+    second: Among Us - Buttons & Menu_32
+  - first:
+      213: -2345260739038002969
+    second: Among Us - Buttons & Menu_33
+  - first:
+      213: -4303750567428113516
+    second: Among Us - Buttons & Menu_34
+  - first:
+      213: -3562533454868978251
+    second: Among Us - Buttons & Menu_35
+  - first:
+      213: -8001189681993443213
+    second: Among Us - Buttons & Menu_36
+  - first:
+      213: -6805255631747559673
+    second: Among Us - Buttons & Menu_37
+  - first:
+      213: 154165880640948794
+    second: Among Us - Buttons & Menu_38
+  - first:
+      213: -734248276331528871
+    second: Among Us - Buttons & Menu_39
+  - first:
+      213: 2763936332605241590
+    second: Among Us - Buttons & Menu_40
+  - first:
+      213: -5922064378755261854
+    second: Among Us - Buttons & Menu_41
+  - first:
+      213: 6577177897433442699
+    second: Among Us - Buttons & Menu_42
+  - first:
+      213: -8465344492827541340
+    second: Among Us - Buttons & Menu_43
+  - first:
+      213: 8124371144416692652
+    second: Among Us - Buttons & Menu_44
+  - first:
+      213: -6602548396692496000
+    second: Among Us - Buttons & Menu_45
+  - first:
+      213: -5629964316796639789
+    second: Among Us - Buttons & Menu_46
+  - first:
+      213: -2437430093400221657
+    second: Among Us - Buttons & Menu_47
+  - first:
+      213: -2451836865981040527
+    second: Among Us - Buttons & Menu_48
+  - first:
+      213: -1987244120885600210
+    second: Among Us - Buttons & Menu_49
+  - first:
+      213: 7944659205956810605
+    second: Among Us - Buttons & Menu_50
+  - first:
+      213: 3528143861068144439
+    second: Among Us - Buttons & Menu_51
+  - first:
+      213: 4246202836204854978
+    second: Among Us - Buttons & Menu_52
+  - first:
+      213: -8061897020495907938
+    second: Among Us - Buttons & Menu_53
+  - first:
+      213: -6713041905604982010
+    second: Among Us - Buttons & Menu_54
+  - first:
+      213: -947468578348944576
+    second: Among Us - Buttons & Menu_55
+  - first:
+      213: 5794906731837637023
+    second: Among Us - Buttons & Menu_56
+  - first:
+      213: 8439595519445115813
+    second: Among Us - Buttons & Menu_57
+  - first:
+      213: 4051235576304905439
+    second: Among Us - Buttons & Menu_58
+  - first:
+      213: 6778285003082353774
+    second: Among Us - Buttons & Menu_59
+  - first:
+      213: 4887329185084822207
+    second: Among Us - Buttons & Menu_60
+  - first:
+      213: 1478230118711995595
+    second: Among Us - Buttons & Menu_61
+  - first:
+      213: -8450746019251189845
+    second: Among Us - Buttons & Menu_62
+  - first:
+      213: -3664488204322042359
+    second: Among Us - Buttons & Menu_63
+  - first:
+      213: -5626145335981045069
+    second: Among Us - Buttons & Menu_64
+  - first:
+      213: 7684984455713347248
+    second: Among Us - Buttons & Menu_65
+  - first:
+      213: -7136255480127937167
+    second: Among Us - Buttons & Menu_66
+  - first:
+      213: 2281581422761407785
+    second: Among Us - Buttons & Menu_67
+  - first:
+      213: -5645712996693533190
+    second: Among Us - Buttons & Menu_68
+  - first:
+      213: 4526489875718544211
+    second: Among Us - Buttons & Menu_69
+  - first:
+      213: -5591432538172059194
+    second: Among Us - Buttons & Menu_70
+  - first:
+      213: 5323398760826669478
+    second: Among Us - Buttons & Menu_71
+  - first:
+      213: -8551284625024240061
+    second: Among Us - Buttons & Menu_72
+  - first:
+      213: 4069615598256140715
+    second: Among Us - Buttons & Menu_73
+  - first:
+      213: -3632405928741721297
+    second: Among Us - Buttons & Menu_74
+  - first:
+      213: 8166982151405680305
+    second: Among Us - Buttons & Menu_75
+  - first:
+      213: -7030629765526780712
+    second: Among Us - Buttons & Menu_76
+  - first:
+      213: 2968225263576089849
+    second: Among Us - Buttons & Menu_77
+  - first:
+      213: 4140262256760775860
+    second: Among Us - Buttons & Menu_78
+  - first:
+      213: 9036959145925919331
+    second: Among Us - Buttons & Menu_79
+  - first:
+      213: -9164712385732876132
+    second: Among Us - Buttons & Menu_80
+  - first:
+      213: -4733832419399701279
+    second: Among Us - Buttons & Menu_81
+  - first:
+      213: 7579321224207266038
+    second: Among Us - Buttons & Menu_82
+  - first:
+      213: 788295530934897520
+    second: Among Us - Buttons & Menu_83
+  - first:
+      213: -5756612855648649542
+    second: Among Us - Buttons & Menu_84
+  - first:
+      213: -6622682263463694225
+    second: Among Us - Buttons & Menu_85
+  - first:
+      213: 7841591715300076007
+    second: Among Us - Buttons & Menu_86
+  - first:
+      213: 1401357146836862468
+    second: Among Us - Buttons & Menu_87
+  - first:
+      213: -1709864822339099848
+    second: Among Us - Buttons & Menu_88
+  - first:
+      213: 7848753668842859086
+    second: Among Us - Buttons & Menu_89
+  - first:
+      213: -959078383180580370
+    second: Among Us - Buttons & Menu_90
+  - first:
+      213: -2360295482516172874
+    second: Among Us - Buttons & Menu_91
+  - first:
+      213: 1860283812809764410
+    second: Among Us - Buttons & Menu_92
+  - first:
+      213: 4683959882905090066
+    second: Among Us - Buttons & Menu_93
+  - first:
+      213: -4619962861333244644
+    second: Among Us - Buttons & Menu_94
+  - first:
+      213: -7808723081255839150
+    second: Among Us - Buttons & Menu_95
+  - first:
+      213: -966350727680370982
+    second: Among Us - Buttons & Menu_96
+  - first:
+      213: -7453111821829700940
+    second: Among Us - Buttons & Menu_97
+  - first:
+      213: -8190304763798095224
+    second: Among Us - Buttons & Menu_98
+  - first:
+      213: 4391245722468232311
+    second: Among Us - Buttons & Menu_99
+  - first:
+      213: -4184846862413772661
+    second: Among Us - Buttons & Menu_100
+  - first:
+      213: -801040813630316475
+    second: Among Us - Buttons & Menu_101
+  - first:
+      213: 1073762140978872298
+    second: Among Us - Buttons & Menu_102
+  - first:
+      213: 3460400309170680438
+    second: Among Us - Buttons & Menu_103
+  - first:
+      213: -7364880301967394897
+    second: Among Us - Buttons & Menu_104
+  - first:
+      213: 4200369772688581525
+    second: Among Us - Buttons & Menu_105
+  - first:
+      213: -7359019479114932412
+    second: Among Us - Buttons & Menu_106
+  - first:
+      213: 6547233789855789114
+    second: Among Us - Buttons & Menu_107
+  - first:
+      213: -2246784963074271118
+    second: Among Us - Buttons & Menu_108
+  - first:
+      213: -3680409429917120096
+    second: Among Us - Buttons & Menu_109
+  - first:
+      213: 4773527601992139478
+    second: Among Us - Buttons & Menu_110
+  - first:
+      213: -5989202468157081341
+    second: Among Us - Buttons & Menu_111
+  - first:
+      213: -5535376987790669195
+    second: Among Us - Buttons & Menu_112
+  - first:
+      213: 4360248881656070196
+    second: Among Us - Buttons & Menu_113
+  - first:
+      213: 4028751099926700713
+    second: Among Us - Buttons & Menu_114
+  - first:
+      213: 1750209491490101655
+    second: Among Us - Buttons & Menu_115
+  - first:
+      213: -5110049378318939019
+    second: Among Us - Buttons & Menu_116
+  - first:
+      213: -2871548457060264116
+    second: Among Us - Buttons & Menu_117
+  - first:
+      213: -98360039777736514
+    second: Among Us - Buttons & Menu_118
+  - first:
+      213: -4985940244790527737
+    second: Among Us - Buttons & Menu_119
+  - first:
+      213: 613871590056864851
+    second: Among Us - Buttons & Menu_120
+  - first:
+      213: 2627845218105350021
+    second: Among Us - Buttons & Menu_121
+  - first:
+      213: -4326864578543484974
+    second: Among Us - Buttons & Menu_122
+  - first:
+      213: 5063624611287839631
+    second: Among Us - Buttons & Menu_123
+  - first:
+      213: -304814548714465449
+    second: Among Us - Buttons & Menu_124
+  - first:
+      213: -5466593854967310035
+    second: Among Us - Buttons & Menu_125
+  - first:
+      213: 448015432614921363
+    second: Among Us - Buttons & Menu_126
+  - first:
+      213: -3905800530189825150
+    second: Among Us - Buttons & Menu_127
+  - first:
+      213: -1070681568922108248
+    second: Among Us - Buttons & Menu_128
+  - first:
+      213: -3610052698557063313
+    second: Among Us - Buttons & Menu_129
+  - first:
+      213: 4111904879403370124
+    second: Among Us - Buttons & Menu_130
+  - first:
+      213: -6319636818897047570
+    second: Among Us - Buttons & Menu_131
+  - first:
+      213: -6289309935720411029
+    second: Among Us - Buttons & Menu_132
+  - first:
+      213: 184978832366471662
+    second: Among Us - Buttons & Menu_133
+  - first:
+      213: 5776658980304655848
+    second: Among Us - Buttons & Menu_134
+  - first:
+      213: -4964694642864092103
+    second: Among Us - Buttons & Menu_135
+  - first:
+      213: 698760456289123499
+    second: Among Us - Buttons & Menu_136
+  - first:
+      213: -8576000173714370078
+    second: Among Us - Buttons & Menu_137
+  - first:
+      213: -1680599213268062300
+    second: Among Us - Buttons & Menu_138
+  - first:
+      213: -2086557342545554457
+    second: Among Us - Buttons & Menu_139
+  - first:
+      213: 4001054657046362464
+    second: Among Us - Buttons & Menu_140
+  - first:
+      213: 5196523012010756255
+    second: Among Us - Buttons & Menu_141
+  - first:
+      213: -6454630323164449748
+    second: Among Us - Buttons & Menu_142
+  - first:
+      213: 3951791156520075404
+    second: Among Us - Buttons & Menu_143
+  - first:
+      213: 5659829774920860613
+    second: Among Us - Buttons & Menu_144
+  - first:
+      213: -1583244828730851919
+    second: Among Us - Buttons & Menu_145
+  - first:
+      213: -1181106928056354010
+    second: Among Us - Buttons & Menu_146
+  - first:
+      213: -3159251029100004647
+    second: Among Us - Buttons & Menu_147
+  - first:
+      213: 3558890642881671089
+    second: Among Us - Buttons & Menu_148
+  - first:
+      213: -8732449779876051194
+    second: Among Us - Buttons & Menu_149
+  - first:
+      213: 1411501191824815128
+    second: Among Us - Buttons & Menu_150
+  - first:
+      213: 5378614525351895230
+    second: Among Us - Buttons & Menu_151
+  - first:
+      213: 351368984264746570
+    second: Among Us - Buttons & Menu_152
+  - first:
+      213: -3958867265201422074
+    second: Among Us - Buttons & Menu_153
+  - first:
+      213: 1855728790115246956
+    second: Among Us - Buttons & Menu_154
+  - first:
+      213: -4771724332368115453
+    second: Among Us - Buttons & Menu_155
+  - first:
+      213: 5542322594570715022
+    second: Among Us - Buttons & Menu_156
+  - first:
+      213: -6382114888993525876
+    second: Among Us - Buttons & Menu_157
+  - first:
+      213: -1422438158392147927
+    second: Among Us - Buttons & Menu_158
+  - first:
+      213: 2133710718970235617
+    second: Among Us - Buttons & Menu_159
+  - first:
+      213: -3995859421883121389
+    second: Among Us - Buttons & Menu_160
+  - first:
+      213: 7688982036139941059
+    second: Among Us - Buttons & Menu_161
+  - first:
+      213: -1951220194209934447
+    second: Among Us - Buttons & Menu_162
+  - first:
+      213: 2092034981415732596
+    second: Among Us - Buttons & Menu_163
+  - first:
+      213: 5475291897958519927
+    second: Among Us - Buttons & Menu_164
+  - first:
+      213: -3421866849285108197
+    second: Among Us - Buttons & Menu_165
+  - first:
+      213: -4688095570636221573
+    second: Among Us - Buttons & Menu_166
+  - first:
+      213: -6915584372333550502
+    second: Among Us - Buttons & Menu_167
+  - first:
+      213: -8823912524447256828
+    second: Among Us - Buttons & Menu_168
+  - first:
+      213: 7251156915585522914
+    second: Among Us - Buttons & Menu_169
+  - first:
+      213: -4800672051581984179
+    second: Among Us - Buttons & Menu_170
+  - first:
+      213: 8825508463509320163
+    second: Among Us - Buttons & Menu_171
+  - first:
+      213: 4017871680365156981
+    second: Among Us - Buttons & Menu_172
+  - first:
+      213: -7141503277462059650
+    second: Among Us - Buttons & Menu_173
+  - first:
+      213: -7835223638977138792
+    second: Among Us - Buttons & Menu_174
+  - first:
+      213: -5315005201381939243
+    second: Among Us - Buttons & Menu_175
+  - first:
+      213: -8591326739315569228
+    second: Among Us - Buttons & Menu_176
+  - first:
+      213: 2276607107714534695
+    second: Among Us - Buttons & Menu_177
+  - first:
+      213: 5343319323644172962
+    second: Among Us - Buttons & Menu_178
+  - first:
+      213: -7059226379974347135
+    second: Among Us - Buttons & Menu_179
+  - first:
+      213: 4904130048021808519
+    second: Among Us - Buttons & Menu_180
+  - first:
+      213: 7860892641464538453
+    second: Among Us - Buttons & Menu_181
+  - first:
+      213: -1111660968206006361
+    second: Among Us - Buttons & Menu_182
+  - first:
+      213: -6647554602217943726
+    second: Among Us - Buttons & Menu_183
+  - first:
+      213: -7040643913287986845
+    second: Among Us - Buttons & Menu_184
+  - first:
+      213: -1965886950561501162
+    second: Among Us - Buttons & Menu_185
+  - first:
+      213: -4631442092862390568
+    second: Among Us - Buttons & Menu_186
+  - first:
+      213: -3351922304587982153
+    second: Among Us - Buttons & Menu_187
+  - first:
+      213: -7653847801424774132
+    second: Among Us - Buttons & Menu_188
+  - first:
+      213: 5177523993852931854
+    second: Among Us - Buttons & Menu_189
+  - first:
+      213: 5645379842543089950
+    second: Among Us - Buttons & Menu_190
+  - first:
+      213: -15182855268171870
+    second: Among Us - Buttons & Menu_191
+  - first:
+      213: -6109426367900669091
+    second: Among Us - Buttons & Menu_192
+  - first:
+      213: -6720655811210493137
+    second: Among Us - Buttons & Menu_193
+  - first:
+      213: -1298963646850808565
+    second: Among Us - Buttons & Menu_194
+  - first:
+      213: 4111563258118493705
+    second: Among Us - Buttons & Menu_195
+  - first:
+      213: 8038938824726297650
+    second: Among Us - Buttons & Menu_196
+  - first:
+      213: 5793222087679331247
+    second: Among Us - Buttons & Menu_197
+  - first:
+      213: -480205182016322745
+    second: Among Us - Buttons & Menu_198
+  - first:
+      213: -2532217633764416041
+    second: Among Us - Buttons & Menu_199
+  - first:
+      213: -2931525835847379621
+    second: Among Us - Buttons & Menu_200
+  - first:
+      213: -1402727961990820439
+    second: Among Us - Buttons & Menu_201
+  - first:
+      213: 8121479662304239618
+    second: Among Us - Buttons & Menu_202
+  - first:
+      213: -4785450229185899377
+    second: Among Us - Buttons & Menu_203
+  - first:
+      213: 2155142282642139418
+    second: Among Us - Buttons & Menu_204
+  - first:
+      213: 4953209957876069129
+    second: Among Us - Buttons & Menu_205
+  - first:
+      213: -7433698559396655057
+    second: Among Us - Buttons & Menu_206
+  - first:
+      213: 808421193524333865
+    second: Among Us - Buttons & Menu_207
+  - first:
+      213: -1551044558858021764
+    second: Among Us - Buttons & Menu_208
+  - first:
+      213: -5112763642809609470
+    second: Among Us - Buttons & Menu_209
+  - first:
+      213: -3950794293449897862
+    second: Among Us - Buttons & Menu_210
+  - first:
+      213: 1503102505421990383
+    second: Among Us - Buttons & Menu_211
+  - first:
+      213: 7127036668538228697
+    second: Among Us - Buttons & Menu_212
+  - first:
+      213: 2939860162983930924
+    second: Among Us - Buttons & Menu_213
+  - first:
+      213: -7068870619971961149
+    second: Among Us - Buttons & Menu_214
+  - first:
+      213: -6233274035987483604
+    second: Among Us - Buttons & Menu_215
+  - first:
+      213: 4440772961605925939
+    second: Among Us - Buttons & Menu_216
+  - first:
+      213: -5884828864079472920
+    second: Among Us - Buttons & Menu_217
+  - first:
+      213: -3307038886870721925
+    second: Among Us - Buttons & Menu_218
+  - first:
+      213: -2358261339306949589
+    second: Among Us - Buttons & Menu_219
+  - first:
+      213: 4335528441463907286
+    second: Among Us - Buttons & Menu_220
+  - first:
+      213: -5709774234117282909
+    second: Among Us - Buttons & Menu_221
+  - first:
+      213: 1650711646815967460
+    second: Among Us - Buttons & Menu_222
+  - first:
+      213: -6239865247585500931
+    second: Among Us - Buttons & Menu_223
+  - first:
+      213: -7434932959940582211
+    second: Among Us - Buttons & Menu_224
+  - first:
+      213: -6037016425954753558
+    second: Among Us - Buttons & Menu_225
+  - first:
+      213: 2250954871557839392
+    second: Among Us - Buttons & Menu_226
+  - first:
+      213: -7086473486671697208
+    second: Among Us - Buttons & Menu_227
+  - first:
+      213: 727864757789392421
+    second: Among Us - Buttons & Menu_228
+  - first:
+      213: -6904143353086236781
+    second: Among Us - Buttons & Menu_229
+  - first:
+      213: -2856191530277086826
+    second: Among Us - Buttons & Menu_230
+  - first:
+      213: -8394882071368760008
+    second: Among Us - Buttons & Menu_231
+  - first:
+      213: 641389060452018052
+    second: Among Us - Buttons & Menu_232
+  - first:
+      213: 3872609670366914640
+    second: Among Us - Buttons & Menu_233
+  - first:
+      213: 4762673007776088959
+    second: Among Us - Buttons & Menu_234
+  - first:
+      213: -2300193325677088023
+    second: Among Us - Buttons & Menu_235
+  - first:
+      213: -811248250120855322
+    second: Among Us - Buttons & Menu_236
+  - first:
+      213: -1815939444096960946
+    second: Among Us - Buttons & Menu_237
+  - first:
+      213: -8671734586899460955
+    second: Among Us - Buttons & Menu_238
+  - first:
+      213: -2410934967248859050
+    second: Among Us - Buttons & Menu_239
+  - first:
+      213: 5104451741432606362
+    second: Among Us - Buttons & Menu_240
+  - first:
+      213: 6922049788933186872
+    second: Among Us - Buttons & Menu_241
+  - first:
+      213: -1449823497214912580
+    second: Among Us - Buttons & Menu_242
+  - first:
+      213: 2152426125661673734
+    second: Among Us - Buttons & Menu_243
+  - first:
+      213: 5327791326404447839
+    second: Among Us - Buttons & Menu_244
+  - first:
+      213: -2414704906661009574
+    second: Among Us - Buttons & Menu_245
+  - first:
+      213: 8034990234715528705
+    second: Among Us - Buttons & Menu_246
+  - first:
+      213: -1452143881861437695
+    second: Among Us - Buttons & Menu_247
+  - first:
+      213: -3808724353950221047
+    second: Among Us - Buttons & Menu_248
+  - first:
+      213: -3202730542032553562
+    second: Among Us - Buttons & Menu_249
+  - first:
+      213: 1189429720684748336
+    second: Among Us - Buttons & Menu_250
+  - first:
+      213: 202302230225599046
+    second: Among Us - Buttons & Menu_251
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Among Us - Buttons & Menu_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1041
+        width: 445
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c48920e22f04b30800000000000000
+      internalID: 4269678726173183006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Among Us - Buttons & Menu_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 962
+        width: 190
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f8e755455a63050800000000000000
+      internalID: 5779988953406803855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Among Us - Buttons & Menu_2
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 963
+        width: 188
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08fc48fb6ccfd8000800000000000000
+      internalID: 39965902263078784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Among Us - Buttons & Menu_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 884
+        width: 189
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abcd5ff57abbfb5f0800000000000000
+      internalID: -738665486321591110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Among Us - Buttons & Menu_4
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 884
+        width: 187
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561607de6df4e1df0800000000000000
+      internalID: -207640748287303323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Among Us - Buttons & Menu_5
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 832
+        width: 192
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b1b7ab5f56944f0800000000000000
+      internalID: -844031349085234340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Among Us - Buttons & Menu_6
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 785
+        width: 192
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6326eab547a2360800000000000000
+      internalID: 7145651695893231330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Among Us - Buttons & Menu_7
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 583
+        width: 162
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520408ae9b11e6740800000000000000
+      internalID: 5147070914331951141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Among Us - Buttons & Menu_8
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 579
+        width: 166
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5154366f303485960800000000000000
+      internalID: 7590890856230634773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Among Us - Buttons & Menu_9
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 580
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946573d36a11649b0800000000000000
+      internalID: -5096366522633857463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Among Us - Buttons & Menu_10
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 64
+        width: 183
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777ac32c21f0c2c50800000000000000
+      internalID: 6641700123707221879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Among Us - Buttons & Menu_11
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 467
+        width: 64
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23428b5bba96eb20800000000000000
+      internalID: 3163385917759177517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
