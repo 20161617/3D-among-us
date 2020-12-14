@@ -25,8 +25,13 @@ public class PlayerMission : MonoBehaviour
     {
         
         Debug.Log("create");
+<<<<<<< Updated upstream
         displayText = GameObject.FindWithTag("MissionText").GetComponent<Text>();
         int imposterCount = DatabaseManager.databaseManager.Players.Count <= 5 ? 1 : 2; //임포수 5명이하면 1빼기 이상이면 2빼기 
+=======
+        int imposterCount = DatabaseManager.databaseManager.Players.Count <= 5 ? 1 : 2; //임포수 5명이하면 1빼기 이상이면 2빼기 
+         displayText = GameObject.FindWithTag("MissionText").GetComponent<Text>();
+>>>>>>> Stashed changes
 
         ////게이지 최대 100이라고 봤을떄  미션최대게이지/ 플레이어 수 - 임포수 / 미션수 
         MissionManager.Instance.plusGague = (1.0f / (DatabaseManager.databaseManager.Players.Count - imposterCount)) / (MissionManager.Instance.commonMissionNum + MissionManager.Instance.simpleMissionNum + MissionManager.Instance.difficultMissionNum);

@@ -154,19 +154,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 11348}
     - Class: 114
       Script: {instanceID: 11352}
     - Class: 114
       Script: {instanceID: 11358}
+=======
+      Script: {instanceID: 11338}
     - Class: 114
-      Script: {instanceID: 11538}
+      Script: {instanceID: 11346}
     - Class: 114
-      Script: {instanceID: 12586}
+      Script: {instanceID: 12616}
+>>>>>>> Stashed changes
     - Class: 114
+      Script: {instanceID: 12970}
+    - Class: 114
+      Script: {instanceID: 13668}
+    - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 12914}
     - Class: 114
       Script: {instanceID: 13628}
+=======
+      Script: {instanceID: 13998}
+    - Class: 114
+      Script: {instanceID: 14714}
+>>>>>>> Stashed changes
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -219,38 +233,50 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 11336}
     - Class: 114
+=======
+>>>>>>> Stashed changes
       Script: {instanceID: 11338}
     - Class: 114
       Script: {instanceID: 11348}
     - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 11352}
     - Class: 114
       Script: {instanceID: 11358}
+=======
+      Script: {instanceID: 11346}
     - Class: 114
-      Script: {instanceID: 11540}
+      Script: {instanceID: 12618}
     - Class: 114
-      Script: {instanceID: 11598}
+      Script: {instanceID: 12676}
+>>>>>>> Stashed changes
     - Class: 114
-      Script: {instanceID: 11780}
+      Script: {instanceID: 12858}
     - Class: 114
-      Script: {instanceID: 11786}
+      Script: {instanceID: 12864}
     - Class: 114
-      Script: {instanceID: 11790}
+      Script: {instanceID: 12868}
     - Class: 114
-      Script: {instanceID: 12004}
+      Script: {instanceID: 12970}
     - Class: 114
-      Script: {instanceID: 12064}
+      Script: {instanceID: 13086}
     - Class: 114
-      Script: {instanceID: 12304}
+      Script: {instanceID: 13146}
     - Class: 114
-      Script: {instanceID: 12430}
+      Script: {instanceID: 13384}
     - Class: 114
-      Script: {instanceID: 12538}
+      Script: {instanceID: 13510}
     - Class: 114
-      Script: {instanceID: 12576}
+      Script: {instanceID: 13618}
     - Class: 114
+      Script: {instanceID: 13656}
+    - Class: 114
+      Script: {instanceID: 13686}
+    - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 12742}
     - Class: 114
       Script: {instanceID: 12758}
@@ -258,9 +284,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12818}
     - Class: 114
       Script: {instanceID: 12860}
+=======
+      Script: {instanceID: 13826}
     - Class: 114
-      Script: {instanceID: 12862}
+      Script: {instanceID: 13842}
     - Class: 114
+      Script: {instanceID: 13902}
+    - Class: 114
+      Script: {instanceID: 13944}
+>>>>>>> Stashed changes
+    - Class: 114
+      Script: {instanceID: 13946}
+    - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 13004}
     - Class: 114
       Script: {instanceID: 13256}
@@ -276,9 +312,29 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14002}
     - Class: 114
       Script: {instanceID: 14012}
+=======
+      Script: {instanceID: 14088}
     - Class: 114
-      Script: {instanceID: 14018}
+      Script: {instanceID: 14340}
     - Class: 114
+      Script: {instanceID: 14418}
+    - Class: 114
+      Script: {instanceID: 14522}
+    - Class: 114
+      Script: {instanceID: 14530}
+    - Class: 114
+      Script: {instanceID: 14696}
+    - Class: 114
+      Script: {instanceID: 14752}
+    - Class: 114
+      Script: {instanceID: 14884}
+    - Class: 114
+      Script: {instanceID: 15090}
+>>>>>>> Stashed changes
+    - Class: 114
+      Script: {instanceID: 15100}
+    - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 14350}
     - Class: 114
       Script: {instanceID: 14366}
@@ -300,6 +356,31 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15540}
     - Class: 114
       Script: {instanceID: 15636}
+=======
+      Script: {instanceID: 15106}
+    - Class: 114
+      Script: {instanceID: 15438}
+    - Class: 114
+      Script: {instanceID: 15454}
+    - Class: 114
+      Script: {instanceID: 15556}
+    - Class: 114
+      Script: {instanceID: 15568}
+    - Class: 114
+      Script: {instanceID: 16354}
+    - Class: 114
+      Script: {instanceID: 16402}
+    - Class: 114
+      Script: {instanceID: 16474}
+    - Class: 114
+      Script: {instanceID: 16486}
+    - Class: 114
+      Script: {instanceID: 16622}
+    - Class: 114
+      Script: {instanceID: 16624}
+    - Class: 114
+      Script: {instanceID: 16722}
+>>>>>>> Stashed changes
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -354,19 +435,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 11348}
     - Class: 114
       Script: {instanceID: 11352}
     - Class: 114
       Script: {instanceID: 11358}
+=======
+      Script: {instanceID: 11338}
     - Class: 114
-      Script: {instanceID: 11538}
+      Script: {instanceID: 11346}
     - Class: 114
-      Script: {instanceID: 12586}
+      Script: {instanceID: 12616}
+>>>>>>> Stashed changes
     - Class: 114
+      Script: {instanceID: 12970}
+    - Class: 114
+      Script: {instanceID: 13668}
+    - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 12914}
     - Class: 114
       Script: {instanceID: 13628}
+=======
+      Script: {instanceID: 13998}
+    - Class: 114
+      Script: {instanceID: 14714}
+>>>>>>> Stashed changes
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -433,40 +528,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11346}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 12462}
     - Class: 114
-      Script: {instanceID: 11350}
+      Script: {instanceID: 12472}
     - Class: 114
-      Script: {instanceID: 11352}
+      Script: {instanceID: 12614}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 12746}
     - Class: 114
-      Script: {instanceID: 11356}
+      Script: {instanceID: 12770}
     - Class: 114
-      Script: {instanceID: 11358}
+      Script: {instanceID: 12778}
     - Class: 114
-      Script: {instanceID: 11382}
+      Script: {instanceID: 12816}
     - Class: 114
-      Script: {instanceID: 11392}
+      Script: {instanceID: 12970}
     - Class: 114
-      Script: {instanceID: 11536}
+      Script: {instanceID: 13014}
     - Class: 114
-      Script: {instanceID: 11668}
+      Script: {instanceID: 13080}
     - Class: 114
-      Script: {instanceID: 11692}
+      Script: {instanceID: 13122}
     - Class: 114
-      Script: {instanceID: 11700}
+      Script: {instanceID: 13210}
     - Class: 114
-      Script: {instanceID: 11738}
+      Script: {instanceID: 13354}
     - Class: 114
-      Script: {instanceID: 11934}
+      Script: {instanceID: 13384}
     - Class: 114
-      Script: {instanceID: 12040}
+      Script: {instanceID: 13414}
     - Class: 114
-      Script: {instanceID: 12130}
+      Script: {instanceID: 13510}
     - Class: 114
-      Script: {instanceID: 12274}
+      Script: {instanceID: 13608}
     - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 12334}
     - Class: 114
       Script: {instanceID: 12528}
@@ -556,6 +652,103 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15708}
     - Class: 114
       Script: {instanceID: 15714}
+=======
+      Script: {instanceID: 13658}
+    - Class: 114
+      Script: {instanceID: 13688}
+    - Class: 114
+      Script: {instanceID: 13794}
+    - Class: 114
+      Script: {instanceID: 13826}
+    - Class: 114
+      Script: {instanceID: 13900}
+    - Class: 114
+      Script: {instanceID: 13960}
+    - Class: 114
+      Script: {instanceID: 13970}
+    - Class: 114
+      Script: {instanceID: 14158}
+    - Class: 114
+      Script: {instanceID: 14196}
+    - Class: 114
+      Script: {instanceID: 14244}
+    - Class: 114
+      Script: {instanceID: 14306}
+    - Class: 114
+      Script: {instanceID: 14422}
+    - Class: 114
+      Script: {instanceID: 14428}
+    - Class: 114
+      Script: {instanceID: 14466}
+    - Class: 114
+      Script: {instanceID: 14538}
+    - Class: 114
+      Script: {instanceID: 14752}
+    - Class: 114
+      Script: {instanceID: 14782}
+    - Class: 114
+      Script: {instanceID: 14840}
+    - Class: 114
+      Script: {instanceID: 14960}
+    - Class: 114
+      Script: {instanceID: 15088}
+    - Class: 114
+      Script: {instanceID: 15116}
+    - Class: 114
+      Script: {instanceID: 15118}
+    - Class: 114
+      Script: {instanceID: 15138}
+    - Class: 114
+      Script: {instanceID: 15184}
+    - Class: 114
+      Script: {instanceID: 15206}
+    - Class: 114
+      Script: {instanceID: 15356}
+    - Class: 114
+      Script: {instanceID: 15394}
+    - Class: 114
+      Script: {instanceID: 15402}
+    - Class: 114
+      Script: {instanceID: 15410}
+    - Class: 114
+      Script: {instanceID: 15428}
+    - Class: 114
+      Script: {instanceID: 15486}
+    - Class: 114
+      Script: {instanceID: 15516}
+    - Class: 114
+      Script: {instanceID: 15538}
+    - Class: 114
+      Script: {instanceID: 15760}
+    - Class: 114
+      Script: {instanceID: 15828}
+    - Class: 114
+      Script: {instanceID: 16092}
+    - Class: 114
+      Script: {instanceID: 16292}
+    - Class: 114
+      Script: {instanceID: 16346}
+    - Class: 114
+      Script: {instanceID: 16474}
+    - Class: 114
+      Script: {instanceID: 16486}
+    - Class: 114
+      Script: {instanceID: 16584}
+    - Class: 114
+      Script: {instanceID: 16588}
+    - Class: 114
+      Script: {instanceID: 16622}
+    - Class: 114
+      Script: {instanceID: 16648}
+    - Class: 114
+      Script: {instanceID: 16678}
+    - Class: 114
+      Script: {instanceID: 16690}
+    - Class: 114
+      Script: {instanceID: 16794}
+    - Class: 114
+      Script: {instanceID: 16800}
+>>>>>>> Stashed changes
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -612,12 +805,16 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 11336}
     - Class: 114
+=======
+>>>>>>> Stashed changes
       Script: {instanceID: 11338}
     - Class: 114
       Script: {instanceID: 11340}
     - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 11348}
     - Class: 114
       Script: {instanceID: 11352}
@@ -633,6 +830,25 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15402}
     - Class: 114
       Script: {instanceID: 15538}
+=======
+      Script: {instanceID: 11346}
+    - Class: 114
+      Script: {instanceID: 12970}
+    - Class: 114
+      Script: {instanceID: 13080}
+    - Class: 114
+      Script: {instanceID: 13826}
+    - Class: 114
+      Script: {instanceID: 14752}
+    - Class: 114
+      Script: {instanceID: 15098}
+    - Class: 114
+      Script: {instanceID: 16474}
+    - Class: 114
+      Script: {instanceID: 16486}
+    - Class: 114
+      Script: {instanceID: 16622}
+>>>>>>> Stashed changes
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -689,20 +905,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11340}
     - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 11342}
     - Class: 114
       Script: {instanceID: 11348}
     - Class: 114
       Script: {instanceID: 11352}
+=======
+      Script: {instanceID: 11344}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11346}
+>>>>>>> Stashed changes
     - Class: 114
-      Script: {instanceID: 11356}
+      Script: {instanceID: 12970}
     - Class: 114
-      Script: {instanceID: 11358}
+      Script: {instanceID: 13080}
     - Class: 114
-      Script: {instanceID: 12528}
+      Script: {instanceID: 13608}
     - Class: 114
+      Script: {instanceID: 13826}
+    - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 12742}
     - Class: 114
       Script: {instanceID: 12880}
@@ -720,6 +943,27 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15538}
     - Class: 114
       Script: {instanceID: 15698}
+=======
+      Script: {instanceID: 13964}
+    - Class: 114
+      Script: {instanceID: 14306}
+    - Class: 114
+      Script: {instanceID: 14752}
+    - Class: 114
+      Script: {instanceID: 15138}
+    - Class: 114
+      Script: {instanceID: 15250}
+    - Class: 114
+      Script: {instanceID: 16474}
+    - Class: 114
+      Script: {instanceID: 16486}
+    - Class: 114
+      Script: {instanceID: 16592}
+    - Class: 114
+      Script: {instanceID: 16622}
+    - Class: 114
+      Script: {instanceID: 16784}
+>>>>>>> Stashed changes
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -747,40 +991,10 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
-  - hash:
-      serializedVersion: 2
-      Hash: aeb62f729c52c814dec86c47dcac1471
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
-  - hash:
-      serializedVersion: 2
-      Hash: 7ab0e790220bdca831fdd886b339039d
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: GridLayoutGroup
-  - hash:
-      serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ContentSizeFitter
-  - hash:
-      serializedVersion: 2
-      Hash: caa533b001ae39b864ba8425019e2268
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Shadow
-  - hash:
-      serializedVersion: 2
-      Hash: 7072231382eb3c4871b3dd75ad0227e1
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Slider
   - hash:
       serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
@@ -789,16 +1003,16 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: aeb62f729c52c814dec86c47dcac1471
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
+  - hash:
+      serializedVersion: 2
       Hash: 499fd23433e68e265d153aa6b95d0047
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Scrollbar
-  - hash:
-      serializedVersion: 2
-      Hash: 89f9a1b4c64db9559e39f4a2e3bfaadd
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Image
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -807,10 +1021,10 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
+      Hash: 4bc4346a71a8df53a6b106f68ef3a190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
-    className: InputField
+    className: CanvasScaler
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -1131,6 +1345,12 @@ ScriptsOnlyBuild:
     className: DemoHubManager
   - hash:
       serializedVersion: 2
+      Hash: 89f9a1b4c64db9559e39f4a2e3bfaadd
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Image
+  - hash:
+      serializedVersion: 2
       Hash: 95e6797232b7d5831c9feb55a8582905
     assemblyName: Unity.RenderPipelines.Universal.Runtime.dll
     namespaceName: UnityEngine.Rendering.Universal
@@ -1171,6 +1391,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: CountOfPlayersOnMasterProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 7ab0e790220bdca831fdd886b339039d
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GridLayoutGroup
   - hash:
       serializedVersion: 2
       Hash: 487b20882d4649137ca20d5bccbfc7f4
@@ -1429,6 +1655,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MiniGame_Asteroid
+  - hash:
+      serializedVersion: 2
+      Hash: caa533b001ae39b864ba8425019e2268
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Shadow
   - hash:
       serializedVersion: 2
       Hash: ca910f344cf61e78b3f04492ad1faa3e
@@ -1917,6 +2149,12 @@ ScriptsOnlyBuild:
     className: VolumeProfile
   - hash:
       serializedVersion: 2
+      Hash: 5f1752ed2092162f016c19510c28a8b9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
       Hash: 0c9920fb850aff7b5ec756815b7a6fc1
     assemblyName: Unity.RenderPipelines.Universal.Runtime.dll
     namespaceName: UnityEngine.Rendering.Universal
@@ -2083,6 +2321,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerFoldout
+  - hash:
+      serializedVersion: 2
+      Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: InputField
   - hash:
       serializedVersion: 2
       Hash: c9a8b80298a116835b51ba1cf9284367
@@ -2817,6 +3061,12 @@ ScriptsOnlyBuild:
     className: ConnectToRegionUIForm
   - hash:
       serializedVersion: 2
+      Hash: 7072231382eb3c4871b3dd75ad0227e1
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Slider
+  - hash:
+      serializedVersion: 2
       Hash: 5f4d6e57084c42d31cf00600fe2c939d
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -2907,4 +3157,8 @@ ScriptsOnlyBuild:
   - Assets/01.Scenes/Crew Team.unity
   - Assets/01.Scenes/WaitingRoom.unity
   - Assets/01.Scenes/VoteScene.unity
+<<<<<<< Updated upstream
   playerPath: "C:/Users/USER-PC/Desktop/\uAC8C\uC784\uD14C\uC2A4\uD2B8/amongUs.exe"
+=======
+  playerPath: C:/Users/USER-PC/Desktop/111/amongUs.exe
+>>>>>>> Stashed changes

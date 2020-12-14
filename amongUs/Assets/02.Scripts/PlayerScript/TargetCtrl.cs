@@ -61,6 +61,7 @@ public class TargetCtrl : MonoBehaviourPun
                 //선택한 오브젝트의 미션데이터가 현재 임무에 포함되어 있다면
                 if (MissionManager.Instance.ContainsMission(TargetMissionData.MissionType, TargetMissionData.MissionNumber, databaseManager.MyPlayer.isImposter))
                 {
+<<<<<<< Updated upstream
                     if (TargetMissionData.MissionType == MissionCommon || TargetMissionData.MissionType == MissionSimple || TargetMissionData.MissionType == MissionDifficult) //미션 타입 
                     {
                         if (!transform.GetComponent<PlayerMission>().myMission.Contains(selection.gameObject))
@@ -68,6 +69,15 @@ public class TargetCtrl : MonoBehaviourPun
                     }
                         //반짝이를 켜준다
                         GlowObject selectionGlowObject = selection.GetComponent<GlowObject>();
+=======
+                    //다른미션도 받아들일까봐
+                    //현재미션 체크
+                    if(!(TargetMissionData.MissionType == "PLAYER")&& !transform.GetComponent<PlayerMission>().myMission.Contains(selection.gameObject))
+                      return;
+
+                    //반짝이를 켜준다
+                    GlowObject selectionGlowObject = selection.GetComponent<GlowObject>();
+>>>>>>> Stashed changes
 
                     selectionGlowObject.OnRaycastEnter();
 
