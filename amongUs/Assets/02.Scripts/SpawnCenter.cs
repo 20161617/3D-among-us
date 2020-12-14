@@ -11,7 +11,7 @@ public class SpawnCenter : MonoBehaviour
 
     Vector3 Center;
 
-    int playerNum = databaseManager.Players.Count;
+     int playerNum = databaseManager.Players.Count;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +23,7 @@ public class SpawnCenter : MonoBehaviour
         {
             radian = (360 / playerNum * i) * Mathf.PI / 180;
 
-            databaseManager.Players[i].GetComponent<PhotonView>().RPC("SetMyPosition",
+             databaseManager.Players[i].GetComponent<PhotonView>().RPC("SetMyPosition",
                 RpcTarget.AllViaServer,
                 new Vector3(Center.x + 3 * Mathf.Cos(radian), Center.y, Center.z + 3 * Mathf.Sin(radian)));
             //Instantiate(SpawnPoint, new Vector3(Center.x + 3 * Mathf.Cos(radian), Center.y, Center.z + 3 * Mathf.Sin(radian)), Quaternion.identity);

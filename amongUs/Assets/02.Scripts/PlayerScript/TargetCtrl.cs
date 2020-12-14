@@ -76,6 +76,8 @@ public class TargetCtrl : MonoBehaviourPun
 
                     //상호작용하는 오브젝트 이름에 현재 충돌하고있는 오브젝트의 이름을 넣어준다
                     InteractionObject = hit.collider.name;
+                    MissionManager.Instance.myMission = transform.GetComponent<PlayerMission>().myMission;
+                    MissionManager.Instance.clearObject = selection.gameObject;
                 }
             }
             //충돌하고 있는 오브젝트의 이름을 넣어준다

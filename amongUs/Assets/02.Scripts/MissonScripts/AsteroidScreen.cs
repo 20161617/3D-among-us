@@ -15,6 +15,7 @@ public class AsteroidScreen : MonoBehaviour
             cusor.setPos(Input.mousePosition);
             StartCoroutine(colliderCheck());
         }
+
     }
     IEnumerator colliderCheck()
     {
