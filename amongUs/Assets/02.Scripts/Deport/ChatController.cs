@@ -10,10 +10,13 @@ using static GameSceneManager;
 
 public class ChatController : MonoBehaviour
 {
+
+    public GameObject playerCopy;
+
     public Text ChatText;
     public Text ChatText2;
 
-    public string writerText = "";
+    private string writerText = "";
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +26,7 @@ public class ChatController : MonoBehaviour
 
     IEnumerator Loading()
     {
-        yield return new WaitForSeconds(3f);
+      
 
         int impoCount = 0;
 
@@ -36,13 +39,26 @@ public class ChatController : MonoBehaviour
         }
         databaseManager.impoCount = impoCount;
 
+
         if (databaseManager.deportMember == -1)
         {
+            playerCopy.SetActive(false);
+
+            yield return new WaitForSeconds(2f);
             StartCoroutine(NormalChat("아무도 추방되지 않았습니다..", "임포스터는 " + databaseManager.impoCount.ToString() + "명 남았습니다.."));
         }
         else
         {
+            //추방 당한 플레이어 카피
             int _deportMember = databaseManager.deportMember;
+
+            int colorIndex = databaseManager.Players[_deportMember].colorIndex;
+
+            SkinnedMeshRenderer copyPlayerMaterial = playerCopy.transform.Find("Beta_Surface").GetComponent<SkinnedMeshRenderer>();
+
+            copyPlayerMaterial.material = databaseManager.Colors[colorIndex];
+
+
 
             string name = databaseManager.Players[_deportMember].nickName + "님은 ";
 
@@ -60,6 +76,7 @@ public class ChatController : MonoBehaviour
 
             databaseManager.Players[_deportMember].SetState(PLAYER_STATE.DEAD);
 
+            yield return new WaitForSeconds(3f);
             StartCoroutine(NormalChat(name + impo, "임포스터는 " + databaseManager.impoCount.ToString() + "명 남았습니다.."));
         }
     }

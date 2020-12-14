@@ -15,7 +15,7 @@ public class GameSceneManager : MonoBehaviourPun
     public GameObject MissionPanel;
 
     GameObject networkManager;
-
+    public SpawnCenter spawnCenter;
 
     void Awake()
     {
@@ -33,13 +33,10 @@ public class GameSceneManager : MonoBehaviourPun
         if (DatabaseManager.databaseManager.isEvent)
         {
             DatabaseManager.databaseManager.isEvent = false;
-            MainCamera.SetActive(false);
-            Map.SetActive(false);
-            UIPanel.SetActive(false);
-            MissionPanel.SetActive(false);
 
-            //photonView.RPC("NextScene", RpcTarget.AllViaServer);
-            SceneManager.LoadScene("DeportScene", LoadSceneMode.Additive);
+            StartCoroutine(NextScene());
+
+            spawnCenter.SetPosition();           
         }
     }
 
@@ -57,9 +54,19 @@ public class GameSceneManager : MonoBehaviourPun
 
        
     }
-    [PunRPC]
-    public void NextScene()
+
+    IEnumerator NextScene()
     {
         SceneManager.LoadScene("DeportScene", LoadSceneMode.Additive);
+
+        Map.SetActive(false);
+        UIPanel.SetActive(false);
+        MissionPanel.SetActive(false);
+
+        yield return new WaitForSeconds(0.1f);
+
+        MainCamera.SetActive(false);
+      
+      
     }
 }

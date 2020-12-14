@@ -12,6 +12,9 @@ public class WatingRoomManager : MonoBehaviourPun
     [Header("RoomPanel")]
     public GameObject RoomPanel;
     public Text RoomInfoText;
+    public GameObject[] playerPos;
+
+    private int posIndex = 0;
 
     private void Awake()
     {
@@ -41,7 +44,9 @@ public class WatingRoomManager : MonoBehaviourPun
 
         databaseManager.SetRandColor();
 
-        //databaseManager.MyPlayer.gameObject.SetActive(true);
+        databaseManager.MyPlayer.photonView.RPC("SetMyPosition", RpcTarget.AllViaServer, playerPos[databaseManager.Players.Count -1].transform.position);
+
+        databaseManager.MyPlayer.GetComponent<PhotonView>().RPC("ShowCharacter", RpcTarget.AllViaServer);
     }
 
     #region 게임시작

@@ -336,12 +336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &1061373027 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5203617403938514958, guid: 478c6ee9f7e528e4b83d8b2cbf8c62ab,
-    type: 3}
-  m_PrefabInstance: {fileID: 5203617402977840237}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1358930881
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,16 +620,6 @@ PrefabInstance:
       objectReference: {fileID: 1854985676}
     - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
         type: 3}
-      propertyPath: gridTr
-      value: 
-      objectReference: {fileID: 1061373027}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: RoomPanel
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
       propertyPath: CellBtn.Array.data[0]
       value: 
       objectReference: {fileID: 1033292497}
@@ -654,86 +638,6 @@ PrefabInstance:
       propertyPath: CellBtn.Array.data[3]
       value: 
       objectReference: {fileID: 1031556122}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: RoomInfoText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: ChatPanel
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: ChatInput
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: ChatText.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: ChatText.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: ChatText.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: ChatText.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: ChatText.Array.data[4]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: ChatText.Array.data[5]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: ChatText.Array.data[6]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: ChatText.Array.data[7]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: ChatText.Array.data[8]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: ChatText.Array.data[9]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: ChatText.Array.data[10]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: ChatText.Array.data[11]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
-        type: 3}
-      propertyPath: GSM
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 843396591135124029, guid: 61734d483b1759042a2be93a2fda336e,
         type: 3}
       propertyPath: StatusText

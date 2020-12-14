@@ -7,11 +7,10 @@ using static DatabaseManager;
 
 public class SpawnCenter : MonoBehaviour
 {
-
-
     Vector3 Center;
 
     int playerNum;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +19,7 @@ public class SpawnCenter : MonoBehaviour
         float radian = 0;
 
         Center = gameObject.transform.position;
+
         for (int i = 0; i < playerNum; i++)
         {
             radian = (360 / playerNum * i) * Mathf.PI / 180;
@@ -27,14 +27,31 @@ public class SpawnCenter : MonoBehaviour
             databaseManager.Players[i].GetComponent<PhotonView>().RPC("SetMyPosition",
                 RpcTarget.AllViaServer,
                 new Vector3(Center.x + 3 * Mathf.Cos(radian), Center.y, Center.z + 3 * Mathf.Sin(radian)));
-            //Instantiate(SpawnPoint, new Vector3(Center.x + 3 * Mathf.Cos(radian), Center.y, Center.z + 3 * Mathf.Sin(radian)), Quaternion.identity);
+
         }
-        //반지름 3을 기준으로 플레이어 수만큼 스폰포인트 소환
     }
 
     // Update is called once per frame
     void Update()
     {
+    }
 
+    public void SetPosition()
+    {
+        playerNum = databaseManager.Players.Count;
+
+        float radian = 0;
+
+        Center = gameObject.transform.position;
+
+        for (int i = 0; i < playerNum; i++)
+        {
+            radian = (360 / playerNum * i) * Mathf.PI / 180;
+
+            databaseManager.Players[i].GetComponent<PhotonView>().RPC("SetMyPosition",
+                RpcTarget.AllViaServer,
+                new Vector3(Center.x + 3 * Mathf.Cos(radian), Center.y, Center.z + 3 * Mathf.Sin(radian)));
+
+        }
     }
 }

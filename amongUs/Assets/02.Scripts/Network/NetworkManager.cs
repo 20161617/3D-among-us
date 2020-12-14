@@ -28,7 +28,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         Screen.SetResolution(960, 540, false);
         Connect();
-        DontDestroyOnLoad(gameObject);
+       // DontDestroyOnLoad(gameObject);
     }
 
     private void Update()
@@ -93,7 +93,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         databaseManager.MyPlayer = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity).GetComponent<PlayerScript>();
 
-        //databaseManager.MyPlayer.gameObject.SetActive(false);
+        databaseManager.MyPlayer.photonView.RPC("HideCharacter", RpcTarget.AllViaServer);
 
         //databaseManager.photonView.RPC("SetRandColor", RpcTarget.AllBuffered);
 

@@ -701,9 +701,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd115fc1b1314ae4b96db7a5ee328d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCopy: {fileID: 1872180431}
   ChatText: {fileID: 802650883}
   ChatText2: {fileID: 1681562142}
-  writerText: 
 --- !u!1 &2093858324
 GameObject:
   m_ObjectHideFlags: 0
