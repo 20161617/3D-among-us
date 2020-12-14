@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -52,7 +52,7 @@ public class MissionManager : MonoBehaviourPun
     public int commonMissionNum { get; set; } //공통임무
     public int simpleMissionNum { get; set; } //단순임무
     public int difficultMissionNum { get; set; } //복잡임무 
-
+ 
     private void Awake()
     {
         PV = photonView;
