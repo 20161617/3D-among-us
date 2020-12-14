@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-public class SoundManger : MonoBehaviour
+public class SoundManager : MonoBehaviour
 {
-    public static SoundManger instance;
+    public static SoundManager instance;
 
     /* enum SOUND
      {
@@ -43,7 +43,7 @@ public class SoundManger : MonoBehaviour
     public AudioClip security;
     public AudioClip communications;
     private float time = 0;
-    private int indexNum;
+    //private int indexNum;
     private void Awake()
     {
         if(instance == null)
@@ -59,24 +59,30 @@ public class SoundManger : MonoBehaviour
             audioSources[i].Stop();
         }
         audioClips[0] = Resources.Load("FootstepMetal08-sharedassets0.assets.split0-631.wav", typeof(AudioClip)) as AudioClip;
-        audioClips[1] = Resources.Load("AMB_EngineRoom-sharedassets0.assets.split0-836", typeof(AudioClip)) as AudioClip;
-        audioClips[2] = Resources.Load("AMB_MedbayRoom-sharedassets0.assets.split0-682", typeof(AudioClip)) as AudioClip;
-        audioClips[3] = Resources.Load("AMB_Admin-sharedassets0.assets.split0-711", typeof(AudioClip)) as AudioClip;
-        audioClips[4] = Resources.Load("AMB_SecurityRoom-sharedassets0.assets.split0-803", typeof(AudioClip)) as AudioClip;
-        audioClips[5] = Resources.Load("AMB_Reactor-sharedassets0.assets.split0-708", typeof(AudioClip)) as AudioClip;
-        audioClips[6] = Resources.Load("AMB_Storage-sharedassets0.assets.split0-779", typeof(AudioClip)) as AudioClip;
-        audioClips[7] = Resources.Load("AMB_Weapons-sharedassets0.assets.split0-624", typeof(AudioClip)) as AudioClip;
-        audioClips[8] = Resources.Load("AMB_Cafeteria-sharedassets0.assets.split0-610", typeof(AudioClip)) as AudioClip;
-        audioClips[9] = Resources.Load("AMB_CommsRoom-sharedassets0.assets.split0-602", typeof(AudioClip)) as AudioClip;
-        audioClips[10] = Resources.Load("AMB_ShieldRoom-sharedassets0.assets.split0-592", typeof(AudioClip)) as AudioClip;
-        audioClips[11] = Resources.Load("AMB_O2Room-sharedassets0.assets.split0-712", typeof(AudioClip)) as AudioClip;
-        audioClips[12] = Resources.Load("AMB_ElectricRoom-sharedassets0.assets.split0-751", typeof(AudioClip)) as AudioClip;
-        audioClips[13] = Resources.Load("AMB_LabHallway-sharedassets0.assets.split0-828", typeof(AudioClip)) as AudioClip;
-        for (int j = 0; j < 14; j++)
+        audioClips[1] = Resources.Load("AMB_EngineRoom-sharedassets0.assets.split0-836.wav", typeof(AudioClip)) as AudioClip;
+        audioClips[2] = Resources.Load("AMB_MedbayRoom-sharedassets0.assets.split0-682.wav", typeof(AudioClip)) as AudioClip;
+        audioClips[3] = Resources.Load("AMB_Admin-sharedassets0.assets.split0-711.wav", typeof(AudioClip)) as AudioClip;
+        audioClips[4] = Resources.Load("AMB_SecurityRoom-sharedassets0.assets.split0-803.wav", typeof(AudioClip)) as AudioClip;
+        audioClips[5] = Resources.Load("AMB_Reactor-sharedassets0.assets.split0-708.wav", typeof(AudioClip)) as AudioClip;
+        audioClips[6] = Resources.Load("AMB_Storage-sharedassets0.assets.split0-779.wav", typeof(AudioClip)) as AudioClip;
+        audioClips[7] = Resources.Load("AMB_Weapons-sharedassets0.assets.split0-624.wav", typeof(AudioClip)) as AudioClip;
+        audioClips[8] = Resources.Load("AMB_Cafeteria-sharedassets0.assets.split0-610.wav", typeof(AudioClip)) as AudioClip;
+        audioClips[9] = Resources.Load("AMB_CommsRoom-sharedassets0.assets.split0-602.wav", typeof(AudioClip)) as AudioClip;
+        audioClips[10] = Resources.Load("AMB_ShieldRoom-sharedassets0.assets.split0-592.wav", typeof(AudioClip)) as AudioClip;
+        audioClips[11] = Resources.Load("AMB_O2Room-sharedassets0.assets.split0-712.wav", typeof(AudioClip)) as AudioClip;
+        audioClips[12] = Resources.Load("AMB_ElectricRoom-sharedassets0.assets.split0-751.wav", typeof(AudioClip)) as AudioClip;
+        audioClips[13] = Resources.Load("AMB_LabHallway-sharedassets0.assets.split0-828.wav", typeof(AudioClip)) as AudioClip;
+        audioSources[0].spatialBlend = 1.0f;
+        audioSources[0].minDistance = 2.0f;
+        audioSources[0].clip = audioClips[0];
+        for (int j = 1; j < 14; j++)
         {
+            audioSources[j].spatialBlend = 1.0f;
+            audioSources[j].minDistance = 4.0f;
+            audioSources[j].maxDistance = 4.0f;
             audioSources[j].clip = audioClips[j];
-            audioSources[j].loop = false;
-            audioSources[j].playOnAwake = false;
+            audioSources[j].loop = true;
+            audioSources[j].playOnAwake = true;
         }
     }
    
@@ -93,7 +99,7 @@ public class SoundManger : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider other)
+    /*public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "UpperEngine" || other.tag == "LowerEngine")
         {
@@ -203,15 +209,15 @@ public class SoundManger : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        /*if ((other.tag == "UpperEngine" || other.tag == "LowerEngine") && !audioSources[1].isPlaying)
+        if ((other.tag == "UpperEngine" || other.tag == "LowerEngine") && !audioSources[1].isPlaying)
         {
            // audioSources[1].clip = engineRoom;
            // audioSources[1].loop = true;
             audioSources[1].Play();
            // indexNum = 1;
             Debug.Log("UpperEngine collider");
-        }*/
-        /*else if (other.tag == "MedBay")
+        }
+        else if (other.tag == "MedBay")
         {
             audioSources[2].clip = medBay;
             audioSources[2].loop = true;
@@ -306,14 +312,14 @@ public class SoundManger : MonoBehaviour
             audioSources[13].Play();
             indexNum = 13;
             Debug.Log("security collider");
-        }*/
+        }
     }
 
     public void OnTriggerExit(Collider other)
     {
         audioSources[indexNum].loop = false;
         audioSources[indexNum].Stop();
-    }
+    }*/
     // Update is called once per frame
     void Update()
     {
