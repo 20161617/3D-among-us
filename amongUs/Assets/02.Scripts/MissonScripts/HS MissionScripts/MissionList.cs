@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,4 +33,9 @@ public static class MissionList
         FURNACEFIX, //용광로고치기
     }
 
+    public enum REPORT
+    {
+        EMERGENCY_MEETING = 1,
+        DEAD_BODY_REPORTED
+    }
 }

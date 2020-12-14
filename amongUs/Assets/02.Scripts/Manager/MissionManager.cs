@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,6 +26,7 @@ public class MissionManager : MonoBehaviourPun
     public List<GameObject> CommonMissionGame = new List<GameObject>();
     public List<GameObject> SimpleMissionGame = new List<GameObject>();
     public List<GameObject> DifficultMissionGame = new List<GameObject>();
+    public GameObject ReportGame;
 
     //현재 임무를 저장하는 리스트
     //초기에 정해준 Num의 수만큼 저장된다
@@ -168,6 +169,10 @@ public class MissionManager : MonoBehaviourPun
         {
             DifficultMissionGame[MissionNumber - 1].SetActive(true);
         }
+        if(MissionType == "REPORT")
+        {
+            ReportGame.GetComponent<GotoVoteManager>().photonView.RPC("ActivePanel", RpcTarget.AllViaServer, MissionNumber);
+        }
     }
 
     //해당하는 임무가 현재 임무에 포함되어있는지 검사
@@ -186,7 +191,10 @@ public class MissionManager : MonoBehaviourPun
         {
             return DifficultMission.Contains(MissionNumber);
         }
-
-        return false;
+        if (MissionType == "REPORT")
+        {
+            return true;
+        }
+            return false;
     }
 }
