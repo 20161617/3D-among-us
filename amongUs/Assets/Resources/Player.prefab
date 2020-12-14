@@ -1106,10 +1106,11 @@ GameObject:
   - component: {fileID: 4230105031625750077}
   - component: {fileID: 4101267405289613908}
   - component: {fileID: -1849553579890175928}
-  - component: {fileID: 1767637032086524887}
+  - component: {fileID: 2058204651968720278}
+  - component: {fileID: 1351160332222452273}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1234,8 +1235,6 @@ MonoBehaviour:
   isImposter: 0
   color: {fileID: 0}
   colorIndex: -1
-  nickName: 
-  PV: {fileID: 0}
   targetCtrl: {fileID: 0}
 --- !u!114 &-851834456733325061
 MonoBehaviour:
@@ -1310,7 +1309,103 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractionObject: 
---- !u!114 &1767637032086524887
+--- !u!82 &2058204651968720278
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4450092894471199211}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1351160332222452273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1319,11 +1414,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 4450092894471199211}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ace24264cddfea4b8069a41ea50b183, type: 3}
+  m_Script: {fileID: 11500000, guid: debf6b418d54ff74b99e78ec2f080b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myMission: []
-  displayText: {fileID: 0}
+  footStep: {fileID: 8300000, guid: 746c42bca3c6e5d41bb132ae11a026a3, type: 3}
+  engineRoom: {fileID: 0}
+  reactor: {fileID: 0}
+  restaurant: {fileID: 0}
+  armory: {fileID: 0}
+  oxygenSupplyRoom: {fileID: 0}
+  electricChamber: {fileID: 0}
+  protectiveMembraneControlRoom: {fileID: 0}
+  navigationalChamber: {fileID: 0}
+  medBay: {fileID: 0}
+  storage: {fileID: 0}
+  admin: {fileID: 0}
+  security: {fileID: 0}
+  communications: {fileID: 0}
 --- !u!1 &4469135047442823856
 GameObject:
   m_ObjectHideFlags: 0

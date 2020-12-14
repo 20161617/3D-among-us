@@ -4,11 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Asteroid
   - ROOM
   - Bullet
   - INTERACTION
-  - MissionText
+  - DEAD
   layers:
   - Default
   - TransparentFX
@@ -18,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - DeadZone
   - 
   - 
   - 

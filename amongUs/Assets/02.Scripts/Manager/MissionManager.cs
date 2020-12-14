@@ -52,7 +52,7 @@ public class MissionManager : MonoBehaviourPun
     public int commonMissionNum { get; set; } //공통임무
     public int simpleMissionNum { get; set; } //단순임무
     public int difficultMissionNum { get; set; } //복잡임무 
- 
+
     private void Awake()
     {
         PV = photonView;
@@ -115,42 +115,26 @@ public class MissionManager : MonoBehaviourPun
     public void MissionAllocation() //게임시작시 미션 갯수만큼 임무 분배
     {
         //공통임무 배정
-        //for (int i = 0; i < commonMissionNum; i++)
-        //{
-        //    //                                                           ↓Enum에 들어가있는 아이템의 총 갯수
-        //    int RandCommonMission = Random.Range(1, System.Enum.GetValues(typeof(MissionList.COMMON_MISSIONLIST)).Length);
-        //    CommonMission.Add(RandCommonMission);
-        //}
+        for (int i = 0; i < commonMissionNum; i++)
+        {
+            //                                                           ↓Enum에 들어가있는 아이템의 총 갯수
+            int RandCommonMission = Random.Range(1, System.Enum.GetValues(typeof(MissionList.COMMON_MISSIONLIST)).Length);
+            CommonMission.Add(RandCommonMission);
+        }
 
         //단순임무 배정
-        //현재는 테스트를 위해 의도적으로 2를 기입함.
-        //나중에 주석처리한 부분으로 사용할 것
-
-        CommonMission.Add(2);
-
-        SimpleMission.Add(1);
-        SimpleMission.Add(2);
-        SimpleMission.Add(4);
-
-        DifficultMission.Add(2);
-        DifficultMission.Add(3);
-        DifficultMission.Add(4);
-        DifficultMission.Add(6);
-
-        /*
         for (int i = 0; i < simpleMissionNum; i++)
         {
             int RandSimpleMission = Random.Range(1, System.Enum.GetValues(typeof(MissionList.SIMPLE_MISSIONLIST)).Length);
             SimpleMission.Add(RandSimpleMission);
         }
-        */
 
         //복잡임무 배정
-        //for (int i = 0; i < difficultMissionNum; i++)
-        //{
-        //    int RandDifficultMission = Random.Range(1, System.Enum.GetValues(typeof(MissionList.DIFFUCLT_MISSIONLIST)).Length);
-        //    DifficultMission.Add(RandDifficultMission);
-        //}
+        for (int i = 0; i < difficultMissionNum; i++)
+        {
+            int RandDifficultMission = Random.Range(1, System.Enum.GetValues(typeof(MissionList.DIFFUCLT_MISSIONLIST)).Length);
+            DifficultMission.Add(RandDifficultMission);
+        }
     }
 
     public void MissionNumInit() //게임시작시 미션 갯수 설정  별도로 원할시 미션 get set 으로 불러와서 지정 
@@ -194,7 +178,7 @@ public class MissionManager : MonoBehaviourPun
         }
         if (MissionType == "EmergencyCall")
         {
-            //ReportGame.GetComponent<GotoVoteManager>().photonView.RPC("ActivePanel", RpcTarget.AllViaServer, MissionNumber);
+            ReportGame.GetComponent<GotoVoteManager>().photonView.RPC("ActivePanel", RpcTarget.AllViaServer, MissionNumber);
         }
     }
 
@@ -202,15 +186,15 @@ public class MissionManager : MonoBehaviourPun
     public bool ContainsMission(string MissionType, int MissionNumber, bool isImposter)
     {
         //있으면 true, 없으면 false를 반환
-        if (MissionType == "CommonMission" && !isImposter)
+        if (MissionType == MissionCommon && !isImposter)
         {
             return CommonMission.Contains(MissionNumber);
         }
-        if (MissionType == "SimpleMission" && !isImposter)
+        if (MissionType == MissionSimple && !isImposter)
         {
             return SimpleMission.Contains(MissionNumber);
         }
-        if (MissionType == "DifficultMission" && !isImposter)
+        if (MissionType == MissionDifficult && !isImposter)
         {
             return DifficultMission.Contains(MissionNumber);
         }

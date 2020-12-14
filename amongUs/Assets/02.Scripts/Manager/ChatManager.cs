@@ -47,7 +47,7 @@ public class ChatManager : MonoBehaviourPun
         GameObject prefab;
 
         //자신일 경우 
-        if (PhotonNetwork.NickName == name )
+        if (PhotonNetwork.NickName == name)
         {
             prefab = Resources.Load("MyChatContent") as GameObject;
         }
@@ -68,11 +68,6 @@ public class ChatManager : MonoBehaviourPun
 
         //메시지
         Profile.transform.GetChild(1).GetComponent<Text>().text = msg;
-
-        int colorIndex = GetIconColor(name);
-
-        //아이콘 색깔
-        Profile.transform.GetChild(2).GetComponent<Image>().color = DatabaseManager.databaseManager.SetColorIcon(colorIndex);
 
         //부모 설정
         temp.transform.SetParent(ContentParent.transform);
@@ -125,18 +120,5 @@ public class ChatManager : MonoBehaviourPun
         }
 
         ChatList.Clear();
-    }
-
-    public int GetIconColor(string name)
-    {
-        for(int i=0; i < DatabaseManager.databaseManager.Players.Count; i++)
-        {
-            if(DatabaseManager.databaseManager.Players[i].nickName == name)
-            {
-                return DatabaseManager.databaseManager.Players[i].colorIndex;
-            }
-        }
-
-        return 0;
     }
 }

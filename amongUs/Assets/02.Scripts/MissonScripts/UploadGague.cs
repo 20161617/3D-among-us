@@ -9,10 +9,6 @@ public class UploadGague : MonoBehaviour
     public Text gagueText;
 
 
-    private void OnEnable()
-    {
-        fillGague.fillAmount = 0;
-    }
     public void gagueSet(bool set)
     {
         gameObject.SetActive(set);
@@ -22,5 +18,16 @@ public class UploadGague : MonoBehaviour
         fillGague.fillAmount += 0.1f;
         gagueText.text = (int)(fillGague.fillAmount * 100)+"%";
     }
-   
+        
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }

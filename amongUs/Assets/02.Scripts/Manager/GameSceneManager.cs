@@ -11,7 +11,7 @@ public class GameSceneManager : MonoBehaviour
     public GameObject MainCamera;
     public GameObject Map;
     public GameObject UIPanel;
-    public GameObject MissionPanel;
+    public GameObject MissionBar;
 
     GameObject networkManager;
 
@@ -30,10 +30,11 @@ public class GameSceneManager : MonoBehaviour
 
     public void CameraOn()
     {
+        Debug.Log("카메라온");
         MainCamera.SetActive(true);
         Map.SetActive(true);
         UIPanel.SetActive(true);
-        MissionPanel.SetActive(true);
+        MissionBar.SetActive(true);
     }
 
 }

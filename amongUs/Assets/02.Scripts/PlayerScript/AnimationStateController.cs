@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -37,7 +37,7 @@ public class AnimationStateController : MonoBehaviour
 
         if (forwardPressed && velocity < 1.0f)
         {
-            velocity += Time.deltaTime * acceleration;
+            velocity += Time.deltaTime * acceleration; 
         }
         if (!forwardPressed && velocity > 0.0f)
         {

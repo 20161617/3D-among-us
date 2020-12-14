@@ -28,7 +28,7 @@ public class UIPanel : MonoBehaviour
 
     void Start()
     {
-        if (databaseManager.MyPlayer.isImposter)
+        if (isImposter)
         {
             KillButton.gameObject.SetActive(true);
             SabotageButton.gameObject.SetActive(true);
@@ -61,7 +61,7 @@ public class UIPanel : MonoBehaviour
             //Kill 버튼 활성화/비활성화
             if (PlayerTargetCtrl.InteractionObject != "" && !OneCall)
             {
-                if (PlayerTargetCtrl.InteractionObject == "emergencyTable")
+                if (PlayerTargetCtrl.InteractionObject == "EmergencyTable")
                 {
                     UseButton.gameObject.SetActive(true);
                     SabotageButton.gameObject.SetActive(false);
@@ -98,6 +98,15 @@ public class UIPanel : MonoBehaviour
                 HideButton("Use");
                 OneCall = false;
             }
+        }
+
+        if (databaseManager.MyPlayer.isDetected)
+        {
+            ShowButton("Report");
+        }
+        else
+        {
+            HideButton("Report");
         }
     }
 

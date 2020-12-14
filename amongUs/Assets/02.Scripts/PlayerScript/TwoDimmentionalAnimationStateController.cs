@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using static DatabaseManager;
 
 public class TwoDimmentionalAnimationStateController : MonoBehaviourPunCallbacks
 {
@@ -16,11 +17,14 @@ public class TwoDimmentionalAnimationStateController : MonoBehaviourPunCallbacks
     int VelocityZHash;
     int VelocityXHash;
 
+    bool deathPressed;
+
     // Start is called before the first frame update
     void Start()
     {
         PV = photonView;
         animator = GetComponent<Animator>();
+        deathPressed = false;
 
         VelocityZHash = Animator.StringToHash("Velocity Z");
         VelocityXHash = Animator.StringToHash("Velocity X");
@@ -81,11 +85,23 @@ public class TwoDimmentionalAnimationStateController : MonoBehaviourPunCallbacks
         }
 
     }
+
+    public void OnDeath()
+    {
+        deathPressed = true;
+        animator.SetTrigger("Die");
+    }
+    public void OnKill()
+    {
+        animator.SetTrigger("Kill");
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (!PV.IsMine)
+        if (!PV.IsMine || deathPressed)
             return;
+
         bool forwardPressed = Input.GetKey(KeyCode.W);
         bool leftPressed = Input.GetKey(KeyCode.A);
         bool rightPressed = Input.GetKey(KeyCode.D);
