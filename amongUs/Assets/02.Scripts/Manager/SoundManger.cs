@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-public class SoundManger : MonoBehaviour
+public class SoundManager : MonoBehaviour
 {
-    public static SoundManger instance;
+    public static SoundManager instance;
 
     /* enum SOUND
      {
@@ -72,11 +72,16 @@ public class SoundManger : MonoBehaviour
         audioClips[11] = Resources.Load("AMB_O2Room-sharedassets0.assets.split0-712", typeof(AudioClip)) as AudioClip;
         audioClips[12] = Resources.Load("AMB_ElectricRoom-sharedassets0.assets.split0-751", typeof(AudioClip)) as AudioClip;
         audioClips[13] = Resources.Load("AMB_LabHallway-sharedassets0.assets.split0-828", typeof(AudioClip)) as AudioClip;
-        for (int j = 0; j < 14; j++)
+        audioSources[0].spatialBlend = 1.0f;
+        audioSources[0].minDistance = 2.0f;
+        audioSources[0].clip = audioClips[0];
+        for (int j = 1; j < 14; j++)
         {
+           audioSources[j].spatialBlend = 1.0f;
+           audioSources[j].minDistance = 4.0f;
             audioSources[j].clip = audioClips[j];
-            audioSources[j].loop = false;
-            audioSources[j].playOnAwake = false;
+            audioSources[j].loop = true;
+            audioSources[j].playOnAwake = true;
         }
     }
    
@@ -93,118 +98,181 @@ public class SoundManger : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider other)
+   /* public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "UpperEngine" || other.tag == "LowerEngine")
+        if (other.tag == "Player")
         {
-            audioSources[1].clip = engineRoom;
-            audioSources[1].loop = true;
-            audioSources[1].Play();
-            indexNum = 1;
-            Debug.Log("UpperEngine collider");
-        }
-        else if (other.tag == "MedBay")
-        {
-            audioSources[2].clip = medBay;
-            audioSources[2].loop = true;
-            audioSources[2].Play();
-            indexNum = 2;
-            Debug.Log("security collider");
-        }
-        else if (other.tag == "Admin")
-        {
-            audioSources[3].clip = admin;
-            audioSources[3].loop = true;
-            audioSources[3].Play();
-            indexNum = 3;
-            Debug.Log("security collider");
-        }
-        else if (other.tag == "Security")
-        {
-            audioSources[4].clip = security;
-            audioSources[4].loop = true;
-            audioSources[4].Play();
-            indexNum = 4;
-            Debug.Log("security collider");
-        }
-        else if (other.tag == "Reactor")
-        {
-            audioSources[5].clip = reactor;
-            audioSources[5].loop = true;
-            audioSources[5].Play();
-            indexNum = 5;
-            Debug.Log("reactor collider");
-        }
-        else if (other.tag == "Storage")
-        {
-            audioSources[6].clip = storage;
-            audioSources[6].loop = true;
-            audioSources[6].Play();
-            indexNum = 6;
-            Debug.Log("security collider");
-        }
-        else if (other.tag == "Armory")
-        {
-            audioSources[7].clip = armory;
-            audioSources[7].loop = true;
-            audioSources[7].Play();
-            indexNum = 7;
-            Debug.Log("security collider");
-        }
-        else if (other.tag == "Restaurant")
-        {
-            audioSources[8].clip = restaurant;
-            audioSources[8].loop = true;
-            audioSources[8].Play();
-            indexNum = 8;
-            Debug.Log("security collider");
-        }
-        else if (other.tag == "Communications")
-        {
-            audioSources[9].clip = communications;
-            audioSources[9].loop = true;
-            audioSources[9].Play();
-            indexNum = 9;
-            Debug.Log("security collider");
-        }
-        else if (other.tag == "ProtectiveMembraneControlRoom")
-        {
-            audioSources[10].clip = protectiveMembraneControlRoom;
-            audioSources[10].loop = true;
-            audioSources[10].Play();
-            indexNum = 10;
-            Debug.Log("security collider");
-        }
-        else if (other.tag == "OxygenSupplyRoom")
-        {
-            audioSources[11].clip = oxygenSupplyRoom;
-            audioSources[11].loop = true;
-            audioSources[11].Play();
-            indexNum = 11;
-            Debug.Log("security collider");
-        }
-        else if (other.tag == "ElectricChamber")
-        {
-            audioSources[12].clip = electricChamber;
-            audioSources[12].loop = true;
-            audioSources[12].Play();
-            indexNum = 12;
-            Debug.Log("security collider");
-        }
-        else if (other.tag == "NavigationalChamber")
-        {
-            audioSources[13].clip = navigationalChamber;
-            audioSources[13].loop = true;
-            audioSources[13].Play();
-            indexNum = 13;
-            Debug.Log("security collider");
+            if ((this.tag == "UpperEngine" || this.tag == "LowerEngine") && !audioSources[1].isPlaying)
+            {
+                audioSources[1].clip = engineRoom;
+                audioSources[1].loop = true;
+                audioSources[1].Play();
+                indexNum = 1;
+                Debug.Log("UpperEngine collider");
+            }
+            else if (this.tag == "MedBay" && !audioSources[2].isPlaying)
+            {
+                audioSources[2].clip = medBay;
+                audioSources[2].loop = true;
+                audioSources[2].Play();
+                indexNum = 2;
+                Debug.Log("security collider");
+            }
+            else if (this.tag == "Admin" && !audioSources[3].isPlaying)
+            {
+                audioSources[3].clip = admin;
+                audioSources[3].loop = true;
+                audioSources[3].Play();
+                indexNum = 3;
+                Debug.Log("security collider");
+            }
+            else if (this.tag == "Security" && !audioSources[4].isPlaying)
+            {
+                audioSources[4].clip = security;
+                audioSources[4].loop = true;
+                audioSources[4].Play();
+                indexNum = 4;
+                Debug.Log("security collider");
+            }
+            else if (this.tag == "Reactor" && !audioSources[5].isPlaying)
+            {
+                audioSources[5].clip = reactor;
+                audioSources[5].loop = true;
+                audioSources[5].Play();
+                indexNum = 5;
+                Debug.Log("reactor collider");
+            }
+            else if (this.tag == "Storage" && !audioSources[6].isPlaying)
+            {
+                audioSources[6].clip = storage;
+                audioSources[6].loop = true;
+                audioSources[6].Play();
+                indexNum = 6;
+                Debug.Log("security collider");
+            }
+            else if (this.tag == "Armory" && !audioSources[7].isPlaying)
+            {
+                audioSources[7].clip = armory;
+                audioSources[7].loop = true;
+                audioSources[7].Play();
+                indexNum = 7;
+                Debug.Log("security collider");
+            }
+            else if (this.tag == "Restaurant" && !audioSources[8].isPlaying)
+            {
+                audioSources[8].clip = restaurant;
+                audioSources[8].loop = true;
+                audioSources[8].Play();
+                indexNum = 8;
+                Debug.Log("security collider");
+            }
+            else if (this.tag == "Communications" && !audioSources[9].isPlaying)
+            {
+                audioSources[9].clip = communications;
+                audioSources[9].loop = true;
+                audioSources[9].Play();
+                indexNum = 9;
+                Debug.Log("security collider");
+            }
+            else if (this.tag == "ProtectiveMembraneControlRoom" && !audioSources[10].isPlaying)
+            {
+                audioSources[10].clip = protectiveMembraneControlRoom;
+                audioSources[10].loop = true;
+                audioSources[10].Play();
+                indexNum = 10;
+                Debug.Log("security collider");
+            }
+            else if (this.tag == "OxygenSupplyRoom" && !audioSources[11].isPlaying)
+            {
+                audioSources[11].clip = oxygenSupplyRoom;
+                audioSources[11].loop = true;
+                audioSources[11].Play();
+                indexNum = 11;
+                Debug.Log("security collider");
+            }
+            else if (this.tag == "ElectricChamber" && !audioSources[12].isPlaying)
+            {
+                audioSources[12].clip = electricChamber;
+                audioSources[12].loop = true;
+                audioSources[12].Play();
+                indexNum = 12;
+                Debug.Log("security collider");
+            }
+            else if (this.tag == "NavigationalChamber" && !audioSources[13].isPlaying)
+            {
+                audioSources[13].clip = navigationalChamber;
+                audioSources[13].loop = true;
+                audioSources[13].Play();
+                indexNum = 13;
+                Debug.Log("security collider");
+            }
         }
     }
+
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            if ((this.tag == "UpperEngine" || this.tag == "LowerEngine") && !audioSources[1].isPlaying)
+            {
+                audioSources[1].Play();
+            }
+            else if (this.tag == "MedBay" && !audioSources[2].isPlaying)
+            {
+                audioSources[2].Play();
+            }
+            else if (this.tag == "Admin" && !audioSources[3].isPlaying)
+            {
+               audioSources[3].Play();
+            }
+            else if (this.tag == "Security" && !audioSources[4].isPlaying)
+            {
+                audioSources[4].Play();
+            }
+            else if (this.tag == "Reactor" && !audioSources[5].isPlaying)
+            {
+                audioSources[5].Play();
+            }
+            else if (this.tag == "Storage" && !audioSources[6].isPlaying)
+            {
+                audioSources[6].Play();
+            }
+            else if (this.tag == "Armory" && !audioSources[7].isPlaying)
+            {
+                audioSources[7].Play();
+            }
+            else if (this.tag == "Restaurant" && !audioSources[8].isPlaying)
+            {
+                audioSources[8].Play();
+            }
+            else if (this.tag == "Communications" && !audioSources[9].isPlaying)
+            {
+                audioSources[9].Play();
+            }
+            else if (this.tag == "ProtectiveMembraneControlRoom" && !audioSources[10].isPlaying)
+            {
+                audioSources[10].Play();
+            }
+            else if (this.tag == "OxygenSupplyRoom" && !audioSources[11].isPlaying)
+            {
+                audioSources[11].Play();
+            }
+            else if (this.tag == "ElectricChamber" && !audioSources[12].isPlaying)
+            {
+                audioSources[12].Play();
+            }
+            else if (this.tag == "NavigationalChamber" && !audioSources[13].isPlaying)
+            {
+                audioSources[13].Play();
+            }
+        }
+    }
+
     public void OnTriggerExit(Collider other)
     {
         audioSources[indexNum].loop = false;
         audioSources[indexNum].Stop();
-    }
+    }*/
     // Update is called once per frame
     void Update()
     {

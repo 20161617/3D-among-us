@@ -11,64 +11,28 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 {
     public bool isImposter;
     public SkinnedMeshRenderer color;
-
     public int colorIndex = -1;
-    public string nickName;
 
-    public PhotonView PV;
+    PhotonView PV;
     public TargetCtrl targetCtrl;
-    bool waitRoom = false;
-    bool isCreateMisson = false;
-    bool isReady = false;
-    // Start is called before the first frame update
-    private void OnEnable()
-    {
-        if (waitRoom)
-        {
-            if (!isImposter)
-            {
-                if (PV.IsMine)
-                { 
-                    transform.GetComponent<PlayerMission>().createMission();
-                    isCreateMisson = true;
-                }
-                else
-                {
-                    isCreateMisson = false;
-                    isReady = true;
-                }
-            }
-        }
-        waitRoom = true;
-    }
 
+    // Start is called before the first frame update
     void Awake()
     {
-       
         PV = photonView;
-      
-        color = gameObject.transform.Find("Beta_Surface").GetComponent<SkinnedMeshRenderer>();
-
-        nickName = photonView.Owner.NickName;
-
-        targetCtrl = gameObject.GetComponent<TargetCtrl>();
-        
         databaseManager.Players.Add(this);
 
+        color = gameObject.transform.Find("Beta_Surface").GetComponent<SkinnedMeshRenderer>();
+
+        targetCtrl = gameObject.GetComponent<TargetCtrl>();
+
         DontDestroyOnLoad(gameObject);
-      
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!PV.IsMine) return;
-        if(isReady&&!isCreateMisson&&!isImposter)
-        {
-            transform.GetComponent<PlayerMission>().createMission();
-            isCreateMisson = true;
-        }
-       
     }
 
     void OnDestroy()

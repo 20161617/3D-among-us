@@ -1,25 +1,9 @@
 fileFormatVersion: 2
-guid: debf6b418d54ff74b99e78ec2f080b2a
+guid: b8eb5b9318c6d774f813511ae7d251cf
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - footStep: {fileID: 8300000, guid: 746c42bca3c6e5d41bb132ae11a026a3, type: 3}
-  - engineRoom: {fileID: 8300000, guid: d45d92bef057b2745a24a4140e7fb668, type: 3}
-  - reactor: {fileID: 8300000, guid: b13250df8078bc64f97a4e52d1f42ac1, type: 3}
-  - restaurant: {fileID: 8300000, guid: 4d901b7aae4ea1e44942217c29e1c0b3, type: 3}
-  - armory: {fileID: 8300000, guid: 62d6b74446f899d4785f5c2290447423, type: 3}
-  - oxygenSupplyRoom: {fileID: 8300000, guid: aea01f5e3e03ff24ea1f3722ed2b550a, type: 3}
-  - electricChamber: {fileID: 8300000, guid: 56e8d3e12d656704191e47c0a0da2f6d, type: 3}
-  - protectiveMembraneControlRoom: {fileID: 8300000, guid: cb086ea8a24e3ca45af0db1d00941686,
-      type: 3}
-  - navigationalChamber: {fileID: 8300000, guid: f72cc6516cbf49d43a5161299949968f,
-      type: 3}
-  - medBay: {fileID: 8300000, guid: 29d97f02df3977043afd411b391f8dfa, type: 3}
-  - storage: {fileID: 8300000, guid: b4241054922aa7a41acec85331ba0e0b, type: 3}
-  - admin: {fileID: 8300000, guid: 6e6dda13fd515f842b4ba3585f1ebd4a, type: 3}
-  - security: {fileID: 8300000, guid: bfc61e69be9a33b408ed465a3a3f70ce, type: 3}
-  - communications: {fileID: 8300000, guid: 0dbbc640775885e409ea1e2e7c0641f9, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
