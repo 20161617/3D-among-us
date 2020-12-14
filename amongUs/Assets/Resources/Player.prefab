@@ -1106,8 +1106,7 @@ GameObject:
   - component: {fileID: 4230105031625750077}
   - component: {fileID: 4101267405289613908}
   - component: {fileID: -1849553579890175928}
-  - component: {fileID: 2058204651968720278}
-  - component: {fileID: 1351160332222452273}
+  - component: {fileID: 1767637032086524887}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1235,6 +1234,8 @@ MonoBehaviour:
   isImposter: 0
   color: {fileID: 0}
   colorIndex: -1
+  nickName: 
+  PV: {fileID: 0}
   targetCtrl: {fileID: 0}
 --- !u!114 &-851834456733325061
 MonoBehaviour:
@@ -1309,103 +1310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractionObject: 
---- !u!82 &2058204651968720278
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4450092894471199211}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &1351160332222452273
+--- !u!114 &1767637032086524887
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1414,24 +1319,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4450092894471199211}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: debf6b418d54ff74b99e78ec2f080b2a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ace24264cddfea4b8069a41ea50b183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footStep: {fileID: 8300000, guid: 746c42bca3c6e5d41bb132ae11a026a3, type: 3}
-  engineRoom: {fileID: 8300000, guid: d45d92bef057b2745a24a4140e7fb668, type: 3}
-  reactor: {fileID: 0}
-  restaurant: {fileID: 8300000, guid: 4d901b7aae4ea1e44942217c29e1c0b3, type: 3}
-  armory: {fileID: 8300000, guid: 62d6b74446f899d4785f5c2290447423, type: 3}
-  oxygenSupplyRoom: {fileID: 8300000, guid: aea01f5e3e03ff24ea1f3722ed2b550a, type: 3}
-  electricChamber: {fileID: 8300000, guid: 56e8d3e12d656704191e47c0a0da2f6d, type: 3}
-  protectiveMembraneControlRoom: {fileID: 8300000, guid: cb086ea8a24e3ca45af0db1d00941686,
-    type: 3}
-  navigationalChamber: {fileID: 8300000, guid: f72cc6516cbf49d43a5161299949968f, type: 3}
-  medBay: {fileID: 8300000, guid: 29d97f02df3977043afd411b391f8dfa, type: 3}
-  storage: {fileID: 8300000, guid: b4241054922aa7a41acec85331ba0e0b, type: 3}
-  admin: {fileID: 8300000, guid: 6e6dda13fd515f842b4ba3585f1ebd4a, type: 3}
-  security: {fileID: 8300000, guid: bfc61e69be9a33b408ed465a3a3f70ce, type: 3}
-  communications: {fileID: 8300000, guid: 0dbbc640775885e409ea1e2e7c0641f9, type: 3}
+  myMission: []
+  displayText: {fileID: 0}
 --- !u!1 &4469135047442823856
 GameObject:
   m_ObjectHideFlags: 0

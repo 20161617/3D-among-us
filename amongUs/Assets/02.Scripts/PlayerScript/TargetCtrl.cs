@@ -1,9 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using static MissionManager;
+using static DatabaseManager;
 
 public class TargetCtrl : MonoBehaviourPun
 {
@@ -45,6 +46,7 @@ public class TargetCtrl : MonoBehaviourPun
 
         //Ray를 볼 수 있게 표시 해준다.
         Debug.DrawRay(transform.position, transform.forward * MaxDistance, Color.blue, 0.3f);
+
         //Ray에 닿은 오브젝트가 있다면
         if (Physics.Raycast(transform.position, transform.forward, out hit, MaxDistance))
         {
@@ -57,15 +59,21 @@ public class TargetCtrl : MonoBehaviourPun
                 TargetMissionData = selection.GetComponent<MissionData>();
 
                 //선택한 오브젝트의 미션데이터가 현재 임무에 포함되어 있다면
-                if (MissionManager.Instance.ContainsMission(TargetMissionData.MissionType, TargetMissionData.MissionNumber))
+                if (MissionManager.Instance.ContainsMission(TargetMissionData.MissionType, TargetMissionData.MissionNumber, databaseManager.MyPlayer.isImposter))
                 {
-                    //반짝이를 켜준다
-                    GlowObject selectionGlowObject = selection.GetComponent<GlowObject>();
+                    if (TargetMissionData.MissionType == MissionCommon || TargetMissionData.MissionType == MissionSimple || TargetMissionData.MissionType == MissionDifficult) //미션 타입 
+                    {
+                        if (!transform.GetComponent<PlayerMission>().myMission.Contains(selection.gameObject))
+                            return;
+                    }
+                        //반짝이를 켜준다
+                        GlowObject selectionGlowObject = selection.GetComponent<GlowObject>();
 
                     selectionGlowObject.OnRaycastEnter();
 
                     //이전에 선택한 오브젝트에 현재 선택한 오브젝트를 넣어준다
                     _selection = selection;
+
                     //상호작용하는 오브젝트 이름에 현재 충돌하고있는 오브젝트의 이름을 넣어준다
                     InteractionObject = hit.collider.name;
                 }
@@ -74,10 +82,16 @@ public class TargetCtrl : MonoBehaviourPun
             Debug.Log(hit.collider.name);
         }
     }
-
     //Use버튼을 누르면 현재 미션데이터에 맞는 미션을 불러오는 함수를 호출
     public void TargetUse()
     {
         MissionManager.Instance.CallMission(TargetMissionData.MissionType, TargetMissionData.MissionNumber);
+    }
+    //Use버튼을 누르면 현재 미션데이터에 맞는 미션을 불러오는 함수를 호출
+    public void TargetKill()
+    {
+        Debug.Log("죽여!");
+        databaseManager.MyPlayer.GetComponent<PhotonView>().RPC("KillRPC", RpcTarget.AllViaServer);
+         //_selection.GetComponent<PlayerScript>().KillingPlayer();
     }
 }

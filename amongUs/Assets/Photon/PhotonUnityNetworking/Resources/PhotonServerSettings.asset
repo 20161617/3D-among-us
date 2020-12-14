@@ -48,6 +48,8 @@ MonoBehaviour:
   - SetMyPosition
   - ShowCharacter
   - HideCharacter
+  - IVoted
+  - ActivePanel
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
