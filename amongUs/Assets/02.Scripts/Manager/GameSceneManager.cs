@@ -1,11 +1,12 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.SceneManagement;
 
-public class GameSceneManager : MonoBehaviour
+public class GameSceneManager : MonoBehaviourPun
 {
     public static GameSceneManager GameInstance;
     public GameObject MainCamera;
@@ -14,7 +15,7 @@ public class GameSceneManager : MonoBehaviour
     public GameObject MissionBar;
   
     GameObject networkManager;
-
+    public SpawnCenter spawnCenter;
 
     void Awake()
     {
@@ -28,6 +29,17 @@ public class GameSceneManager : MonoBehaviour
     }
 
 
+    private void Update()
+    {
+        if (DatabaseManager.databaseManager.isEvent)
+        {
+            DatabaseManager.databaseManager.isEvent = false;
+
+            StartCoroutine(NextScene());
+
+            spawnCenter.SetPosition();
+        }
+    }
     public void CameraOn()
     {
         Debug.Log("카메라온");
@@ -37,4 +49,19 @@ public class GameSceneManager : MonoBehaviour
         MissionBar.SetActive(true);
     }
 
+
+    IEnumerator NextScene()
+    {
+        SceneManager.LoadScene("DeportScene", LoadSceneMode.Additive);
+
+        Map.SetActive(false);
+        UIPanel.SetActive(false);
+        MissionBar.SetActive(false);
+
+        yield return new WaitForSeconds(0.1f);
+
+        MainCamera.SetActive(false);
+
+
+    }
 }

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -176,9 +176,9 @@ public class MissionManager : MonoBehaviourPun
         {
             DifficultMissionGame[MissionNumber - 1].SetActive(true);
         }
-        if (MissionType == "EmergencyCall")
+        if (MissionType == "Report")
         {
-           //ReportGame.GetComponent<GotoVoteManager>().photonView.RPC("ActivePanel", RpcTarget.AllViaServer, MissionNumber);
+           ReportGame.GetComponent<GotoVoteManager>().photonView.RPC("ActivePanel", RpcTarget.AllViaServer, MissionNumber);
         }
     }
 
@@ -198,7 +198,7 @@ public class MissionManager : MonoBehaviourPun
         {
             return DifficultMission.Contains(MissionNumber);
         }
-        if (MissionType == "EmergencyCall")
+        if (MissionType == "Report")
         {
             return true;
         }

@@ -37,6 +37,7 @@ public class TargetCtrl : MonoBehaviourPun
 
         if (!PV.IsMine)
             return;
+
         //이전에 선택한 오브젝트가 비어있지 않다면
         if (_selection != null)
         {
@@ -56,6 +57,7 @@ public class TargetCtrl : MonoBehaviourPun
         {
             if (hit.collider.name == "Detect Dead")
                 return;
+
             //닿은 오브젝트가 상호작용 할 수 있는 오브젝트 라면
             if (hit.transform.CompareTag("INTERACTION"))
             {
@@ -70,8 +72,8 @@ public class TargetCtrl : MonoBehaviourPun
                    
                     //다른미션도 받아들일까봐
                     //현재미션 체크
-                    if(!(TargetMissionData.MissionType == "PLAYER")&& !transform.GetComponent<PlayerMission>().myMission.Contains(selection.gameObject))
-                      return;
+                    //if(!(TargetMissionData.MissionType == "PLAYER")&& !transform.GetComponent<PlayerMission>().myMission.Contains(selection.gameObject))
+                     // return;
 
                     //반짝이를 켜준다
                     GlowObject selectionGlowObject = selection.GetComponent<GlowObject>();
@@ -84,8 +86,8 @@ public class TargetCtrl : MonoBehaviourPun
                     //상호작용하는 오브젝트 이름에 현재 충돌하고있는 오브젝트의 이름을 넣어준다
                     InteractionObject = hit.collider.name;
 
-                    MissionManager.Instance.myMission = transform.GetComponent<PlayerMission>().myMission;
-                    MissionManager.Instance.clearObject = selection.gameObject;
+                   MissionManager.Instance.myMission = transform.GetComponent<PlayerMission>().myMission;
+                   MissionManager.Instance.clearObject = selection.gameObject;
                 }
             }
 

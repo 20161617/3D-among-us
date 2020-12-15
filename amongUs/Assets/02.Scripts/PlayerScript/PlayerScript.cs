@@ -7,6 +7,11 @@ using Photon.Realtime;
 using static UIManager;
 using static DatabaseManager;
 
+public enum PLAYER_STATE
+{
+    ALIVE,
+    DEAD
+}
 
 public class PlayerScript : MonoBehaviourPunCallbacks
 {
@@ -18,6 +23,8 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     public int colorIndex = -1;
     public string nickName;
 
+    public PLAYER_STATE playerState;
+
     PhotonView PV;
     public TargetCtrl targetCtrl;
     public TwoDimmentionalAnimationStateController playerAnimation;
@@ -25,6 +32,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 
     bool waitRoom = false;
     // Start is called before the first frame update
+
     private void OnEnable()
     {
         if (waitRoom)
@@ -68,6 +76,8 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 
         nickName = photonView.Owner.NickName;
 
+        playerState = PLAYER_STATE.ALIVE;
+
         targetCtrl = gameObject.GetComponent<TargetCtrl>();
 
         playerAnimation = gameObject.GetComponent<TwoDimmentionalAnimationStateController>();
@@ -89,6 +99,9 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     void OnDestroy()
     {
         databaseManager.Players.Remove(this);
+
+        //임시 작용
+        if (playerState == PLAYER_STATE.DEAD) photonView.RPC("HideCharacter", RpcTarget.AllViaServer);
     }
 
     public void KillingPlayer()
@@ -152,5 +165,10 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     void KillRPC()
     {
         playerAnimation.OnKill();
+    }
+
+    public void SetState(PLAYER_STATE playerState)
+    {
+        this.playerState = playerState;
     }
 }

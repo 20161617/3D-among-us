@@ -36,7 +36,7 @@ public static class MissionList
 
     public enum REPORT
     {
-        EMERGENCY_MEETING = 1,
+        EMERGENCY_MEETING = 0,
         DEAD_BODY_REPORTED
     }
 }
