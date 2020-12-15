@@ -50,10 +50,8 @@ MonoBehaviour:
   - HideCharacter
   - IVoted
   - ActivePanel
-  - ShowVoteResult
-  - SaveDictionary
-  - SetRandColor
-  - NextScene
+  - DieRPC
+  - KillRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

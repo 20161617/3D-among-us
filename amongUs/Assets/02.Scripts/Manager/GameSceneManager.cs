@@ -12,8 +12,8 @@ public class GameSceneManager : MonoBehaviourPun
     public GameObject MainCamera;
     public GameObject Map;
     public GameObject UIPanel;
-    public GameObject MissionPanel;
-
+    public GameObject MissionBar;
+  
     GameObject networkManager;
     public SpawnCenter spawnCenter;
 
@@ -42,10 +42,11 @@ public class GameSceneManager : MonoBehaviourPun
 
     public void CameraOn()
     {
+        Debug.Log("카메라온");
         MainCamera.SetActive(true);
         Map.SetActive(true);
         UIPanel.SetActive(true);
-        MissionPanel.SetActive(true);
+        MissionBar.SetActive(true);
     }
 
     IEnumerator EventScene()

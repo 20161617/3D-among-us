@@ -1130,27 +1130,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Among Us - Buttons & Menu_12
-      rect:
-        serializedVersion: 2
-        x: 118
-        y: 287
-        width: 107
-        height: 108
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8bca1cc6b53802120800000000000000
-      internalID: 2387052231196257464
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []

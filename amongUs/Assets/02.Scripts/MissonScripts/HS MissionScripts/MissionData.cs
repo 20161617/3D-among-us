@@ -8,4 +8,5 @@ public class MissionData : MonoBehaviour
     public string MissionType;
     //미션 번호
     public int MissionNumber;
+    public string MissionPlace;
 }

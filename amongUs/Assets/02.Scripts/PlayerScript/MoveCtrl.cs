@@ -1,8 +1,9 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using static DatabaseManager;
 
 public class MoveCtrl : MonoBehaviourPunCallbacks, IPunObservable
 {
@@ -34,6 +35,8 @@ public class MoveCtrl : MonoBehaviourPunCallbacks, IPunObservable
         //controlled locally일 경우 이동(자기 자신의 캐릭터일 때)
         if (photonView.IsMine)
         {
+            if (!databaseManager.MyPlayer.isAlive)
+                return;
             float moveHorizontal = Input.GetAxis("Horizontal");
             float moveVertical = Input.GetAxis("Vertical");
 
@@ -46,9 +49,10 @@ public class MoveCtrl : MonoBehaviourPunCallbacks, IPunObservable
 
             if (isMove)
             {
-
+             
                 transform.Rotate(0f, moveHorizontal, 0f);
-
+                SoundManager.instance.PlayFootStep();
+              
             }
 
 

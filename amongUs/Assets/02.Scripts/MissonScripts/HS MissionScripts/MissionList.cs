@@ -21,10 +21,11 @@ public static class MissionList
     public enum DIFFUCLT_MISSIONLIST //복잡임무 리스트 
     {
         SCANNING = 1,//스캔
-        SHOOTING = 2, //총쏘기 
-        TRASHING, // 쓰레기버리기 
-        DNASEARCHING, //의무실 누르고 60초 기다렸다 오는거 
-        FILLOIL, //기름채우기 
+        SHOOTING = 2, //총쏘기  ->구현  MiniGame_ClearAsteroids
+        TRASHING = 3, // 쓰레기버리기  -> 구현  MiniGame_EmptyGarbage
+        DNASEARCHING = 4, //의무실 누르고 60초 기다렸다 오는거  ->구현 MiniGame_InspectSample
+        FILLOIL = 5, //기름채우기
+        DISTRIBUTOR = 6, // 원 일치시기키기 -> 구현 MiniGame_Distributor
     }
     public enum SAVOTAGE_MISSIONLIST //사보타지 미션 
     {

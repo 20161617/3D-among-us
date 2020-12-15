@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,9 +18,12 @@ public class MissionManager : MonoBehaviourPun
     public RectTransform clearText = null;
     public Image missionGauge;
 
+
     float missionBarFill { get; set; } //미션게이지 최소 0 최대 1 
     const float MIN_BAR = 0.0f;
     const float MAX_BAR = 1.0f;
+
+    public float plusGague;
 
     //임무에 해당하는 미니게임들
     public List<GameObject> CommonMissionGame = new List<GameObject>();
@@ -30,28 +33,36 @@ public class MissionManager : MonoBehaviourPun
 
     //현재 임무를 저장하는 리스트
     //초기에 정해준 Num의 수만큼 저장된다
-    List<int> CommonMission = new List<int>();
-    List<int> SimpleMission = new List<int>();
-    List<int> DifficultMission = new List<int>();
+    public List<int> CommonMission = new List<int>();
+    public List<int> SimpleMission = new List<int>();
+    public List<int> DifficultMission = new List<int>();
+
+    // public List<GameObject> HaveMission = new List<GameObject>(); //맵에 보유 미션 
+    public GameObject clearObject { get; set; }
+    public List<GameObject> myMission = new List<GameObject>(); //자신의 미션 
+    public Text displayText;
+
+
+    public const string MissionCommon = "CommonMission";
+    public const string MissionSimple = "SimpleMission";
+    public const string MissionDifficult = "DifficultMission";
+
 
     //갯수
-    int commonMissionNum { get; set; } //공통임무
-    int simpleMissionNum { get; set; } //단순임무
-    int difficultMissionNum { get; set; } //복잡임무 
-
+    public int commonMissionNum { get; set; } //공통임무
+    public int simpleMissionNum { get; set; } //단순임무
+    public int difficultMissionNum { get; set; } //복잡임무 
 
     private void Awake()
     {
-
         PV = photonView;
         Instance = this;
-
+        MissionNumInit();
     }
     private void Start()
     {
         MissionAllocation();
     }
-
 
     public void MissionClear(GameObject _object) // 미션을꺳을떄 
     {
@@ -67,6 +78,7 @@ public class MissionManager : MonoBehaviourPun
             upText += 5;
             clearText.anchoredPosition = new Vector3(0, upText, 0);
             yield return new WaitForSeconds(0.001f);
+            Debug.Log("텍스트 올리기");
         }
         StartCoroutine(setMission_End(_object));
         PV_GaugeFill(_object);
@@ -76,15 +88,15 @@ public class MissionManager : MonoBehaviourPun
     public void PV_GaugeFill(GameObject _object)
     {
         // getGagueFill = _object.GetComponent<Gague>().setGague * 0.01f;
+        myMission.Remove(clearObject);
         PV.RPC("MissionClearGauge", RpcTarget.AllViaServer);
     }
 
     [PunRPC]
     IEnumerator MissionClearGauge()
     {
-        missionGauge.fillAmount += 0.25f;
-        // getGagueFill = 0f;
-
+        missionGauge.fillAmount += plusGague;
+        Debug.Log("게이지 올리기 ");
         yield return null;
     }
 
@@ -111,16 +123,11 @@ public class MissionManager : MonoBehaviourPun
         }
 
         //단순임무 배정
-        //현재는 테스트를 위해 의도적으로 2를 기입함.
-        //나중에 주석처리한 부분으로 사용할 것
-        SimpleMission.Add(2);
-        /*
         for (int i = 0; i < simpleMissionNum; i++)
         {
             int RandSimpleMission = Random.Range(1, System.Enum.GetValues(typeof(MissionList.SIMPLE_MISSIONLIST)).Length);
             SimpleMission.Add(RandSimpleMission);
         }
-        */
 
         //복잡임무 배정
         for (int i = 0; i < difficultMissionNum; i++)
@@ -133,8 +140,8 @@ public class MissionManager : MonoBehaviourPun
     public void MissionNumInit() //게임시작시 미션 갯수 설정  별도로 원할시 미션 get set 으로 불러와서 지정 
     {
         commonMissionNum = 1;
-        simpleMissionNum = 1;
-        difficultMissionNum = 2;
+        simpleMissionNum = 5;
+        difficultMissionNum = 4;
     }
     // Start is called before the first frame update
 
@@ -169,32 +176,91 @@ public class MissionManager : MonoBehaviourPun
         {
             DifficultMissionGame[MissionNumber - 1].SetActive(true);
         }
-        if(MissionType == "REPORT")
+        if (MissionType == "EmergencyCall")
         {
-            ReportGame.GetComponent<GotoVoteManager>().photonView.RPC("ActivePanel", RpcTarget.AllViaServer, MissionNumber);
+           //ReportGame.GetComponent<GotoVoteManager>().photonView.RPC("ActivePanel", RpcTarget.AllViaServer, MissionNumber);
         }
     }
 
     //해당하는 임무가 현재 임무에 포함되어있는지 검사
-    public bool ContainsMission(string MissionType, int MissionNumber)
+    public bool ContainsMission(string MissionType, int MissionNumber, bool isImposter)
     {
         //있으면 true, 없으면 false를 반환
-        if (MissionType == "CommonMission")
+        if (MissionType == MissionCommon && !isImposter)
         {
             return CommonMission.Contains(MissionNumber);
         }
-        if (MissionType == "SimpleMission")
+        if (MissionType == MissionSimple && !isImposter)
         {
             return SimpleMission.Contains(MissionNumber);
         }
-        if (MissionType == "DifficultMission")
+        if (MissionType == MissionDifficult && !isImposter)
         {
             return DifficultMission.Contains(MissionNumber);
         }
-        if (MissionType == "REPORT")
+        if (MissionType == "EmergencyCall")
         {
             return true;
         }
-            return false;
+        if (MissionType == "PLAYER" && isImposter)
+        {
+            return true;
+        }
+        return false;
+    }
+
+
+
+    public string GetInformation(string missionKind, int number)
+    {
+        string text = "";
+        if (missionKind == MissionManager.MissionCommon)
+        {
+            switch (number)
+            {
+                case (int)COMMON_MISSIONLIST.ELECTRICFIX:
+                    break;
+                case (int)COMMON_MISSIONLIST.SCRATCHINGCARD:
+                    text = " 카드 긁기 ";
+                    break;
+
+            }
+        }
+        else if (missionKind == MissionManager.MissionSimple)
+        {
+            switch (number)
+            {
+                case (int)SIMPLE_MISSIONLIST.SWITCH:
+                    text = "스위치 올리기";
+                    break;
+                case (int)SIMPLE_MISSIONLIST.NAVIGATION:
+                    text = "항로 조정하기";
+                    break;
+                case (int)SIMPLE_MISSIONLIST.DOWNLOADING:
+                    text = "파일 다운로드 하기";
+                    break;
+            }
+
+        }
+        else if (missionKind == MissionManager.MissionDifficult)
+        {
+            switch (number)
+            {
+                case (int)DIFFUCLT_MISSIONLIST.SHOOTING:
+                    text = "행성 파괴하기";
+                    break;
+                case (int)DIFFUCLT_MISSIONLIST.TRASHING:
+                    text = "쓰레기 버리기";
+                    break;
+                case (int)DIFFUCLT_MISSIONLIST.DNASEARCHING:
+                    text = "DNA 수집하세요";
+                    break;
+                case (int)DIFFUCLT_MISSIONLIST.DISTRIBUTOR:
+                    text = "전기를 안정화 시키세요";
+                    break;
+
+            }
+        }
+        return text;
     }
 }
