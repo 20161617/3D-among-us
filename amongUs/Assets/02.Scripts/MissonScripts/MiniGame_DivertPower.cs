@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static MissionManager;
 
 public class MiniGame_DivertPower : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class MiniGame_DivertPower : MonoBehaviour
     public void ClearDivertPower()
     {
         clear = true;
-        MissionManager.Instance.MissionClear(MinigamePanel);
+        missionManager.MissionClear(MinigamePanel);
     }
-    
+
 }

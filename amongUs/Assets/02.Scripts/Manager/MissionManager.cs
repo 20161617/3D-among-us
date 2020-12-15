@@ -6,17 +6,25 @@ using Photon.Pun;
 using Photon.Realtime;
 using static PhotonInit;
 using static MissionList;
+using static DatabaseManager;
 
 
 public class MissionManager : MonoBehaviourPun
 {
-    public static MissionManager Instance;
+    public static MissionManager missionManager;
 
     PhotonView PV;
 
 
     public RectTransform clearText = null;
     public Image missionGauge;
+
+
+    public List<GameObject> MissionObject = new List<GameObject>();
+
+    List<MissionData> CommonMissionList = new List<MissionData>();
+    List<MissionData> SimpleMissionList = new List<MissionData>();
+    List<MissionData> DifficultMissionList = new List<MissionData>();
 
 
     float missionBarFill { get; set; } //미션게이지 최소 0 최대 1 
@@ -31,16 +39,18 @@ public class MissionManager : MonoBehaviourPun
     public List<GameObject> DifficultMissionGame = new List<GameObject>();
     public GameObject ReportGame;
 
+    MissionData CurrentMissionData;
+
     //현재 임무를 저장하는 리스트
     //초기에 정해준 Num의 수만큼 저장된다
-    public List<int> CommonMission = new List<int>();
-    public List<int> SimpleMission = new List<int>();
-    public List<int> DifficultMission = new List<int>();
+    public List<MissionData> CommonMission = new List<MissionData>();
+    public List<MissionData> SimpleMission = new List<MissionData>();
+    public List<MissionData> DifficultMission = new List<MissionData>();
 
-    // public List<GameObject> HaveMission = new List<GameObject>(); //맵에 보유 미션 
-    public GameObject clearObject { get; set; }
-    public List<GameObject> myMission = new List<GameObject>(); //자신의 미션 
-    public Text displayText;
+    //// public List<GameObject> HaveMission = new List<GameObject>(); //맵에 보유 미션 
+    //public GameObject clearObject { get; set; }
+    //public List<GameObject> myMission = new List<GameObject>(); //자신의 미션 
+    //public Text displayText;
 
 
     public const string MissionCommon = "CommonMission";
@@ -56,16 +66,20 @@ public class MissionManager : MonoBehaviourPun
     private void Awake()
     {
         PV = photonView;
-        Instance = this;
+        missionManager = this;
         MissionNumInit();
+
+        databaseManager.MyPlayer.CurrentMyMission.FindDisplayText();
     }
     private void Start()
     {
+        MissionListInit();
         MissionAllocation();
     }
 
     public void MissionClear(GameObject _object) // 미션을꺳을떄 
     {
+        MissionRemove();
         StartCoroutine(MissionClearText(_object));
         // PV.RPC("testFill", RpcTarget.AllViaServer);
     }
@@ -88,7 +102,7 @@ public class MissionManager : MonoBehaviourPun
     public void PV_GaugeFill(GameObject _object)
     {
         // getGagueFill = _object.GetComponent<Gague>().setGague * 0.01f;
-        myMission.Remove(clearObject);
+        //myMission.Remove(clearObject);
         PV.RPC("MissionClearGauge", RpcTarget.AllViaServer);
     }
 
@@ -114,26 +128,90 @@ public class MissionManager : MonoBehaviourPun
 
     public void MissionAllocation() //게임시작시 미션 갯수만큼 임무 분배
     {
+        int imposterCount = DatabaseManager.databaseManager.Players.Count <= 5 ? 1 : 2; //임포수 5명이하면 1빼기 이상이면 2빼기 
+                                                                                        //게이지 최대 100이라고 봤을떄  미션최대게이지/ 플레이어 수 - 임포수 / 미션수 
+        plusGague = (1.0f / (DatabaseManager.databaseManager.Players.Count - imposterCount)) / (commonMissionNum + simpleMissionNum + difficultMissionNum);
+
+
         //공통임무 배정
         for (int i = 0; i < commonMissionNum; i++)
         {
-            //                                                           ↓Enum에 들어가있는 아이템의 총 갯수
-            int RandCommonMission = Random.Range(1, System.Enum.GetValues(typeof(MissionList.COMMON_MISSIONLIST)).Length);
-            CommonMission.Add(RandCommonMission);
+            int RandCommonMission = Random.Range(1, CommonMissionList.Count);
+            while (CommonMission.Contains(CommonMissionList[RandCommonMission - 1]))
+            {
+                RandCommonMission = Random.Range(1, CommonMissionList.Count);
+            }
+
+            CommonMission.Add(CommonMissionList[RandCommonMission - 1]);
         }
 
         //단순임무 배정
         for (int i = 0; i < simpleMissionNum; i++)
         {
-            int RandSimpleMission = Random.Range(1, System.Enum.GetValues(typeof(MissionList.SIMPLE_MISSIONLIST)).Length);
-            SimpleMission.Add(RandSimpleMission);
+            int RandSimpleMission = Random.Range(1, SimpleMissionList.Count);
+
+            while (SimpleMission.Contains(SimpleMissionList[RandSimpleMission - 1]))
+            {
+                RandSimpleMission = Random.Range(1, SimpleMissionList.Count);
+            }
+
+            SimpleMission.Add(SimpleMissionList[RandSimpleMission - 1]);
         }
 
         //복잡임무 배정
         for (int i = 0; i < difficultMissionNum; i++)
         {
-            int RandDifficultMission = Random.Range(1, System.Enum.GetValues(typeof(MissionList.DIFFUCLT_MISSIONLIST)).Length);
-            DifficultMission.Add(RandDifficultMission);
+            int RandDifficultMission = Random.Range(1, DifficultMissionList.Count);
+
+            while (DifficultMission.Contains(DifficultMissionList[RandDifficultMission - 1]))
+            {
+                RandDifficultMission = Random.Range(1, DifficultMissionList.Count);
+            }
+
+            DifficultMission.Add(DifficultMissionList[RandDifficultMission - 1]);
+        }
+    }
+
+    void MissionListInit()
+    {
+        //미션종류에 따른 미션리스트를 초기화
+        for (int i = 0; i < MissionObject.Count; i++)
+        {
+            MissionData TempMissionData = MissionObject[i].GetComponent<MissionData>();
+            string TempMissionType = TempMissionData.MissionType;
+
+            if (TempMissionType == "CommonMission")
+            {
+                CommonMissionList.Add(TempMissionData);
+            }
+
+            if (TempMissionType == "SimpleMission")
+            {
+                SimpleMissionList.Add(TempMissionData);
+            }
+
+            if (TempMissionType == "DifficultMission")
+            {
+                DifficultMissionList.Add(TempMissionData);
+            }
+        }
+    }
+
+    void MissionRemove()
+    {
+        string MissionType = CurrentMissionData.MissionType;
+
+        if (MissionType == "CommonMission")
+        {
+            CommonMission.Remove(CurrentMissionData);
+        }
+        if (MissionType == "SimpleMission")
+        {
+            SimpleMission.Remove(CurrentMissionData);
+        }
+        if (MissionType == "DifficultMission")
+        {
+            DifficultMission.Remove(CurrentMissionData);
         }
     }
 
@@ -160,8 +238,13 @@ public class MissionManager : MonoBehaviourPun
     }
 
     //미션을 MissionType(미션종류) 중, MissionNumber(미션번호)에 맞는 미션을 불러온다.
-    public void CallMission(string MissionType, int MissionNumber)
+    public void CallMission(MissionData TargetMissionData)
     {
+        CurrentMissionData = TargetMissionData;
+
+        string MissionType = CurrentMissionData.MissionType;
+        int MissionNumber = CurrentMissionData.MissionNumber;
+
         if (MissionType == "CommonMission")
         {
             // 미션넘버에 -1을 해주는 이유는 배열의 번호는 0부터 시작하지만,
@@ -183,26 +266,26 @@ public class MissionManager : MonoBehaviourPun
     }
 
     //해당하는 임무가 현재 임무에 포함되어있는지 검사
-    public bool ContainsMission(string MissionType, int MissionNumber, bool isImposter)
+    public bool ContainsMission(MissionData TargetMissionData, bool isImposter)
     {
         //있으면 true, 없으면 false를 반환
-        if (MissionType == MissionCommon && !isImposter)
+        if (TargetMissionData.MissionType == "CommonMission" && !isImposter)
         {
-            return CommonMission.Contains(MissionNumber);
+            return CommonMission.Contains(TargetMissionData);
         }
-        if (MissionType == MissionSimple && !isImposter)
+        if (TargetMissionData.MissionType == "SimpleMission" && !isImposter)
         {
-            return SimpleMission.Contains(MissionNumber);
+            return SimpleMission.Contains(TargetMissionData);
         }
-        if (MissionType == MissionDifficult && !isImposter)
+        if (TargetMissionData.MissionType == "DifficultMission" && !isImposter)
         {
-            return DifficultMission.Contains(MissionNumber);
+            return DifficultMission.Contains(TargetMissionData);
         }
-        if (MissionType == "EmergencyCall")
+        if (TargetMissionData.MissionType == "EmergencyCall")
         {
             return true;
         }
-        if (MissionType == "PLAYER" && isImposter)
+        if (TargetMissionData.MissionType == "PLAYER" && isImposter)
         {
             return true;
         }

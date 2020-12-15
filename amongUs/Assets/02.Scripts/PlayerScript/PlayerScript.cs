@@ -6,6 +6,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using static UIManager;
 using static DatabaseManager;
+using static MissionManager;
 
 
 public class PlayerScript : MonoBehaviourPunCallbacks
@@ -13,6 +14,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     public bool isImposter = false;
     public bool isAlive = true;
     public bool isDetected = false;
+
     public SkinnedMeshRenderer color;
 
     public int colorIndex = -1;
@@ -21,7 +23,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     PhotonView PV;
     public TargetCtrl targetCtrl;
     public TwoDimmentionalAnimationStateController playerAnimation;
-    public PlayerMission CurrentMyMission;
+    public PlayerMissionHS CurrentMyMission;
 
     bool waitRoom = false;
     bool isCreateMisson = false;
@@ -48,7 +50,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
             {
                 int imposterCount = DatabaseManager.databaseManager.Players.Count <= 5 ? 1 : 2; //임포수 5명이하면 1빼기 이상이면 2빼기 
                 //게이지 최대 100이라고 봤을떄  미션최대게이지/ 플레이어 수 - 임포수 / 미션수 
-                MissionManager.Instance.plusGague = (1.0f / (DatabaseManager.databaseManager.Players.Count - imposterCount)) / (MissionManager.Instance.commonMissionNum + MissionManager.Instance.simpleMissionNum + MissionManager.Instance.difficultMissionNum);
+                missionManager.plusGague = (1.0f / (DatabaseManager.databaseManager.Players.Count - imposterCount)) / (missionManager.commonMissionNum + missionManager.simpleMissionNum + missionManager.difficultMissionNum);
             }
         }
         waitRoom = true;
@@ -67,7 +69,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 
         playerAnimation = gameObject.GetComponent<TwoDimmentionalAnimationStateController>();
 
-        CurrentMyMission = gameObject.GetComponent<PlayerMission>();
+        CurrentMyMission = gameObject.GetComponent<PlayerMissionHS>();
 
         databaseManager.Players.Add(this);
 
@@ -134,6 +136,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     {
         gameObject.tag = "INTERACTION";
         gameObject.SetActive(true);
+        CurrentMyMission.GameStart = true;
     }
 
     [PunRPC]

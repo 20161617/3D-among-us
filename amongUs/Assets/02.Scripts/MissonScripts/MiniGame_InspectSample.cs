@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static MissionManager;
 
 public class MiniGame_InspectSample : MonoBehaviour
 {
@@ -18,17 +19,17 @@ public class MiniGame_InspectSample : MonoBehaviour
     public Text underText;
     public Text overText;
 
-    public Image []waterImage;
+    public Image[] waterImage;
     public GameObject box;
     public int painWater { get; private set; }
     public GameObject MinigamePanel;
     public Vector3 pos;
-    Vector3 posInit; 
+    Vector3 posInit;
     private Status status;
     private bool move;
     public bool down;
-    const string underBeforeText= "터치를 해서 시작 하세요 ->";
-    const string underStartingText= "시약추가중";
+    const string underBeforeText = "터치를 해서 시작 하세요 ->";
+    const string underStartingText = "시약추가중";
     const string underWaitingText = "커피나 한잔 하고 오시죠";
     const string underEndText = "이상 표본을 선택 하세요";
 
@@ -39,7 +40,7 @@ public class MiniGame_InspectSample : MonoBehaviour
     }
     private void OnEnable()
     {
-        if(status==Status.BeforeStart || status==Status.End) //아직 아무것도 안눌렀을떄 
+        if (status == Status.BeforeStart || status == Status.End) //아직 아무것도 안눌렀을떄 
         {
 
             syringe.transform.localPosition = posInit;
@@ -47,12 +48,12 @@ public class MiniGame_InspectSample : MonoBehaviour
             startButton.SetActive(true);
             overText.text = " ";
             underText.text = underBeforeText;
-            for(int i=0; i<waterImage.Length;i++)
+            for (int i = 0; i < waterImage.Length; i++)
             {
                 waterImage[i].color = new Color(255, 255, 255);
             }
         }
-        else if(status==Status.Waiting&& transform.parent.GetComponent<MissionTimer>().timeEnd)
+        else if (status == Status.Waiting && transform.parent.GetComponent<MissionTimer>().timeEnd)
         {
             selectWater();
         }
@@ -65,12 +66,12 @@ public class MiniGame_InspectSample : MonoBehaviour
     }
     IEnumerator timeSet()
     {
-        yield return null; 
+        yield return null;
     }
     IEnumerator AddWater()
     {
         Vector3 target = syringe.transform.localPosition;
-        for (int i=0; i<5; i++)
+        for (int i = 0; i < 5; i++)
         {
             syringe.transform.localPosition = target;
             waterImage[i].color = new Color(0, 0, 255); //파란색 시약 추가 
@@ -79,7 +80,7 @@ public class MiniGame_InspectSample : MonoBehaviour
         }
         target.x = -240;
         syringe.transform.localPosition = target;
-        pos = new Vector3(box.GetComponent<RectTransform>().anchoredPosition.x, box.GetComponent<RectTransform>().anchoredPosition.y-500,0);
+        pos = new Vector3(box.GetComponent<RectTransform>().anchoredPosition.x, box.GetComponent<RectTransform>().anchoredPosition.y - 500, 0);
         transform.parent.GetComponent<MissionTimer>().TimerSet(60f);
         down = move = true;
         underText.text = underWaitingText;
@@ -88,9 +89,9 @@ public class MiniGame_InspectSample : MonoBehaviour
     }
     public void SelectWater(int num)
     {
-        if(num!=painWater) //틀렷을때 
+        if (num != painWater) //틀렷을때 
         {
-          
+
             syringe.transform.localPosition = posInit;
             selectButton.SetActive(false);
             startButton.SetActive(true);
@@ -106,7 +107,7 @@ public class MiniGame_InspectSample : MonoBehaviour
         }
         else //맞췄을떄 
         {
-            MissionManager.Instance.MissionClear(MinigamePanel);
+            missionManager.MissionClear(MinigamePanel);
             status = Status.End;
             transform.parent.GetComponent<MissionTimer>().timeEnd = false;
 
@@ -117,8 +118,8 @@ public class MiniGame_InspectSample : MonoBehaviour
     {
         if (!move)
             return;
-        
-        if(down)
+
+        if (down)
         {
             box.GetComponent<RectTransform>().anchoredPosition = Vector3.MoveTowards(box.GetComponent<RectTransform>().anchoredPosition, pos, 300 * Time.deltaTime);
             if (box.GetComponent<RectTransform>().anchoredPosition.y <= -500)
@@ -128,9 +129,9 @@ public class MiniGame_InspectSample : MonoBehaviour
         {
             box.GetComponent<RectTransform>().anchoredPosition = Vector3.MoveTowards(box.GetComponent<RectTransform>().anchoredPosition, pos, 300 * Time.deltaTime);
             if (box.GetComponent<RectTransform>().anchoredPosition.y >= 0)
-                move = false;     
+                move = false;
         }
-      
+
 
     }
     public void selectWater()
@@ -139,7 +140,7 @@ public class MiniGame_InspectSample : MonoBehaviour
         down = false;
         pos.y = 0;
         underText.text = underEndText;
-        painWater=Random.Range(0, waterImage.Length);
+        painWater = Random.Range(0, waterImage.Length);
         waterImage[painWater].color = new Color(255, 0, 0);
         status = Status.Select;
         selectButton.SetActive(true);
@@ -148,15 +149,15 @@ public class MiniGame_InspectSample : MonoBehaviour
 
     void timeCheck()
     {
-        if(status==Status.Waiting)
+        if (status == Status.Waiting)
         {
             overText.text = "Time : " + transform.parent.GetComponent<MissionTimer>().TimeGet();
-           if (transform.parent.GetComponent<MissionTimer>().timeEnd)
+            if (transform.parent.GetComponent<MissionTimer>().timeEnd)
             {
                 selectWater();
             }
         }
-       
+
     }
     // Update is called once per frame
     void Update()
