@@ -15,6 +15,7 @@ public class MoveCtrl : MonoBehaviourPunCallbacks, IPunObservable
 
     void Awake()
     {
+        //shit
         rigid = GetComponent<Rigidbody>();
     }
 

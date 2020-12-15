@@ -29,6 +29,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     bool isCreateMisson = false;
     bool isReady = false;
     // Start is called before the first frame update
+<<<<<<< Updated upstream
     private void OnEnable()
     {
         if (waitRoom)
@@ -55,6 +56,10 @@ public class PlayerScript : MonoBehaviourPunCallbacks
         }
         waitRoom = true;
     }
+=======
+
+
+>>>>>>> Stashed changes
 
     void Awake()
     {
