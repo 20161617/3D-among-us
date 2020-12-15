@@ -51,7 +51,7 @@ public class VoteManager : MonoBehaviourPun
 
             photonView.RPC("ShowVoteResult", RpcTarget.AllViaServer);
 
-           
+
         }
     }
 
@@ -63,10 +63,16 @@ public class VoteManager : MonoBehaviourPun
 
     public void OnVotePanel()
     {
-        
+
         StartCoroutine("Loading");
 
-        
+        for(int i=0; i<databaseManager.Players.Count; i++)
+        {
+            if (databaseManager.Players[i].playerState == PLAYER_STATE.DEAD || !databaseManager.Players[i].isAlive)
+            {
+                databaseManager.Players[i].photonView.RPC("SetDie", RpcTarget.AllBuffered);
+            }
+        }
 
         VotePanel.SetActive(true);
 
@@ -76,18 +82,20 @@ public class VoteManager : MonoBehaviourPun
 
         StartCoroutine("VoteTimerCo");
 
-        for (int i=0; i< VoteComponents.Count; i++)
+        for (int i = 0; i < VoteComponents.Count; i++)
         {
             bool isExist = i < databaseManager.Players.Count;
             VoteComponents[i].SetActive(isExist);
 
+
             if (isExist)
             {
-
-                if (databaseManager.MyPlayer.playerState == PLAYER_STATE.DEAD)
+                if (databaseManager.MyPlayer.playerState == PLAYER_STATE.DEAD || !databaseManager.MyPlayer.isAlive)
                 {
+
                     VoteComponents[i].GetComponent<Button>().interactable = false;
                 }
+
 
                 GameObject icon = VoteComponents[i].transform.GetChild(0).gameObject;
                 icon.GetComponentInChildren<Text>().text = databaseManager.Players[i].nickName;
@@ -110,7 +118,7 @@ public class VoteManager : MonoBehaviourPun
     {
         VotePanel.SetActive(false);
 
-        for(int i=0; i< VoteComponents.Count; i++)
+        for (int i = 0; i < VoteComponents.Count; i++)
         {
             VoteComponents[i].SetActive(false);
         }
@@ -145,7 +153,7 @@ public class VoteManager : MonoBehaviourPun
         for (int i = 0; i < databaseManager.Players.Count; i++)
         {
             GameObject icon = VoteComponents[i].transform.GetChild(0).gameObject;
-   
+
             if (icon.GetComponentInChildren<Text>().text == PhotonNetwork.NickName)
             {
                 photonView.RPC("IVoted", RpcTarget.AllBuffered, num, i);
@@ -278,11 +286,11 @@ public class VoteManager : MonoBehaviourPun
     }
 
 
-   IEnumerator VoteTimerCo()
+    IEnumerator VoteTimerCo()
     {
         int _voteTimer = voteTimer;
 
-        for(int i = _voteTimer; i >=0; i--)
+        for (int i = _voteTimer; i >= 0; i--)
         {
             voteTimer = i;
             timerText.text = $"투표 종료까지: {voteTimer}초";
@@ -290,11 +298,11 @@ public class VoteManager : MonoBehaviourPun
         }
 
         timerText.text = "투표 발표";
-        for (int i=0; i<databaseManager.Players.Count; i++)
+        for (int i = 0; i < databaseManager.Players.Count; i++)
         {
             VoteComponents[i].GetComponent<Button>().interactable = false;
         }
-       
+
         photonView.RPC("ShowVoteResult", RpcTarget.AllViaServer);
     }
 }

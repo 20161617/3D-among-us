@@ -11,6 +11,11 @@ public class GotoVoteManager : MonoBehaviourPun
 
     int index;
 
+    public void Report(int i)
+    {
+        photonView.RPC("ActivePanel", RpcTarget.AllViaServer, i);
+    }
+
     IEnumerator GotoVote()
     {
         yield return new WaitForSeconds(1.0f);

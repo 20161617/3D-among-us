@@ -13,7 +13,8 @@ public class GameSceneManager : MonoBehaviourPun
     public GameObject Map;
     public GameObject UIPanel;
     public GameObject MissionBar;
-  
+    public GameObject MissionUI;
+
     GameObject networkManager;
     public SpawnCenter spawnCenter;
 
@@ -47,6 +48,7 @@ public class GameSceneManager : MonoBehaviourPun
         Map.SetActive(true);
         UIPanel.SetActive(true);
         MissionBar.SetActive(true);
+        MissionUI.SetActive(true);
     }
 
 
@@ -57,11 +59,11 @@ public class GameSceneManager : MonoBehaviourPun
         Map.SetActive(false);
         UIPanel.SetActive(false);
         MissionBar.SetActive(false);
+        MissionUI.SetActive(false);
 
         yield return new WaitForSeconds(0.1f);
-
         MainCamera.SetActive(false);
-
+       
 
     }
 }

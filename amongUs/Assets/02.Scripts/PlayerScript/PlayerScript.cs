@@ -33,44 +33,11 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     public PlayerMissionHS CurrentMyMission;
 
     bool waitRoom = false;
-<<<<<<< Updated upstream
     bool isCreateMisson = false;
     bool isReady = false;
-=======
-
->>>>>>> Stashed changes
     // Start is called before the first frame update
 
-    private void OnEnable()
-    {
-        if (waitRoom)
-        {
-            if (!isImposter)
-            {
-                if (PV.IsMine)
-                {
-                    transform.GetComponent<PlayerMission>().createMission();
-<<<<<<< Updated upstream
-                    isCreateMisson = true;
-=======
->>>>>>> Stashed changes
-                }
-                else
-                {
-                    isCreateMisson = false;
-                    isReady = true;
-                }
-            }
-            else
-            {
-                int imposterCount = DatabaseManager.databaseManager.Players.Count <= 5 ? 1 : 2; //임포수 5명이하면 1빼기 이상이면 2빼기 
-                //게이지 최대 100이라고 봤을떄  미션최대게이지/ 플레이어 수 - 임포수 / 미션수 
-                missionManager.plusGague = (1.0f / (DatabaseManager.databaseManager.Players.Count - imposterCount)) / (missionManager.commonMissionNum + missionManager.simpleMissionNum + missionManager.difficultMissionNum);
-            }
-        }
-        waitRoom = true;
-    }
-
+   
     void Awake()
     {
 
@@ -104,6 +71,11 @@ public class PlayerScript : MonoBehaviourPunCallbacks
             isCreateMisson = true;
         }
 
+        //임시 작용
+        if (playerState == PLAYER_STATE.DEAD)
+        {
+            photonView.RPC("HideCharacter", RpcTarget.AllViaServer);
+        }
     }
 
     void OnDestroy()
@@ -170,6 +142,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     {
         gameObject.tag = "DEAD";
         isAlive = false;
+        //playerState = PLAYER_STATE.DEAD;
         playerAnimation.OnDeath();
     }
     [PunRPC]
@@ -178,8 +151,20 @@ public class PlayerScript : MonoBehaviourPunCallbacks
         playerAnimation.OnKill();
     }
 
+    [PunRPC]
+    public void SetDie()
+    {
+        playerState = PLAYER_STATE.DEAD;
+        isAlive = false;
+    }
     public void SetState(PLAYER_STATE playerState)
     {
         this.playerState = playerState;
+    }
+
+    IEnumerator DeadPlayerDelayActive()
+    {
+        yield return new WaitForSeconds(2.0f);
+        photonView.RPC("HideCharacter", RpcTarget.AllViaServer);
     }
 }
