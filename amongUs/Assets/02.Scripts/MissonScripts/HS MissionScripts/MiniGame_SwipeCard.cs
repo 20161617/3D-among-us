@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static MissionManager;
 
 public class MiniGame_SwipeCard : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
@@ -39,7 +40,7 @@ public class MiniGame_SwipeCard : MonoBehaviour, IPointerDownHandler, IDragHandl
         if (RT.anchoredPosition.x > -180 && RT.anchoredPosition.x < 140 && RT.anchoredPosition.y > 240 && RT.anchoredPosition.y < 340)
         {
             RT.anchoredPosition = Vector2.zero;
-            MissionManager.Instance.MissionClear(MinigamePanel);
+            missionManager.MissionClear(MinigamePanel);
         }
     }
 }

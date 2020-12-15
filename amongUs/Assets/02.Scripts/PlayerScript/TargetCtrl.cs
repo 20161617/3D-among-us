@@ -37,7 +37,6 @@ public class TargetCtrl : MonoBehaviourPun
 
         if (!PV.IsMine)
             return;
-
         //이전에 선택한 오브젝트가 비어있지 않다면
         if (_selection != null)
         {
@@ -57,7 +56,6 @@ public class TargetCtrl : MonoBehaviourPun
         {
             if (hit.collider.name == "Detect Dead")
                 return;
-
             //닿은 오브젝트가 상호작용 할 수 있는 오브젝트 라면
             if (hit.transform.CompareTag("INTERACTION"))
             {
@@ -67,13 +65,15 @@ public class TargetCtrl : MonoBehaviourPun
                 TargetMissionData = selection.GetComponent<MissionData>();
 
                 //선택한 오브젝트의 미션데이터가 현재 임무에 포함되어 있다면
-                if (MissionManager.Instance.ContainsMission(TargetMissionData.MissionType, TargetMissionData.MissionNumber, databaseManager.MyPlayer.isImposter))
+                if (missionManager.ContainsMission(TargetMissionData, databaseManager.MyPlayer.isImposter))
                 {
-                   
+                    //if (!(TargetMissionData.MissionType == "PLAYER") && !transform.GetComponent<PlayerMission>().myMission.Contains(selection.gameObject))
+                    //    return;
+
                     //다른미션도 받아들일까봐
                     //현재미션 체크
-                    //if(!(TargetMissionData.MissionType == "PLAYER")&& !transform.GetComponent<PlayerMission>().myMission.Contains(selection.gameObject))
-                     // return;
+                    //if (!transform.GetComponent<PlayerMission>().myMission.Contains(selection.gameObject))
+                    //  return;
 
                     //반짝이를 켜준다
                     GlowObject selectionGlowObject = selection.GetComponent<GlowObject>();
@@ -86,8 +86,8 @@ public class TargetCtrl : MonoBehaviourPun
                     //상호작용하는 오브젝트 이름에 현재 충돌하고있는 오브젝트의 이름을 넣어준다
                     InteractionObject = hit.collider.name;
 
-                   MissionManager.Instance.myMission = transform.GetComponent<PlayerMission>().myMission;
-                   MissionManager.Instance.clearObject = selection.gameObject;
+                    //MissionManager.Instance.myMission = transform.GetComponent<PlayerMission>().myMission;
+                    //MissionManager.Instance.clearObject = selection.gameObject;
                 }
             }
 
@@ -101,7 +101,7 @@ public class TargetCtrl : MonoBehaviourPun
     //Use버튼을 누르면 현재 미션데이터에 맞는 미션을 불러오는 함수를 호출
     public void TargetUse()
     {
-        MissionManager.Instance.CallMission(TargetMissionData.MissionType, TargetMissionData.MissionNumber);
+        missionManager.CallMission(TargetMissionData);
     }
     //임포스터일 경우, Kill 버튼을 누르면 상대방을 죽인다.
     public void TargetKill()

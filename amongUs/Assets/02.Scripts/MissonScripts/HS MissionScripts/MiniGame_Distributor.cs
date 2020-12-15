@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using static MissionManager;
 
 public class MiniGame_Distributor : MonoBehaviour //전기 배급 미션 
 {
     public GameObject MinigamePanel;
-    public DistributorObject[]circle; //노랑 , 파랑 , 하늘색 클릭  전기 배급 
+    public DistributorObject[] circle; //노랑 , 파랑 , 하늘색 클릭  전기 배급 
 
-    public float rotationSpeed=0.1f; // 사이클 회전 속도
+    public float rotationSpeed = 0.1f; // 사이클 회전 속도
     public int select; //현재 몇번쨰인지 나타내는것 
     private int selectMax = 3;
 
@@ -39,10 +39,10 @@ public class MiniGame_Distributor : MonoBehaviour //전기 배급 미션
         {
             if (!circle[select].point.activeSelf)
             {
-                circle[select].LightUP(true); 
+                circle[select].LightUP(true);
             }
         }
-        else 
+        else
         {
             if (circle[select].point.activeSelf)
             {
@@ -52,17 +52,17 @@ public class MiniGame_Distributor : MonoBehaviour //전기 배급 미션
     }
     void ClickButton() //버튼 클릭 
     {
-        if(circle[select].button.Getbutton&& circle[select].point.activeSelf) //버튼을 타이밍에 맞게 눌렀을떄 
+        if (circle[select].button.Getbutton && circle[select].point.activeSelf) //버튼을 타이밍에 맞게 눌렀을떄 
         {
             select++;
         }
-        else if(circle[select].button.Getbutton&&!circle[select].point.activeSelf) //버튼을 잘못눌렀을떄  초기화 
+        else if (circle[select].button.Getbutton && !circle[select].point.activeSelf) //버튼을 잘못눌렀을떄  초기화 
         {
             MissionInit();
         }
         if (select >= selectMax) //미션을 다 완료햇을떄 
         {
-            MissionManager.Instance.MissionClear(MinigamePanel);
+            missionManager.MissionClear(MinigamePanel);
             rotationSpeed = 0;
             select = 0;
         }

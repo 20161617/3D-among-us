@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static MissionManager;
 
 public class MiniGame_ClearAsteroids : MonoBehaviour
 {
@@ -17,27 +18,27 @@ public class MiniGame_ClearAsteroids : MonoBehaviour
         scoreNow = 0;
         isClear = false;
         StartCoroutine(startClearAsteroids());
-        DestroyedText.text = "Destroyed : "+scoreNow+" / "+scoreMax;
+        DestroyedText.text = "Destroyed : " + scoreNow + " / " + scoreMax;
     }
     public void upScore()
     {
         Debug.Log("upscore");
         scoreNow++;
         DestroyedText.text = "Destroyed : " + scoreNow + " / " + scoreMax;
-        if(scoreNow>=scoreMax)
+        if (scoreNow >= scoreMax)
         {
-            MissionManager.Instance.MissionClear(MinigamePanel);
+            missionManager.MissionClear(MinigamePanel);
             isClear = true;
-           
-            for (int i = 0; i < obj.Length; i++)   
+
+            for (int i = 0; i < obj.Length; i++)
                 obj[i].SetActive(false);
-             
-            
+
+
         }
     }
     IEnumerator startClearAsteroids()
     {
-        for( int i =0; i<obj.Length;i++)
+        for (int i = 0; i < obj.Length; i++)
         {
             obj[i].SetActive(true);
             yield return new WaitForSeconds(2.5f); //생성속도
@@ -48,6 +49,6 @@ public class MiniGame_ClearAsteroids : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

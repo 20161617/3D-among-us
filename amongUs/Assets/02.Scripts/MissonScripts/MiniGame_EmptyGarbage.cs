@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static MissionManager;
 
 public class MiniGame_EmptyGarbage : MonoBehaviour // 쓰레기버리기 
 {
@@ -9,7 +10,7 @@ public class MiniGame_EmptyGarbage : MonoBehaviour // 쓰레기버리기
 
     private void OnEnable()
     {
-        colliderUnder.SetActive(true);   
+        colliderUnder.SetActive(true);
     }
     public void startGarbage()
     {
@@ -18,10 +19,10 @@ public class MiniGame_EmptyGarbage : MonoBehaviour // 쓰레기버리기
 
     IEnumerator Garbage()
     {
-    
+
         colliderUnder.SetActive(false);
         yield return new WaitForSeconds(3.0f);
-        MissionManager.Instance.MissionClear(MinigamePanel);
+        missionManager.MissionClear(MinigamePanel);
 
     }
 

@@ -49,10 +49,10 @@ public class MoveCtrl : MonoBehaviourPunCallbacks, IPunObservable
 
             if (isMove)
             {
-             
+
                 transform.Rotate(0f, moveHorizontal, 0f);
                 SoundManager.instance.PlayFootStep();
-              
+
             }
 
 

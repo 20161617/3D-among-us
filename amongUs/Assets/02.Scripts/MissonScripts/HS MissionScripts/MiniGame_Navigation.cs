@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static MissionManager;
 
-public class MiniGame_Navigation : MonoBehaviour ,IPointerDownHandler, IDragHandler,IPointerUpHandler
+public class MiniGame_Navigation : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
     public RectTransform RT;
     public GameObject MinigamePanel;
@@ -14,9 +15,9 @@ public class MiniGame_Navigation : MonoBehaviour ,IPointerDownHandler, IDragHand
         RT = GetComponent<RectTransform>();
         firstPos = GetComponent<RectTransform>().position;
     }
-     void OnEnable()
+    void OnEnable()
     {
-        int randX = Random.Range(-200,201);
+        int randX = Random.Range(-200, 201);
         int randY = (randX > 0) ? 200 : -200;
         firstPos = new Vector2(randX, randY);
         RT.anchoredPosition = firstPos;
@@ -39,7 +40,7 @@ public class MiniGame_Navigation : MonoBehaviour ,IPointerDownHandler, IDragHand
         if (RT.anchoredPosition.x > -20 && RT.anchoredPosition.x < 20 && RT.anchoredPosition.y > -20 && RT.anchoredPosition.y < 20)
         {
             RT.anchoredPosition = Vector2.zero;
-            MissionManager.Instance.MissionClear(MinigamePanel);
+            missionManager.MissionClear(MinigamePanel);
         }
     }
 }
