@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,7 +27,6 @@ public class FadeOut : MonoBehaviour
             StartCoroutine("MainSplash");                        //코루틴    //판넬 투명도 조절
             if (checkbool)                                            //만약 checkbool 이 참이면
             {
-
                 databaseManager.MyPlayer.GetComponent<PhotonView>().RPC("ShowCharacter", RpcTarget.AllViaServer);
                 GameInstance.CameraOn();
                 Scene scene = SceneManager.GetSceneByBuildIndex(sceneNum);

@@ -5,9 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ROOM
-  - Bullet
   - INTERACTION
-  - DEAD
+  - SpawnCenter
   layers:
   - Default
   - TransparentFX
@@ -17,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - DeadZone
+  - 
   - 
   - 
   - 

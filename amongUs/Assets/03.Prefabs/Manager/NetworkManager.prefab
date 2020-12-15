@@ -68,32 +68,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LobbyPanel: {fileID: 0}
   NickNameInput: {fileID: 0}
-  room: {fileID: 5300729850716247033, guid: 72117f5ffbda1c24b88763ff852c27ab, type: 3}
-  gridTr: {fileID: 0}
-  RoomPanel: {fileID: 0}
   CellBtn:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  RoomInfoText: {fileID: 0}
-  ChatPanel: {fileID: 0}
-  ChatInput: {fileID: 0}
-  ChatText:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  GSM: {fileID: 0}
   StatusText: {fileID: 0}
-  PV: {fileID: 843396591135124027}
-  MyPlayer: {fileID: 0}
-  Players: []
