@@ -47,7 +47,7 @@ public class WatingRoomManager : MonoBehaviourPun
 
         databaseManager.MyPlayer.photonView.RPC("SetMyPosition", RpcTarget.AllViaServer, playerPos[databaseManager.Players.Count - 1].transform.position);
 
-        //databaseManager.MyPlayer.GetComponent<PhotonView>().RPC("ShowCharacter", RpcTarget.AllViaServer);
+        //atabaseManager.MyPlayer.GetComponent<PhotonView>().RPC("ShowCharacter", RpcTarget.AllViaServer);
     }
 
     #region 게임시작

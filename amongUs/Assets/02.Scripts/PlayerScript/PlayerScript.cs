@@ -37,33 +37,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     bool isReady = false;
     // Start is called before the first frame update
 
-    private void OnEnable()
-    {
-        if (waitRoom)
-        {
-            if (!isImposter)
-            {
-                if (PV.IsMine)
-                {
-                    transform.GetComponent<PlayerMission>().createMission();
-                    isCreateMisson = true;
-                }
-                else
-                {
-                    isCreateMisson = false;
-                    isReady = true;
-                }
-            }
-            else
-            {
-                int imposterCount = DatabaseManager.databaseManager.Players.Count <= 5 ? 1 : 2; //임포수 5명이하면 1빼기 이상이면 2빼기 
-                //게이지 최대 100이라고 봤을떄  미션최대게이지/ 플레이어 수 - 임포수 / 미션수 
-                missionManager.plusGague = (1.0f / (DatabaseManager.databaseManager.Players.Count - imposterCount)) / (missionManager.commonMissionNum + missionManager.simpleMissionNum + missionManager.difficultMissionNum);
-            }
-        }
-        waitRoom = true;
-    }
-
+   
     void Awake()
     {
 
