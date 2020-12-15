@@ -1241,6 +1241,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 954271889, guid: 3959c22fc5a79c54ab58db057096c085, type: 3}
+      propertyPath: m_Name
+      value: pos
+      objectReference: {fileID: 0}
     - target: {fileID: 3020117220977289220, guid: 3959c22fc5a79c54ab58db057096c085,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2142,42 +2146,42 @@ PrefabInstance:
         type: 3}
       propertyPath: playerPos.Array.data[1]
       value: 
-      objectReference: {fileID: 3020117219175210898}
+      objectReference: {fileID: 3020117219175210894}
     - target: {fileID: 4177640617370542130, guid: 2db36ad0e057fa64f8ca4d676b06eac4,
         type: 3}
       propertyPath: playerPos.Array.data[2]
       value: 
-      objectReference: {fileID: 3020117219175210897}
+      objectReference: {fileID: 3020117219175210898}
     - target: {fileID: 4177640617370542130, guid: 2db36ad0e057fa64f8ca4d676b06eac4,
         type: 3}
       propertyPath: playerPos.Array.data[3]
       value: 
-      objectReference: {fileID: 3020117219175210896}
+      objectReference: {fileID: 3020117219175210893}
     - target: {fileID: 4177640617370542130, guid: 2db36ad0e057fa64f8ca4d676b06eac4,
         type: 3}
       propertyPath: playerPos.Array.data[4]
       value: 
-      objectReference: {fileID: 3020117219175210895}
+      objectReference: {fileID: 3020117219175210897}
     - target: {fileID: 4177640617370542130, guid: 2db36ad0e057fa64f8ca4d676b06eac4,
         type: 3}
       propertyPath: playerPos.Array.data[5]
       value: 
-      objectReference: {fileID: 3020117219175210894}
+      objectReference: {fileID: 3020117219175210892}
     - target: {fileID: 4177640617370542130, guid: 2db36ad0e057fa64f8ca4d676b06eac4,
         type: 3}
       propertyPath: playerPos.Array.data[6]
       value: 
-      objectReference: {fileID: 3020117219175210893}
+      objectReference: {fileID: 3020117219175210896}
     - target: {fileID: 4177640617370542130, guid: 2db36ad0e057fa64f8ca4d676b06eac4,
         type: 3}
       propertyPath: playerPos.Array.data[7]
       value: 
-      objectReference: {fileID: 3020117219175210892}
+      objectReference: {fileID: 3020117219175210891}
     - target: {fileID: 4177640617370542130, guid: 2db36ad0e057fa64f8ca4d676b06eac4,
         type: 3}
       propertyPath: playerPos.Array.data[8]
       value: 
-      objectReference: {fileID: 3020117219175210891}
+      objectReference: {fileID: 3020117219175210895}
     - target: {fileID: 4177640617370542130, guid: 2db36ad0e057fa64f8ca4d676b06eac4,
         type: 3}
       propertyPath: playerPos.Array.data[9]

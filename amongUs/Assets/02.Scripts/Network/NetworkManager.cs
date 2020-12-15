@@ -68,7 +68,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.LocalPlayer.NickName = NickNameInput.text;
 
-        PhotonNetwork.CreateRoom(NickNameInput.text == "" ? "Room" + Random.Range(0, 100) : NickNameInput.text, new RoomOptions { MaxPlayers = 4 });
+        PhotonNetwork.CreateRoom(NickNameInput.text == "" ? "Room" + Random.Range(0, 100) : NickNameInput.text, new RoomOptions { MaxPlayers = 10 });
 
     }
 

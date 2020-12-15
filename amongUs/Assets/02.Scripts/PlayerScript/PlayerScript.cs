@@ -71,6 +71,11 @@ public class PlayerScript : MonoBehaviourPunCallbacks
             isCreateMisson = true;
         }
 
+        //임시 작용
+        if (playerState == PLAYER_STATE.DEAD)
+        {
+            photonView.RPC("HideCharacter", RpcTarget.AllViaServer);
+        }
     }
 
     void OnDestroy()
@@ -137,6 +142,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     {
         gameObject.tag = "DEAD";
         isAlive = false;
+        //playerState = PLAYER_STATE.DEAD;
         playerAnimation.OnDeath();
     }
     [PunRPC]
@@ -145,8 +151,20 @@ public class PlayerScript : MonoBehaviourPunCallbacks
         playerAnimation.OnKill();
     }
 
+    [PunRPC]
+    public void SetDie()
+    {
+        playerState = PLAYER_STATE.DEAD;
+        isAlive = false;
+    }
     public void SetState(PLAYER_STATE playerState)
     {
         this.playerState = playerState;
+    }
+
+    IEnumerator DeadPlayerDelayActive()
+    {
+        yield return new WaitForSeconds(2.0f);
+        photonView.RPC("HideCharacter", RpcTarget.AllViaServer);
     }
 }
