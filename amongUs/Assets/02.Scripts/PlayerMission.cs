@@ -26,7 +26,11 @@ public class PlayerMission : MonoBehaviour
     public void createMission()
     {
 
+<<<<<<< Updated upstream
         Debug.Log("create");
+=======
+
+>>>>>>> Stashed changes
         int imposterCount = DatabaseManager.databaseManager.Players.Count <= 5 ? 1 : 2; //임포수 5명이하면 1빼기 이상이면 2빼기 
         displayText = GameObject.FindWithTag("MissionText").GetComponent<Text>();
 
@@ -35,28 +39,44 @@ public class PlayerMission : MonoBehaviour
 
         //INTERACTION이 붙은 모든 게임오브젝트를 HaveMission에 저장
         GameObject[] HaveMission = GameObject.FindGameObjectsWithTag("INTERACTION");
-
-
+      
         // HaveMission의 길이 만큼 반복
         for (int i = 0; i < HaveMission.Length; i++) //설정대로 미션을 돌려줌 
         {
             //0부터 HavaMission의 길이 사이의 값을 랜덤으로 지정
             int x = Random.Range(0, HaveMission.Length);
+           
             //미션매니저의 공통미션, 단순미션, 복잡미션의 수가 0보다 작거나 같다면
+<<<<<<< Updated upstream
             if (missionManager.commonMissionNum <= 0 && missionManager.simpleMissionNum <= 0 && missionManager.difficultMissionNum <= 0)
             {
                 //DiplayText를 호출하고 반복문을 빠져나감
                 DisplayText();
                 break;
             }
+=======
+            //if (MissionManager.Instance.commonMissionNum <= 0 && MissionManager.Instance.simpleMissionNum <= 0 && MissionManager.Instance.difficultMissionNum <= 0)
+            //{ Debug.LogError("haveMission : "+HaveMission);
+
+               
+            //    //DiplayText를 호출하고 반복문을 빠져나감
+            //    DisplayText();
+            //    break;
+            //}
+>>>>>>> Stashed changes
 
             //myMission에 HaveMission의 x(랜덤값)번째 값이 있는지 조사
             //있다면 반복문을 한차례 지나감
-            if (myMission.Contains(HaveMission[x]))
+            if (myMission.Contains(HaveMission[x])&& HaveMission[x].name== "Player(Clone)")
                 continue;
-
+            //if(HaveMission[x].GetComponent<MissionData>().MissionType==)
             //x번째 HaveMission의 미션타입과 미션매니저의 공통미션이 같고, 미션매니저의 공통임무 갯수가 0보다 크다면
+<<<<<<< Updated upstream
             if (HaveMission[x].GetComponent<MissionData>().MissionType == MissionManager.MissionCommon && missionManager.commonMissionNum > 0)
+=======
+          
+            if (HaveMission[x].GetComponent<MissionData>().MissionType == MissionManager.MissionCommon && MissionManager.Instance.commonMissionNum > 0)
+>>>>>>> Stashed changes
             {
 
                 //myMission에 x번째 HavaMission을 추가

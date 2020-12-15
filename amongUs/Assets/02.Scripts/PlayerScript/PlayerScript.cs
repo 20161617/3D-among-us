@@ -26,8 +26,12 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     public PlayerMissionHS CurrentMyMission;
 
     bool waitRoom = false;
+<<<<<<< Updated upstream
     bool isCreateMisson = false;
     bool isReady = false;
+=======
+
+>>>>>>> Stashed changes
     // Start is called before the first frame update
     private void OnEnable()
     {
@@ -38,7 +42,10 @@ public class PlayerScript : MonoBehaviourPunCallbacks
                 if (PV.IsMine)
                 {
                     transform.GetComponent<PlayerMission>().createMission();
+<<<<<<< Updated upstream
                     isCreateMisson = true;
+=======
+>>>>>>> Stashed changes
                 }
                 else
                 {

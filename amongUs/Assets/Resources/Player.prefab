@@ -1186,11 +1186,18 @@ GameObject:
   - component: {fileID: 4230105031625750077}
   - component: {fileID: 4101267405289613908}
   - component: {fileID: -1849553579890175928}
+<<<<<<< Updated upstream
   - component: {fileID: -6891912118211326180}
   - component: {fileID: -9188510596639402823}
   - component: {fileID: 2325551229909190551}
   - component: {fileID: 6818640752854408616}
   - component: {fileID: 1619309157650093985}
+=======
+  - component: {fileID: 2058204651968720278}
+  - component: {fileID: 1351160332222452273}
+  - component: {fileID: -4499303722256320236}
+  - component: {fileID: 4824758041279604547}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1557,6 +1564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footStep: {fileID: 8300000, guid: 746c42bca3c6e5d41bb132ae11a026a3, type: 3}
+<<<<<<< Updated upstream
   engineRoom: {fileID: 8300000, guid: d45d92bef057b2745a24a4140e7fb668, type: 3}
   reactor: {fileID: 8300000, guid: b13250df8078bc64f97a4e52d1f42ac1, type: 3}
   restaurant: {fileID: 8300000, guid: 4d901b7aae4ea1e44942217c29e1c0b3, type: 3}
@@ -1571,6 +1579,50 @@ MonoBehaviour:
   admin: {fileID: 8300000, guid: 6e6dda13fd515f842b4ba3585f1ebd4a, type: 3}
   security: {fileID: 8300000, guid: bfc61e69be9a33b408ed465a3a3f70ce, type: 3}
   communications: {fileID: 8300000, guid: 0dbbc640775885e409ea1e2e7c0641f9, type: 3}
+=======
+  engineRoom: {fileID: 0}
+  reactor: {fileID: 0}
+  restaurant: {fileID: 0}
+  armory: {fileID: 0}
+  oxygenSupplyRoom: {fileID: 0}
+  electricChamber: {fileID: 0}
+  protectiveMembraneControlRoom: {fileID: 0}
+  navigationalChamber: {fileID: 0}
+  medBay: {fileID: 0}
+  storage: {fileID: 0}
+  admin: {fileID: 0}
+  security: {fileID: 0}
+  communications: {fileID: 0}
+--- !u!114 &-4499303722256320236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4450092894471199211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ace24264cddfea4b8069a41ea50b183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMission: []
+  displayText: {fileID: 0}
+--- !u!114 &4824758041279604547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4450092894471199211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ef9f63a1bc75a408507e146f274501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MissionType: INTERACTION
+  MissionNumber: 0
+  MissionPlace: 
+>>>>>>> Stashed changes
 --- !u!1 &4469135047442823856
 GameObject:
   m_ObjectHideFlags: 0
