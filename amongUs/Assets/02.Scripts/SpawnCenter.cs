@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -34,6 +34,6 @@ public class SpawnCenter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //SoundManger.instance.OnTriggerEnter(databaseManager.Players[0].gameObject.GetComponent<Collider>());
     }
 }
